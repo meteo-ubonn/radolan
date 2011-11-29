@@ -105,31 +105,34 @@ bool testCoordinateSystem(RDScanType type)
 
 int main(int argc, char** argv) 
 {
-	RDScan* scan = RDAllocateScan();
-	
-	RDReadScan( argv[1], scan, false );
-	
-	RDPrintHeaderInformation( scan );
-	
-	RDPrintScan( scan, 20, 20 );
-	
-	RDFreeScan( scan );
-    
-	struct tm tm_time;
-	
-	RDScanTime( scan, &tm_time );
-	
-	time_t time = timegm( &tm_time );
-	
-	char * fn = RDGuessFilename( scan->header.scanType, time );
-	
-	printf( "RDGuessFilename = %s\n", fn );
-	
-	free( fn );
-    
     bool coordTest = testCoordinateSystem( RD_RX );
     
-    printf( "RDCoordinateSystem test %s\n", coordTest ? "OK" : "FAILED" );
+    printf( "RDCoordinateSystem test: %s\n", coordTest ? "OK" : "FAILED" );
+
+    printf( "RDReadScan test:\n" );
+	
+    RDScan* scan = RDAllocateScan();
+	
+	if ( RDReadScan( argv[1], scan, true ) >= 0 )
+    {
+        RDPrintHeaderInformation( scan );
+        
+        RDPrintScan( scan, 20, 20 );
+        
+        RDFreeScan( scan );
+        
+        struct tm tm_time;
+        
+        RDScanTime( scan, &tm_time );
+        
+        time_t time = timegm( &tm_time );
+        
+        char * fn = RDGuessFilename( scan->header.scanType, time );
+        
+        printf( "RDGuessFilename = %s\n", fn );
+        
+        free( fn );
+    }
     
 	return 0;
 }

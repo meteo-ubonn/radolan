@@ -1,6 +1,5 @@
 /*
- *  radolan_to_cartesian.c
- *  RadolanConversion
+ *  read.c
  *
  *  Created by simon on 26.10.07.
  *  Copyright 2007 webtecc. All rights reserved.
@@ -15,8 +14,6 @@
 #include <string.h>
 #include <zlib.h>
 
-namespace Radolan 
-{
 	// Define the static variables
 	
 	/** Reads a numerical value stored as ASCII in the given file at it's current position,
@@ -152,7 +149,7 @@ namespace Radolan
 				}
 				else if (strcmp(tokenList[i],"PR")==0)
 				{
-					if (strncmp(pos," E-00",5)==0)
+					if ( strncmp(pos," E-00",5)==0 || strncmp(pos," E+00",5)==0 )
 					{
 						header->precision=1.0f;
 					}
@@ -248,7 +245,7 @@ namespace Radolan
 	
 	int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
 		
-		gzFile f = gzopen(filename,"r");
+		gzFile* f = gzopen(filename,"r");
         
 		if (f!=NULL)
 		{
@@ -266,7 +263,7 @@ namespace Radolan
 			strcpy(scan->filename,filename);
 			
 			// read the header information
-			RDReadRadolanHeader(&f,&scan->header);
+			RDReadRadolanHeader( f,&scan->header);
 
 			// figure out the resolution lat x lon
 			switch (scan->header.scanType) {
@@ -302,31 +299,44 @@ namespace Radolan
 					
 					// allocate a large enough buffer for the 8bit binary data chunks from radolan
 					unsigned char *buffer = (unsigned char*)calloc(scan->dimLon*scan->dimLat,sizeof(unsigned char));
-					if (buffer==NULL) {
+                    
+					if (buffer==NULL) 
+                    {
 						fprintf(stderr,"RDReadScan : ERROR : could not allocate data buffer : out of memory\n");
 						return -1;
 					}
 					
 					// since August 11 2009 some problem with radolan header. It's missing 2 bytes!
-					// START WORKAROUND
+					
+                    // START WORKAROUND
 					size_t pos = gztell(f);
-					gzrewind(f);
-					size_t fileSize = gzread(f, buffer, -1);
-					size_t nominalSize = scan->header.payloadSize + scan->header.headerSize;
-					if (fileSize < nominalSize ) 
-					{
-						fprintf(stdout,"RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n", nominalSize-fileSize);
-						pos = pos - (nominalSize - fileSize);
-					}
-					gzseek(f, pos, 0);
+
+                    //					gzrewind(f);
+//					size_t fileSize = gzread(f, buffer, -1);
+//					size_t nominalSize = scan->header.payloadSize + scan->header.headerSize;
+//					if (fileSize < nominalSize ) 
+//					{
+//						fprintf(stdout,"RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n", nominalSize-fileSize);
+//						pos = pos - (nominalSize - fileSize);
+//					}
+//					gzseek( f, pos, SEEK_SET );
 					// since August 11 2009 some problem with radolan header. It's missing 2 bytes!
 					// END WORKAROUND
 					
 					// read data into buffer
-					size_t bytesRead = gzread(f, buffer, scan->header.payloadSize);
-					if (bytesRead!=scan->header.payloadSize) {
-						fprintf(stderr,"RDReadScan : ERROR : payload too small. File corrupt?\n");
-						return -1;
+					int bytesRead = gzread(f, buffer, scan->header.payloadSize);
+                    
+                    if ( bytesRead == -1 )
+                    {
+                        fprintf( stderr, "RDReadScan : ERROR : could not read %lu bytes from position %d.", scan->header.payloadSize, pos ); 
+                        
+                        return -3;
+                    }
+                    else if ( bytesRead != scan->header.payloadSize )
+                    {
+						fprintf(stderr,"RDReadScan : ERROR : payload size wrong. File corrupt?\n");
+                        
+						return -3;
 					}
 					
 					// All data read. Close file.
@@ -542,5 +552,4 @@ namespace Radolan
 		}
 		return clone;
 	}
-}
 

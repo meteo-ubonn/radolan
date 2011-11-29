@@ -67,18 +67,28 @@ namespace Radolan {
 	
 	int RDIsCleanMeasurement(RDScanType t, RDDataType value)
 	{
-		return (value >= RDMinValue(t) &&
-				value <= RDMaxValue(t) &&
-				value != RDMissingValue(t) &&
-				value != RDClutterValue(t));
+        bool notMin = value >= RDMinValue(t);
+        
+        bool notMax = value <= RDMaxValue(t);
+        
+        bool notMissing = value != RDMissingValue(t);
+        
+        bool notClutter = value != RDClutterValue(t);
+        
+		return ( notMin && notMax && notMissing && notClutter );
 	}
 	
 	int RDIsCleanMeasurementAndNotMin(RDScanType t, RDDataType value)
 	{
-		return (value > RDMinValue(t) &&
-				value <= RDMaxValue(t) &&
-				value != RDMissingValue(t) &&
-				value != RDClutterValue(t));
+        bool notMin = value > RDMinValue(t);
+        
+        bool notMax = value <= RDMaxValue(t);
+        
+        bool notMissing = value != RDMissingValue(t);
+        
+        bool notClutter = value != RDClutterValue(t);
+        
+		return ( notMin && notMax && notMissing && notClutter );
 	}
 	
 	float RDRainrateFromDezibels(RDDataType dezibels)
@@ -117,7 +127,7 @@ namespace Radolan {
 	  t->tm_mday = scan->header.day;
 	  t->tm_mon = scan->header.month;
 	  
-	  printf("SCAN HEADER MONTH = %d\n",scan->header.month );
+	  //printf("SCAN HEADER MONTH = %d\n",scan->header.month );
 
 	  t->tm_year = scan->header.year + 100; // man mktime
 	}
@@ -379,6 +389,7 @@ namespace Radolan {
 	void RDPrintScan(RDScan* scan, int latCount, int lonCount) 
 	{
 		int lat,lon;
+        
 		for (lat=0; lat<scan->dimLat; lat++) 
 		{
 			if (lat%latCount==0) 

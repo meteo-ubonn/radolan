@@ -7,8 +7,10 @@
 //own headers
 #include <radolan/coordinatesystem.h>
 
+#ifdef __cplusplus
 namespace Radolan
 {
+#endif
 	
 // M_PI is not standard C++
 #ifndef M_PI
@@ -309,4 +311,6 @@ namespace Radolan
 		return rdGeographicalPoint(deg(p.longitude),deg(p.latitude));
 	}
 	
-} //namespace
+#ifdef __cplusplus
+}
+#endif
