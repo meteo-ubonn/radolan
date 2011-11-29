@@ -1,0 +1,12 @@
+#ifndef LIBRADOLAN_CONFIG_H
+#define LIBRADOLAN_CONFIG_H
+
+/* OS - type */
+#cmakedefine libradolan_OS_LINUX
+#cmakedefine libradolan_OS_MACOSX
+
+#if defined(LIBRADOLAN_OS_MACOSX) || defined(LIBRADOLAN_OS_LINUX)
+#define LIBRADOLAN_OS_POSIX
+#endif
+
+#endif /* header guard */
