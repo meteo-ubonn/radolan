@@ -116,6 +116,4 @@ extern "C"
 }
 #endif
 
-
-
-#endif __RADOLAN_UTILS__
+#endif /* Header Guard */

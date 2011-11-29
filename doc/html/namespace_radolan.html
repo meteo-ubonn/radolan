@@ -127,6 +127,15 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a9b3571a0925b1097c8a73e95fac407a9">rdGridPoint</a> (int ix, int iy)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#aa876c085a7b11aa63da49343c5996912">RDEquals</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> a, <a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> b)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a9ea43644938014e395e7549685ef9342">RDValueAt</a> (<a class="el" href="struct_r_d_scan.html">RDScan</a> *scan, <a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> gridPoint)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#ac1ba3f50ba4871957437006aaf03fe9e">readUnsignedInt</a> (gzFile *f, int len, unsigned int *value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#ab6afc9a96ab711d7c3c8b9f6c8686d2b">readUnsignedShortInt</a> (gzFile *f, int len, unsigned short int *value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#abc3d49517929e7dc7ffe40b74075f16f">readInt</a> (gzFile *f, int len, int *value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">_Bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a084ebecc3699b2008b1c1feaf4691d6d">readLong</a> (gzFile *f, int len, long *value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a374443eaa11458fa4a36e385028cd42b">RDReadRadolanHeader</a> (gzFile *f, <a class="el" href="struct_r_d_radolan_header.html">RDRadolanHeader</a> *header)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a8fb848016bfe67bfa26e99adece2a62a">RDReadScan</a> (const char *filename, <a class="el" href="struct_r_d_scan.html">RDScan</a> *scan, _Bool ommitOutside)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_d_scan.html">RDScan</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a53a31850d30c31816bde5945fb637383">RDAllocateScan</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#a36dab207e3d6235e9c7e5c0db1fa9632">RDFreeScan</a> (<a class="el" href="struct_r_d_scan.html">RDScan</a> *scan)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_d_scan.html">RDScan</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_radolan.html#aac015c9d5b03490e9f6372fcd4c64757">RDCloneScan</a> (<a class="el" href="struct_r_d_scan.html">RDScan</a> *original)</td></tr>
 </table>
 <hr/><h2>Enumeration Type Documentation</h2>
 <a class="anchor" id="a2bedc1ddfe0faac38119ba333523ae53"></a><!-- doxytag: member="Radolan::RDGridQuadrant" ref="a2bedc1ddfe0faac38119ba333523ae53" args="" -->
@@ -157,6 +166,25 @@ Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="a53a31850d30c31816bde5945fb637383"></a><!-- doxytag: member="Radolan::RDAllocateScan" ref="a53a31850d30c31816bde5945fb637383" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_r_d_scan.html">RDScan</a>* Radolan::RDAllocateScan </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Allocates a new instance of <a class="el" href="struct_r_d_scan.html">RDScan</a> and sets its up correctly. Please use this method for allocating fresh scans in order to avoid problems when deallocating. </p>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00498">498</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3f1fb5867c9d6e086655b2052371dbf2"></a><!-- doxytag: member="Radolan::rdCartesianPoint" ref="a3f1fb5867c9d6e086655b2052371dbf2" args="(double x, double y)" -->
 <div class="memitem">
 <div class="memproto">
@@ -183,6 +211,33 @@ Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Definition at line <a class="el" href="coordinatesystem_8h_source.html#l00068">68</a> of file <a class="el" href="coordinatesystem_8h_source.html">coordinatesystem.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac015c9d5b03490e9f6372fcd4c64757"></a><!-- doxytag: member="Radolan::RDCloneScan" ref="aac015c9d5b03490e9f6372fcd4c64757" args="(RDScan *original)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_r_d_scan.html">RDScan</a>* Radolan::RDCloneScan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_r_d_scan.html">RDScan</a> *&#160;</td>
+          <td class="paramname"><em>original</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Helper method. Allocates a new <a class="el" href="struct_r_d_scan.html">RDScan</a> and clones content of the given original. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">RDScan*</td><td>original </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>RDScan* clone (if NULL, some error occured while cloning) </dd></dl>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00525">525</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
 
 </div>
 </div>
@@ -302,6 +357,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a36dab207e3d6235e9c7e5c0db1fa9632"></a><!-- doxytag: member="Radolan::RDFreeScan" ref="a36dab207e3d6235e9c7e5c0db1fa9632" args="(RDScan *scan)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Radolan::RDFreeScan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_r_d_scan.html">RDScan</a> *&#160;</td>
+          <td class="paramname"><em>scan</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Call this function to orderly free the scan data. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">RDScan*</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00511">511</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4a248e7ed53360c7ad274d8fa84e9f29"></a><!-- doxytag: member="Radolan::rdGeographicalPoint" ref="a4a248e7ed53360c7ad274d8fa84e9f29" args="(double longitude, double latitude)" -->
 <div class="memitem">
 <div class="memproto">
@@ -389,6 +470,88 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a374443eaa11458fa4a36e385028cd42b"></a><!-- doxytag: member="Radolan::RDReadRadolanHeader" ref="a374443eaa11458fa4a36e385028cd42b" args="(gzFile *f, RDRadolanHeader *header)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Radolan::RDReadRadolanHeader </td>
+          <td>(</td>
+          <td class="paramtype">gzFile *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_r_d_radolan_header.html">RDRadolanHeader</a> *&#160;</td>
+          <td class="paramname"><em>header</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads only the header data from the given FILE* </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FILE*</td><td></td></tr>
+    <tr><td class="paramname">RDHeader*</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00083">83</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8fb848016bfe67bfa26e99adece2a62a"></a><!-- doxytag: member="Radolan::RDReadScan" ref="a8fb848016bfe67bfa26e99adece2a62a" args="(const char *filename, RDScan *scan, _Bool ommitOutside)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Radolan::RDReadScan </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_r_d_scan.html">RDScan</a> *&#160;</td>
+          <td class="paramname"><em>scan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">_Bool&#160;</td>
+          <td class="paramname"><em>ommitOutside</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads the radolan data from the given file. The result is NOT converted.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+    <tr><td class="paramname">radolan_scan</td><td>allocted instance of the radolan data type </td></tr>
+    <tr><td class="paramname">_Bool</td><td>if true, the outside values have no representation (should be default)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 if operation was successful -1 insufficient memory -2 file not found -3 io-error while reading file </dd></dl>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00249">249</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9ea43644938014e395e7549685ef9342"></a><!-- doxytag: member="Radolan::RDValueAt" ref="a9ea43644938014e395e7549685ef9342" args="(RDScan *scan, RDGridPoint gridPoint)" -->
 <div class="memitem">
 <div class="memproto">
@@ -418,6 +581,150 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abc3d49517929e7dc7ffe40b74075f16f"></a><!-- doxytag: member="Radolan::readInt" ref="abc3d49517929e7dc7ffe40b74075f16f" args="(gzFile *f, int len, int *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_Bool Radolan::readInt </td>
+          <td>(</td>
+          <td class="paramtype">gzFile *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads a numerical value stored as ASCII in the given file at it's current position, composed of len numbers. For example: 945 ASCII = len 3. </p>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00055">55</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a084ebecc3699b2008b1c1feaf4691d6d"></a><!-- doxytag: member="Radolan::readLong" ref="a084ebecc3699b2008b1c1feaf4691d6d" args="(gzFile *f, int len, long *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_Bool Radolan::readLong </td>
+          <td>(</td>
+          <td class="paramtype">gzFile *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads a numerical value stored as ASCII in the given file at it's current position, composed of len numbers. For example: 945 ASCII = len 3. </p>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00070">70</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1ba3f50ba4871957437006aaf03fe9e"></a><!-- doxytag: member="Radolan::readUnsignedInt" ref="ac1ba3f50ba4871957437006aaf03fe9e" args="(gzFile *f, int len, unsigned int *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_Bool Radolan::readUnsignedInt </td>
+          <td>(</td>
+          <td class="paramtype">gzFile *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads a numerical value stored as ASCII in the given file at it's current position, composed of len numbers. For example: 945 ASCII = len 3. </p>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00025">25</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6afc9a96ab711d7c3c8b9f6c8686d2b"></a><!-- doxytag: member="Radolan::readUnsignedShortInt" ref="ab6afc9a96ab711d7c3c8b9f6c8686d2b" args="(gzFile *f, int len, unsigned short int *value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">_Bool Radolan::readUnsignedShortInt </td>
+          <td>(</td>
+          <td class="paramtype">gzFile *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short int *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reads a numerical value stored as ASCII in the given file at it's current position, composed of len numbers. For example: 945 ASCII = len 3. </p>
+
+<p>Definition at line <a class="el" href="read_8cpp_source.html#l00040">40</a> of file <a class="el" href="read_8cpp_source.html">read.cpp</a>.</p>
+
+</div>
+</div>
 </div>
 </div>
   <div id="nav-path" class="navpath">
@@ -438,7 +745,7 @@ Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 16:41:21 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

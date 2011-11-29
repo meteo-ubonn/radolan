@@ -24,7 +24,7 @@ var NAVTREE =
       [ "include/radolan/types.h", "types_8h.html", null ],
       [ "src/coordinatesystem.cpp", "coordinatesystem_8cpp.html", null ],
       [ "src/radolan_utils.cpp", "radolan__utils_8cpp.html", null ],
-      [ "src/read.c", "read_8c.html", null ]
+      [ "src/read.cpp", "read_8cpp.html", null ]
     ] ],
     [ "File Members", "globals.html", null ]
   ] ]

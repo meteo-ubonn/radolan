@@ -7,11 +7,15 @@
 
 #include <map>
 
-namespace Radolan
+#ifdef __cplusplus
+extern "C"
 {
-	
+	namespace Radolan 
+    {
+#endif
+
 	class RDObservationFile
-		{
+    {
 			
 		public:
 			
@@ -41,10 +45,12 @@ namespace Radolan
 			
 			std::map< time_t, RDScan* >	m_scans;
 			
-		};
-	
+	};
+
+#ifdef __cplusplus
+    }
 }
+#endif
 
-
-#endif __RADOLAN_OBSERVATIONFILE__
+#endif /* Header Guard */
 

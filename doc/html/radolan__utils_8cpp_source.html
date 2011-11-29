@@ -204,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00105"></a>00105           
 <a name="l00106"></a>00106           time( &amp;now );
 <a name="l00107"></a>00107 
-<a name="l00108"></a>00108           <span class="keyword">struct </span>tm nowPtr = * localtime( (<span class="keyword">const</span> time_t*) &amp;now );
+<a name="l00108"></a>00108 <span class="comment">//        struct tm nowPtr = * localtime( (const time_t*) &amp;now );</span>
 <a name="l00109"></a>00109 
 <a name="l00110"></a>00110           <span class="comment">// initialize the scan time</span>
 <a name="l00111"></a>00111           gmtime_r( (<span class="keyword">const</span> time_t * ) &amp;now, t );
@@ -571,7 +571,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 16:41:21 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

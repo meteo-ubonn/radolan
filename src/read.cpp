@@ -15,9 +15,8 @@
 #include <string.h>
 #include <zlib.h>
 
-#ifdef __cplusplus
-namespace Radolan {
-#endif
+namespace Radolan 
+{
 	// Define the static variables
 	
 	/** Reads a numerical value stored as ASCII in the given file at it's current position,
@@ -110,7 +109,7 @@ namespace Radolan {
 		buffer[249]='\0';
 		
 		// header tokens according to spec
-		char *tokenList[10] = {"BY","VS","SW","PR","INT","GP","VV","MF","QN","MS"};
+		const char *tokenList[10] = {"BY","VS","SW","PR","INT","GP","VV","MF","QN","MS"};
 		int i,j, bytesRead = 0;
 		
 		for (i=0; i<10; i++)
@@ -249,7 +248,8 @@ namespace Radolan {
 	
 	int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
 		
-		gzFile* f = gzopen(filename,"r");
+		gzFile f = gzopen(filename,"r");
+        
 		if (f!=NULL)
 		{
 			
@@ -266,7 +266,7 @@ namespace Radolan {
 			strcpy(scan->filename,filename);
 			
 			// read the header information
-			RDReadRadolanHeader(f,&scan->header);
+			RDReadRadolanHeader(&f,&scan->header);
 
 			// figure out the resolution lat x lon
 			switch (scan->header.scanType) {
@@ -542,8 +542,5 @@ namespace Radolan {
 		}
 		return clone;
 	}
-	
-#ifdef __cplusplus
 }
-#endif
 

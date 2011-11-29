@@ -268,6 +268,4 @@ namespace Radolan
 
 } //namespace Radolan
 
-#endif /*RADOLANCOORDINATESYSTEM_H_*/
-
-
+#endif /* Header Guard */

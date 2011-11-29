@@ -105,7 +105,7 @@ namespace Radolan {
 	  
 	  time( &now );
 
-	  struct tm nowPtr = * localtime( (const time_t*) &now );
+//	  struct tm nowPtr = * localtime( (const time_t*) &now );
 
 	  // initialize the scan time
 	  gmtime_r( (const time_t * ) &now, t );

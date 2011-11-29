@@ -80,7 +80,7 @@ ENDIF()
 
 #the library
 ADD_LIBRARY(radolan SHARED 
-    src/read.c
+    src/read.cpp
     src/coordinatesystem.cpp
     src/radolan_utils.cpp
     src/observationfile.cpp

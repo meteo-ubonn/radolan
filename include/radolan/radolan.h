@@ -7,4 +7,4 @@
 #include <radolan/radolan_utils.h>
 #include <radolan/observationfile.h>
 
-#endif __RADOLAN__
+#endif /* Header Guard */
