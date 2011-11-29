@@ -35,7 +35,8 @@
 namespace Radolan {
 #endif
 
-/** Scan type as denoted in Chapter 1.1 of the Radolan v2.1 spec. */
+/** Scan type as denoted in Chapter 1.1 of the Radolan v2.1 spec. 
+*/
 typedef enum {
 	RD_UNKNOWN,
 	RD_RX,
@@ -85,25 +86,56 @@ typedef enum {RAVOQ_HV,RAVOQ_HV_ConfidenceEstimate,RAVOQ,Winterrath} RDQuantific
 
 /** Contains header information as read from Radolan file. See Radolan spec v2.1 */
 typedef struct {
-	RDScanType scanType;                  /* Product ID (see Section 1, Radolan spec v2.1 */
-	unsigned short int day;               
-	unsigned short int hour;
-	unsigned short int minute;
-	unsigned short int month;
-	unsigned short int year;
-	unsigned int radarLocation;           /// 100000 for composite (see Section 1, Radolan spec v2.1
-	size_t headerSize;					  /// Number of bytes actually read from the header
-	size_t payloadSize;					  /// Tag <b>BY</b>. Limited to 4Gb. Corrected by subtracting the header size
-	RDRadarFormat radarFormat;            /// Tag <b>VS</b>. 128km or 100km
-	char softwareVersion[9];              /// Tag <b>SW</b>
-	float precision;                      /// Tag <b>PR</b> 1, 0.1, 0.01
-	unsigned short int intervalDuration;  /// Tag <b>INT</b>. scan interval in minutes
-	char resolution[10];                  /// Tag <b>GP</b>. 900x900 in most cases
-	unsigned int predictionMinutes;       /// Tag <b>VV</b>when prediction product, time of prediction in minutes from scan time
-	char binaryFormat[9];                 /// Tag <b>MF</b>. 
-	RDQuantification quantification;      /// Tag <b>QN</b>.
-	int numberOfRadarStations;            /// Tag <b>MS</b>. Number of radar stations
-	char* radarStations;                  /// Tag <b>MS</b>. List of radar station id's (c-strings)
+
+  /// Product ID (see Section 1, Radolan spec v2.1
+  RDScanType scanType;                  
+
+  // Date information
+  unsigned short int day;               
+  unsigned short int hour;
+  unsigned short int minute;
+  unsigned short int month;
+  unsigned short int year;
+
+  /// 100000 for composite (see Section 1, Radolan spec v2.1
+  unsigned int radarLocation;           
+
+  /// Number of bytes actually read from the header
+  size_t headerSize;		      
+
+  /// Tag <b>BY</b>. Limited to 4Gb. Corrected by subtracting the header size
+  size_t payloadSize;		      
+
+  /// Tag <b>VS</b>. 128km or 100km
+  RDRadarFormat radarFormat;            
+
+  /// Tag <b>SW</b>
+  char softwareVersion[9];              
+
+  /// Tag <b>PR</b> 1, 0.1, 0.01
+  float precision;                      
+
+  /// Tag <b>INT</b>. scan interval in minutes
+  unsigned short int intervalDuration;  
+
+  /// Tag <b>GP</b>. 900x900 in most cases
+  char resolution[10];                  
+
+  /// Tag <b>VV</b>when prediction product, time of prediction in minutes from scan time
+  unsigned int predictionMinutes;       
+
+  /// Tag <b>MF</b>. 
+  char binaryFormat[9];                 
+
+  /// Tag <b>QN</b>.
+  RDQuantification quantification;      
+
+  /// Tag <b>MS</b>. Number of radar stations
+  int numberOfRadarStations;            
+
+  /// Tag <b>MS</b>. List of radar station id's (c-strings)
+  char* radarStations;                  
+
 } RDRadolanHeader;
 
 /* Which data type to use in the reading process. If you change this,
@@ -115,14 +147,31 @@ typedef float RDDataType;
  * the header will be empty. Use RDAllocate and RDFree to create and dispose of instances.
  */
 typedef struct {
-	char filename[1024];				    /// Name of file containing data when read
-	RDRadolanHeader header;                        /// Header info (when read from radolan binary format)
-	RDDataType* data;                        /// Array of rd_data[header.payloadSize]
-	int dimLon;								/// Number of longitudinal vertices
-	int dimLat;								/// Number of latitudinal vertices
-	RDDataType min_value;                    /// Minimum value found in the actual data
-	RDDataType max_value;                    /// Maximum value found in the actual data
-	double dbZPerUnit;
+
+  /// Name of file containing data when read
+  char filename[1024];		      
+
+  /// Header info (when read from radolan binary format)
+  RDRadolanHeader header;                        
+
+  /// Array of rd_data[header.payloadSize]
+  RDDataType* data;                        
+
+  /// Number of longitudinal vertices
+  int dimLon;								
+
+  /// Number of latitudinal vertices
+  int dimLat;				
+
+  /// Minimum value found in the actual data
+  RDDataType min_value;                    
+
+  /// Maximum value found in the actual data
+  RDDataType max_value;                    
+  
+  /// Conversion factor from RVP6 units to DBZ
+  double dbZPerUnit;
+
 } RDScan;
 
 #ifdef __cplusplus

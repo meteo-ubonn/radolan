@@ -119,6 +119,10 @@ namespace Radolan
 		RDLowerRight=3
 	} RDGridQuadrant;
 	
+	/** This class wraps a number of routines to deal with the radolan specific coordinate systems.
+	 * It provides methods for converting geographical coordinates into cartesian coordinates (within
+	 * the radolan grid) as well as conversion from and to grid points - aka index pairs.
+	 */
 	class RDCoordinateSystem 
 	{
 	public:

@@ -1,29 +1,32 @@
 var NAVTREE =
 [
   [ "libradolan", "index.html", [
-    [ "Data Structures", "annotated.html", [
+    [ "Class List", "annotated.html", [
       [ "Radolan::RDCartesianPoint", "struct_radolan_1_1_r_d_cartesian_point.html", null ],
       [ "Radolan::RDCoordinateSystem", "class_radolan_1_1_r_d_coordinate_system.html", null ],
       [ "Radolan::RDGeographicalPoint", "struct_radolan_1_1_r_d_geographical_point.html", null ],
       [ "Radolan::RDGeographicalPointRad", "struct_radolan_1_1_r_d_geographical_point_rad.html", null ],
       [ "Radolan::RDGridPoint", "struct_radolan_1_1_r_d_grid_point.html", null ],
-      [ "Radolan::RDObservationFile", "class_radolan_1_1_r_d_observation_file.html", null ],
       [ "RDRadolanHeader", "struct_r_d_radolan_header.html", null ],
       [ "RDScan", "struct_r_d_scan.html", null ]
     ] ],
-    [ "Data Structure Index", "classes.html", null ],
-    [ "Data Fields", "functions.html", null ],
+    [ "Class Index", "classes.html", null ],
+    [ "Class Members", "functions.html", null ],
+    [ "Namespace List", "namespaces.html", [
+      [ "Radolan", "namespace_radolan.html", null ]
+    ] ],
+    [ "Namespace Members", "namespacemembers.html", null ],
     [ "File List", "files.html", [
-      [ "include/radolan/coordinatesystem.h", null, null ],
-      [ "include/radolan/observationfile.h", null, null ],
-      [ "include/radolan/radolan.h", null, null ],
-      [ "include/radolan/radolan_utils.h", null, null ],
-      [ "include/radolan/read.h", null, null ],
-      [ "include/radolan/types.h", null, null ],
-      [ "src/coordinatesystem.cpp", null, null ],
-      [ "src/radolan_utils.cpp", null, null ],
-      [ "src/read.c", null, null ]
-    ] ]
+      [ "include/radolan/coordinatesystem.h", "coordinatesystem_8h.html", null ],
+      [ "include/radolan/radolan.h", "radolan_8h.html", null ],
+      [ "include/radolan/radolan_utils.h", "radolan__utils_8h.html", null ],
+      [ "include/radolan/read.h", "read_8h.html", null ],
+      [ "include/radolan/types.h", "types_8h.html", null ],
+      [ "src/coordinatesystem.cpp", "coordinatesystem_8cpp.html", null ],
+      [ "src/radolan_utils.cpp", "radolan__utils_8cpp.html", null ],
+      [ "src/read.c", "read_8c.html", null ]
+    ] ],
+    [ "File Members", "globals.html", null ]
   ] ]
 ];
 

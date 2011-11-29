@@ -51,7 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -74,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -95,124 +97,124 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">include/radolan/coordinatesystem.h</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef RADOLANCOORDINATESYSTEM_H_</span>
+<a href="coordinatesystem_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef RADOLANCOORDINATESYSTEM_H_</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define RADOLANCOORDINATESYSTEM_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="comment">//C-headers</span>
 <a name="l00005"></a>00005 <span class="comment">//C++ headers</span>
 <a name="l00006"></a>00006 <span class="comment">//3rd-party headers</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;radolan/types.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">radolan/types.h</a>&gt;</span>
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="comment">// TODO: refactor using RDGridPoint and RDGeographicalPointRad etc</span>
 <a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>Radolan
+<a name="l00011"></a><a class="code" href="namespace_radolan.html">00011</a> <span class="keyword">namespace </span>Radolan
 <a name="l00012"></a>00012 {
 <a name="l00013"></a>00013         
 <a name="l00017"></a><a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">00017</a>         <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00018"></a>00018                 <span class="keywordtype">double</span> latitude;
-<a name="l00019"></a>00019                 <span class="keywordtype">double</span> longitude;
+<a name="l00018"></a><a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a2b06e426425e67ee988e6017cc2fb0db">00018</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a2b06e426425e67ee988e6017cc2fb0db">latitude</a>;
+<a name="l00019"></a><a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a1501ac2c9defc2fe2d1efa9c25aa895a">00019</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a1501ac2c9defc2fe2d1efa9c25aa895a">longitude</a>;
 <a name="l00020"></a>00020         } <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>;
 <a name="l00021"></a>00021         
-<a name="l00022"></a>00022         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> rdGeographicalPointRad(<span class="keywordtype">double</span> longitude, <span class="keywordtype">double</span> latitude)
+<a name="l00022"></a><a class="code" href="namespace_radolan.html#a18f5d88c0d64faf470ec5da27640b55c">00022</a>         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> <a class="code" href="namespace_radolan.html#a18f5d88c0d64faf470ec5da27640b55c">rdGeographicalPointRad</a>(<span class="keywordtype">double</span> longitude, <span class="keywordtype">double</span> latitude)
 <a name="l00023"></a>00023         {
 <a name="l00024"></a>00024                 <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> p;
-<a name="l00025"></a>00025                 p.longitude = longitude;
-<a name="l00026"></a>00026                 p.latitude = latitude;
+<a name="l00025"></a>00025                 p.<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a1501ac2c9defc2fe2d1efa9c25aa895a">longitude</a> = longitude;
+<a name="l00026"></a>00026                 p.<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a2b06e426425e67ee988e6017cc2fb0db">latitude</a> = latitude;
 <a name="l00027"></a>00027                 <span class="keywordflow">return</span> p;
 <a name="l00028"></a>00028         }
 <a name="l00029"></a>00029         
-<a name="l00030"></a>00030         <span class="keyword">inline</span> <span class="keywordtype">bool</span> RDEquals(RDGeographicalPointRad a, RDGeographicalPointRad b)
+<a name="l00030"></a><a class="code" href="namespace_radolan.html#a70c684affcd0d6564461f3391688fd12">00030</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_radolan.html#a70c684affcd0d6564461f3391688fd12">RDEquals</a>(<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> a, <a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> b)
 <a name="l00031"></a>00031         {
-<a name="l00032"></a>00032                 <span class="keywordflow">return</span> a.latitude == b.latitude &amp;&amp; a.longitude == b.longitude;
+<a name="l00032"></a>00032                 <span class="keywordflow">return</span> a.<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a2b06e426425e67ee988e6017cc2fb0db">latitude</a> == b.<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a2b06e426425e67ee988e6017cc2fb0db">latitude</a> &amp;&amp; a.<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a1501ac2c9defc2fe2d1efa9c25aa895a">longitude</a> == b.<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html#a1501ac2c9defc2fe2d1efa9c25aa895a">longitude</a>;
 <a name="l00033"></a>00033         }
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">        #define RDGeographicalPointRadUndefined rdGeographicalPointRad(NAN,NAN)</span>
+<a name="l00035"></a><a class="code" href="coordinatesystem_8h.html#a44cbb75f7067fd271096cfd72473d432">00035</a> <span class="preprocessor">        #define RDGeographicalPointRadUndefined rdGeographicalPointRad(NAN,NAN)</span>
 <a name="l00036"></a>00036 <span class="preprocessor"></span>        
 <a name="l00040"></a><a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">00040</a>         <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00041"></a>00041                 <span class="keywordtype">double</span> latitude;
-<a name="l00042"></a>00042                 <span class="keywordtype">double</span> longitude;
+<a name="l00041"></a><a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a70b69d0dda965a6335987d2823227bb2">00041</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a70b69d0dda965a6335987d2823227bb2">latitude</a>;
+<a name="l00042"></a><a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a428a168b94e50bfe71c0f9be6192a3c3">00042</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a428a168b94e50bfe71c0f9be6192a3c3">longitude</a>;
 <a name="l00043"></a>00043         } <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>;
 <a name="l00044"></a>00044         
-<a name="l00045"></a>00045         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> rdGeographicalPoint(<span class="keywordtype">double</span> longitude, <span class="keywordtype">double</span> latitude)
+<a name="l00045"></a><a class="code" href="namespace_radolan.html#a4a248e7ed53360c7ad274d8fa84e9f29">00045</a>         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> <a class="code" href="namespace_radolan.html#a4a248e7ed53360c7ad274d8fa84e9f29">rdGeographicalPoint</a>(<span class="keywordtype">double</span> longitude, <span class="keywordtype">double</span> latitude)
 <a name="l00046"></a>00046         {
 <a name="l00047"></a>00047                 <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> p;
-<a name="l00048"></a>00048                 p.longitude = longitude;
-<a name="l00049"></a>00049                 p.latitude = latitude;
+<a name="l00048"></a>00048                 p.<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a428a168b94e50bfe71c0f9be6192a3c3">longitude</a> = longitude;
+<a name="l00049"></a>00049                 p.<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a70b69d0dda965a6335987d2823227bb2">latitude</a> = latitude;
 <a name="l00050"></a>00050                 <span class="keywordflow">return</span> p;
 <a name="l00051"></a>00051         }
 <a name="l00052"></a>00052         
-<a name="l00053"></a>00053         <span class="keyword">inline</span> <span class="keywordtype">bool</span> RDEquals(RDGeographicalPoint a, RDGeographicalPoint b)
+<a name="l00053"></a><a class="code" href="namespace_radolan.html#a38a65f2517c7826e8a4f0d66b648185f">00053</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_radolan.html#a70c684affcd0d6564461f3391688fd12">RDEquals</a>(<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> a, <a class="code" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> b)
 <a name="l00054"></a>00054         {
-<a name="l00055"></a>00055                 <span class="keywordflow">return</span> a.latitude == b.latitude &amp;&amp; a.longitude == b.longitude;
+<a name="l00055"></a>00055                 <span class="keywordflow">return</span> a.<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a70b69d0dda965a6335987d2823227bb2">latitude</a> == b.<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a70b69d0dda965a6335987d2823227bb2">latitude</a> &amp;&amp; a.<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a428a168b94e50bfe71c0f9be6192a3c3">longitude</a> == b.<a class="code" href="struct_radolan_1_1_r_d_geographical_point.html#a428a168b94e50bfe71c0f9be6192a3c3">longitude</a>;
 <a name="l00056"></a>00056         }
 <a name="l00057"></a>00057         
-<a name="l00058"></a>00058 <span class="preprocessor">        #define RDGeographicalPointUndefined rdGeographicalPoint(NAN,NAN)</span>
+<a name="l00058"></a><a class="code" href="coordinatesystem_8h.html#a1f66937dcb459ceb26e417d1da8046ba">00058</a> <span class="preprocessor">        #define RDGeographicalPointUndefined rdGeographicalPoint(NAN,NAN)</span>
 <a name="l00059"></a>00059 <span class="preprocessor"></span>        
 <a name="l00063"></a><a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">00063</a>         <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00064"></a>00064                 <span class="keywordtype">double</span> x;
-<a name="l00065"></a>00065                 <span class="keywordtype">double</span> y;
+<a name="l00064"></a><a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a601e285ee3285165ac86b4051c02a2fe">00064</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a601e285ee3285165ac86b4051c02a2fe">x</a>;
+<a name="l00065"></a><a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a4c1da68cf6e95927e3d232c244379d3b">00065</a>                 <span class="keywordtype">double</span> <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a4c1da68cf6e95927e3d232c244379d3b">y</a>;
 <a name="l00066"></a>00066         } <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>;
 <a name="l00067"></a>00067         
-<a name="l00068"></a>00068         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> rdCartesianPoint(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y)
+<a name="l00068"></a><a class="code" href="namespace_radolan.html#a3f1fb5867c9d6e086655b2052371dbf2">00068</a>         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> <a class="code" href="namespace_radolan.html#a3f1fb5867c9d6e086655b2052371dbf2">rdCartesianPoint</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y)
 <a name="l00069"></a>00069         {
 <a name="l00070"></a>00070                 <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> p;
-<a name="l00071"></a>00071                 p.x = x;
-<a name="l00072"></a>00072                 p.y = y;
+<a name="l00071"></a>00071                 p.<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a601e285ee3285165ac86b4051c02a2fe">x</a> = x;
+<a name="l00072"></a>00072                 p.<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a4c1da68cf6e95927e3d232c244379d3b">y</a> = y;
 <a name="l00073"></a>00073                 <span class="keywordflow">return</span> p;
 <a name="l00074"></a>00074         }
 <a name="l00075"></a>00075         
-<a name="l00076"></a>00076         <span class="keyword">inline</span> <span class="keywordtype">bool</span> RDEquals(RDCartesianPoint a, RDCartesianPoint b)
+<a name="l00076"></a><a class="code" href="namespace_radolan.html#aa03cc6e6962580012f73cd045f9f41b5">00076</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_radolan.html#a70c684affcd0d6564461f3391688fd12">RDEquals</a>(<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> a, <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> b)
 <a name="l00077"></a>00077         {
-<a name="l00078"></a>00078                 <span class="keywordflow">return</span> a.x == b.x &amp;&amp; a.y == b.y;
+<a name="l00078"></a>00078                 <span class="keywordflow">return</span> a.<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a601e285ee3285165ac86b4051c02a2fe">x</a> == b.<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a601e285ee3285165ac86b4051c02a2fe">x</a> &amp;&amp; a.<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a4c1da68cf6e95927e3d232c244379d3b">y</a> == b.<a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html#a4c1da68cf6e95927e3d232c244379d3b">y</a>;
 <a name="l00079"></a>00079         }
 <a name="l00080"></a>00080         
-<a name="l00081"></a>00081 <span class="preprocessor">        #define RDCartesianPointUndefined rdCartesianPoint(NAN,NAN)</span>
+<a name="l00081"></a><a class="code" href="coordinatesystem_8h.html#ac1bcb6d128e4506262e973ee996769aa">00081</a> <span class="preprocessor">        #define RDCartesianPointUndefined rdCartesianPoint(NAN,NAN)</span>
 <a name="l00082"></a>00082 <span class="preprocessor"></span>        
 <a name="l00086"></a><a class="code" href="struct_radolan_1_1_r_d_grid_point.html">00086</a>         <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00087"></a>00087                 <span class="keywordtype">int</span> ix;
-<a name="l00088"></a>00088                 <span class="keywordtype">int</span> iy;
+<a name="l00087"></a><a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a2c3a7c8eb571c78ee8d337dcc0ca4098">00087</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a2c3a7c8eb571c78ee8d337dcc0ca4098">ix</a>;
+<a name="l00088"></a><a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a3d28e1d803339ab67a8b09fe2ebcfeb3">00088</a>                 <span class="keywordtype">int</span> <a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a3d28e1d803339ab67a8b09fe2ebcfeb3">iy</a>;
 <a name="l00089"></a>00089         } <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>;
 <a name="l00090"></a>00090         
-<a name="l00091"></a>00091         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> rdGridPoint(<span class="keywordtype">int</span> ix, <span class="keywordtype">int</span> iy)
+<a name="l00091"></a><a class="code" href="namespace_radolan.html#a9b3571a0925b1097c8a73e95fac407a9">00091</a>         <span class="keyword">inline</span> <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> <a class="code" href="namespace_radolan.html#a9b3571a0925b1097c8a73e95fac407a9">rdGridPoint</a>(<span class="keywordtype">int</span> ix, <span class="keywordtype">int</span> iy)
 <a name="l00092"></a>00092         {
 <a name="l00093"></a>00093                 <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p;
-<a name="l00094"></a>00094                 p.ix = ix;
-<a name="l00095"></a>00095                 p.iy = iy;
+<a name="l00094"></a>00094                 p.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a2c3a7c8eb571c78ee8d337dcc0ca4098">ix</a> = ix;
+<a name="l00095"></a>00095                 p.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a3d28e1d803339ab67a8b09fe2ebcfeb3">iy</a> = iy;
 <a name="l00096"></a>00096                 <span class="keywordflow">return</span> p;
 <a name="l00097"></a>00097         }
 <a name="l00098"></a>00098         
-<a name="l00099"></a>00099         <span class="keyword">inline</span> <span class="keywordtype">bool</span> RDEquals(RDGridPoint a, RDGridPoint b)
+<a name="l00099"></a><a class="code" href="namespace_radolan.html#aa876c085a7b11aa63da49343c5996912">00099</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespace_radolan.html#a70c684affcd0d6564461f3391688fd12">RDEquals</a>(<a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> a, <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> b)
 <a name="l00100"></a>00100         {
-<a name="l00101"></a>00101                 <span class="keywordflow">return</span> a.ix == b.ix &amp;&amp; a.iy == b.iy;
+<a name="l00101"></a>00101                 <span class="keywordflow">return</span> a.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a2c3a7c8eb571c78ee8d337dcc0ca4098">ix</a> == b.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a2c3a7c8eb571c78ee8d337dcc0ca4098">ix</a> &amp;&amp; a.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a3d28e1d803339ab67a8b09fe2ebcfeb3">iy</a> == b.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a3d28e1d803339ab67a8b09fe2ebcfeb3">iy</a>;
 <a name="l00102"></a>00102         }
 <a name="l00103"></a>00103         
-<a name="l00104"></a>00104 <span class="preprocessor">        #define RDGridPointUndefined rdGridPoint(-1, -1)</span>
+<a name="l00104"></a><a class="code" href="coordinatesystem_8h.html#a9aa09e0e10c556c6cdc63c21c11cd50d">00104</a> <span class="preprocessor">        #define RDGridPointUndefined rdGridPoint(-1, -1)</span>
 <a name="l00105"></a>00105 <span class="preprocessor"></span>        
-<a name="l00106"></a>00106         <span class="keyword">inline</span> RDDataType RDValueAt(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, RDGridPoint gridPoint) 
+<a name="l00106"></a><a class="code" href="namespace_radolan.html#a9ea43644938014e395e7549685ef9342">00106</a>         <span class="keyword">inline</span> <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="namespace_radolan.html#a9ea43644938014e395e7549685ef9342">RDValueAt</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> gridPoint) 
 <a name="l00107"></a>00107         {
-<a name="l00108"></a>00108                 <span class="keywordflow">return</span> scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[gridPoint.iy * scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a> + gridPoint.ix];
+<a name="l00108"></a>00108                 <span class="keywordflow">return</span> scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[gridPoint.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a3d28e1d803339ab67a8b09fe2ebcfeb3">iy</a> * scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a> + gridPoint.<a class="code" href="struct_radolan_1_1_r_d_grid_point.html#a2c3a7c8eb571c78ee8d337dcc0ca4098">ix</a>];
 <a name="l00109"></a>00109         }
 <a name="l00110"></a>00110 
 <a name="l00111"></a>00111         <span class="comment">//  1 | 2</span>
 <a name="l00112"></a>00112         <span class="comment">//  - + -</span>
 <a name="l00113"></a>00113         <span class="comment">//  0 | 3</span>
 <a name="l00114"></a>00114         
-<a name="l00115"></a>00115         <span class="keyword">typedef</span> <span class="keyword">enum</span> {
-<a name="l00116"></a>00116                 RDLowerLeft=0,
-<a name="l00117"></a>00117                 RDUpperLeft=1,
-<a name="l00118"></a>00118                 RDUpperRight=2,
-<a name="l00119"></a>00119                 RDLowerRight=3
-<a name="l00120"></a>00120         } RDGridQuadrant;
+<a name="l00115"></a><a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53">00115</a>         <span class="keyword">typedef</span> <span class="keyword">enum</span> {
+<a name="l00116"></a><a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53a96c8caeeb596a840a611fe4a7cbb36bc">00116</a>                 <a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53a96c8caeeb596a840a611fe4a7cbb36bc">RDLowerLeft</a>=0,
+<a name="l00117"></a><a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53a43cd49bd5f710dfcb9d36622a1f5c405">00117</a>                 <a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53a43cd49bd5f710dfcb9d36622a1f5c405">RDUpperLeft</a>=1,
+<a name="l00118"></a><a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53ab6b118568f5e7c548561c7c31947d6fa">00118</a>                 <a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53ab6b118568f5e7c548561c7c31947d6fa">RDUpperRight</a>=2,
+<a name="l00119"></a><a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53ac54331421ebe0bd12fe56267e497ad6b">00119</a>                 <a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53ac54331421ebe0bd12fe56267e497ad6b">RDLowerRight</a>=3
+<a name="l00120"></a>00120         } <a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53">RDGridQuadrant</a>;
 <a name="l00121"></a>00121         
 <a name="l00126"></a><a class="code" href="class_radolan_1_1_r_d_coordinate_system.html">00126</a>         <span class="keyword">class </span><a class="code" href="class_radolan_1_1_r_d_coordinate_system.html">RDCoordinateSystem</a> 
 <a name="l00127"></a>00127         {
 <a name="l00128"></a>00128         <span class="keyword">public</span>:
 <a name="l00129"></a>00129                 
-<a name="l00130"></a>00130                 <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html">RDCoordinateSystem</a>(RDScanType type);
+<a name="l00130"></a>00130                 <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a74b4d6b43f0272d220b3bdfbc1ae2c04">RDCoordinateSystem</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type);
 <a name="l00131"></a>00131                 
-<a name="l00132"></a>00132             <span class="keyword">virtual</span> ~<a class="code" href="class_radolan_1_1_r_d_coordinate_system.html">RDCoordinateSystem</a>();
+<a name="l00132"></a>00132             <span class="keyword">virtual</span> <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a9ea40fbd0c98efcaf55939e9c864b289">~RDCoordinateSystem</a>();
 <a name="l00133"></a>00133                 
-<a name="l00135"></a>00135                 <span class="keywordtype">void</span> <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a9f1d88aa680c912fc45d44f267217df8">setScanType</a>(RDScanType type);
+<a name="l00135"></a>00135                 <span class="keywordtype">void</span> <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a9f1d88aa680c912fc45d44f267217df8">setScanType</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type);
 <a name="l00136"></a>00136 
 <a name="l00141"></a>00141                 <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate</a>(<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>);
 <a name="l00142"></a>00142                 
@@ -240,7 +242,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00213"></a>00213                 
 <a name="l00220"></a>00220                 <a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a007de99f6659b8d6c74096d4f0056892">gridPoint</a>(<a class="code" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> g, <span class="keywordtype">bool</span>&amp; isInside);
 <a name="l00221"></a>00221 
-<a name="l00225"></a>00225                 RDGridQuadrant <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a4e95184baf0cd5c6e515d3c202b195ce">RDQuadrant</a>(<a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p);
+<a name="l00225"></a>00225                 <a class="code" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53">RDGridQuadrant</a> <a class="code" href="class_radolan_1_1_r_d_coordinate_system.html#a4e95184baf0cd5c6e515d3c202b195ce">RDQuadrant</a>(<a class="code" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p);
 <a name="l00226"></a>00226                 
 <a name="l00227"></a>00227         <span class="keyword">private</span>:
 <a name="l00228"></a>00228 
@@ -257,7 +259,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00239"></a>00239                 <span class="comment">// Offset of the origin from lower left corner (example: EX: -600, -800)</span>
 <a name="l00240"></a>00240                 <a class="code" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> m_offset;
 <a name="l00241"></a>00241                 
-<a name="l00242"></a>00242                 RDScanType m_scanType;
+<a name="l00242"></a>00242                 <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> m_scanType;
 <a name="l00243"></a>00243 
 <a name="l00244"></a>00244                 <span class="comment">// These are parameters of the projection itself and don&#39;t change</span>
 <a name="l00245"></a>00245                 <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> LAMBDA_0;
@@ -290,13 +292,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>coordinatesystem.h</b>      </li>
+      <li class="navelem"><a class="el" href="coordinatesystem_8h.html">coordinatesystem.h</a>      </li>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -306,7 +308,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 12:51:02 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

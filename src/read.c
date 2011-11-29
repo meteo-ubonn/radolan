@@ -18,8 +18,6 @@
 #ifdef __cplusplus
 namespace Radolan {
 #endif
-	
-	
 	// Define the static variables
 	
 	/** Reads a numerical value stored as ASCII in the given file at it's current position,

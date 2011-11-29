@@ -51,7 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -74,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -95,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">src/radolan_utils.cpp</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;radolan/radolan_utils.h&gt;</span>
+<a href="radolan__utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;<a class="code" href="radolan__utils_8h.html">radolan/radolan_utils.h</a>&gt;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 <span class="preprocessor">#include &lt;cmath&gt;</span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
@@ -108,27 +110,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00011"></a>00011 <span class="preprocessor"></span><span class="keyword">namespace </span>Radolan {
 <a name="l00012"></a>00012 <span class="preprocessor">#endif</span>
 <a name="l00013"></a>00013 <span class="preprocessor"></span>        
-<a name="l00014"></a>00014 <span class="preprocessor">#define RVP6_BASE_VALUE -32.5f</span>
+<a name="l00014"></a><a class="code" href="radolan__utils_8cpp.html#acf730e2279923b38880d8d620cb906c3">00014</a> <span class="preprocessor">#define RVP6_BASE_VALUE -32.5f</span>
 <a name="l00015"></a>00015 <span class="preprocessor"></span>        
-<a name="l00016"></a>00016         RDDataType RDMinValue(RDScanType t)
+<a name="l00016"></a><a class="code" href="radolan__utils_8cpp.html#a378ca9b48e08fcd3882fb0badb870dec">00016</a>         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t)
 <a name="l00017"></a>00017         {
 <a name="l00018"></a>00018                 <span class="keywordflow">switch</span>(t)
 <a name="l00019"></a>00019                 {
-<a name="l00020"></a>00020                         <span class="keywordflow">case</span> RD_RX:
-<a name="l00021"></a>00021                         <span class="keywordflow">case</span> RD_EX:
-<a name="l00022"></a>00022                                 <span class="keywordflow">return</span> RVP6_BASE_VALUE;
+<a name="l00020"></a>00020                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>:
+<a name="l00021"></a>00021                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
+<a name="l00022"></a>00022                                 <span class="keywordflow">return</span> <a class="code" href="radolan__utils_8cpp.html#acf730e2279923b38880d8d620cb906c3">RVP6_BASE_VALUE</a>;
 <a name="l00023"></a>00023                                 <span class="keywordflow">break</span>;
 <a name="l00024"></a>00024                         <span class="keywordflow">default</span>:
 <a name="l00025"></a>00025                                 <span class="keywordflow">return</span> 0.0;
 <a name="l00026"></a>00026                 };
 <a name="l00027"></a>00027         }
 <a name="l00028"></a>00028         
-<a name="l00029"></a>00029         RDDataType RDMaxValue(RDScanType t)
+<a name="l00029"></a><a class="code" href="radolan__utils_8cpp.html#a8385bdc477e02d00dfc71fc3f28c6ed7">00029</a>         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t)
 <a name="l00030"></a>00030         {
 <a name="l00031"></a>00031                 <span class="keywordflow">switch</span>(t)
 <a name="l00032"></a>00032                 {
-<a name="l00033"></a>00033                         <span class="keywordflow">case</span> RD_RX:
-<a name="l00034"></a>00034                         <span class="keywordflow">case</span> RD_EX:
+<a name="l00033"></a>00033                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>:
+<a name="l00034"></a>00034                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
 <a name="l00035"></a>00035                                 <span class="keywordflow">return</span> 95.0;
 <a name="l00036"></a>00036                                 <span class="keywordflow">break</span>; 
 <a name="l00037"></a>00037                         <span class="keywordflow">default</span>:
@@ -136,64 +138,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00039"></a>00039                 };
 <a name="l00040"></a>00040         }
 <a name="l00041"></a>00041         
-<a name="l00042"></a>00042         RDDataType RDMissingValue(RDScanType t)
+<a name="l00042"></a><a class="code" href="radolan__utils_8cpp.html#a6269d2a21ecad7c4f01afc82332565ed">00042</a>         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a6269d2a21ecad7c4f01afc82332565ed">RDMissingValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t)
 <a name="l00043"></a>00043         {
 <a name="l00044"></a>00044                 <span class="keywordflow">switch</span>(t)
 <a name="l00045"></a>00045                 {
-<a name="l00046"></a>00046                         <span class="keywordflow">case</span> RD_RX:
-<a name="l00047"></a>00047                         <span class="keywordflow">case</span> RD_EX:
-<a name="l00048"></a>00048                                 <span class="keywordflow">return</span> RD_DBZ_OUTSIDEVALUE;
+<a name="l00046"></a>00046                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>:
+<a name="l00047"></a>00047                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
+<a name="l00048"></a>00048                                 <span class="keywordflow">return</span> <a class="code" href="types_8h.html#ab60370e3f38dde4c117321c47f3080d6">RD_DBZ_OUTSIDEVALUE</a>;
 <a name="l00049"></a>00049                                 <span class="keywordflow">break</span>;
 <a name="l00050"></a>00050                         <span class="keywordflow">default</span>:
-<a name="l00051"></a>00051                                 <span class="keywordflow">return</span> RD_ERROR_VALUE;
+<a name="l00051"></a>00051                                 <span class="keywordflow">return</span> <a class="code" href="types_8h.html#a1f3b33354a7e877c49fa8a123a56914c">RD_ERROR_VALUE</a>;
 <a name="l00052"></a>00052                 };
 <a name="l00053"></a>00053         }
 <a name="l00054"></a>00054         
-<a name="l00055"></a>00055         RDDataType RDClutterValue(RDScanType t)
+<a name="l00055"></a><a class="code" href="radolan__utils_8cpp.html#a6a1537cca5f0b597d2970e8549b874f5">00055</a>         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a6a1537cca5f0b597d2970e8549b874f5">RDClutterValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t)
 <a name="l00056"></a>00056         {
 <a name="l00057"></a>00057                 <span class="keywordflow">switch</span>(t)
 <a name="l00058"></a>00058                 {
-<a name="l00059"></a>00059                         <span class="keywordflow">case</span> RD_RX:
-<a name="l00060"></a>00060                         <span class="keywordflow">case</span> RD_EX:
+<a name="l00059"></a>00059                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>:
+<a name="l00060"></a>00060                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
 <a name="l00061"></a>00061                                 <span class="keywordflow">return</span> 92.0f;
 <a name="l00062"></a>00062                                 <span class="keywordflow">break</span>;
 <a name="l00063"></a>00063                         <span class="keywordflow">default</span>:
-<a name="l00064"></a>00064                                 <span class="keywordflow">return</span> RD_CLUTTER_VALUE;
+<a name="l00064"></a>00064                                 <span class="keywordflow">return</span> <a class="code" href="types_8h.html#adf20616c8f35e0f3c61dcb07336ad9ea">RD_CLUTTER_VALUE</a>;
 <a name="l00065"></a>00065                 };
 <a name="l00066"></a>00066         }
 <a name="l00067"></a>00067         
-<a name="l00068"></a>00068         <span class="keywordtype">int</span> RDIsCleanMeasurement(RDScanType t, RDDataType value)
+<a name="l00068"></a><a class="code" href="radolan__utils_8cpp.html#a9930a364403d3d7a589d13eff9c8d709">00068</a>         <span class="keywordtype">int</span> <a class="code" href="radolan__utils_8h.html#a9930a364403d3d7a589d13eff9c8d709">RDIsCleanMeasurement</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> value)
 <a name="l00069"></a>00069         {
-<a name="l00070"></a>00070                 <span class="keywordflow">return</span> (value &gt;= RDMinValue(t) &amp;&amp;
-<a name="l00071"></a>00071                                 value &lt;= RDMaxValue(t) &amp;&amp;
-<a name="l00072"></a>00072                                 value != RDMissingValue(t) &amp;&amp;
-<a name="l00073"></a>00073                                 value != RDClutterValue(t));
+<a name="l00070"></a>00070                 <span class="keywordflow">return</span> (value &gt;= <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(t) &amp;&amp;
+<a name="l00071"></a>00071                                 value &lt;= <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(t) &amp;&amp;
+<a name="l00072"></a>00072                                 value != <a class="code" href="radolan__utils_8h.html#a6269d2a21ecad7c4f01afc82332565ed">RDMissingValue</a>(t) &amp;&amp;
+<a name="l00073"></a>00073                                 value != <a class="code" href="radolan__utils_8h.html#a6a1537cca5f0b597d2970e8549b874f5">RDClutterValue</a>(t));
 <a name="l00074"></a>00074         }
 <a name="l00075"></a>00075         
-<a name="l00076"></a>00076         <span class="keywordtype">int</span> RDIsCleanMeasurementAndNotMin(RDScanType t, RDDataType value)
+<a name="l00076"></a><a class="code" href="radolan__utils_8cpp.html#a1b63f0fd9a68075c714d50fe4ab95335">00076</a>         <span class="keywordtype">int</span> <a class="code" href="radolan__utils_8h.html#a1b63f0fd9a68075c714d50fe4ab95335">RDIsCleanMeasurementAndNotMin</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> value)
 <a name="l00077"></a>00077         {
-<a name="l00078"></a>00078                 <span class="keywordflow">return</span> (value &gt; RDMinValue(t) &amp;&amp;
-<a name="l00079"></a>00079                                 value &lt;= RDMaxValue(t) &amp;&amp;
-<a name="l00080"></a>00080                                 value != RDMissingValue(t) &amp;&amp;
-<a name="l00081"></a>00081                                 value != RDClutterValue(t));
+<a name="l00078"></a>00078                 <span class="keywordflow">return</span> (value &gt; <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(t) &amp;&amp;
+<a name="l00079"></a>00079                                 value &lt;= <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(t) &amp;&amp;
+<a name="l00080"></a>00080                                 value != <a class="code" href="radolan__utils_8h.html#a6269d2a21ecad7c4f01afc82332565ed">RDMissingValue</a>(t) &amp;&amp;
+<a name="l00081"></a>00081                                 value != <a class="code" href="radolan__utils_8h.html#a6a1537cca5f0b597d2970e8549b874f5">RDClutterValue</a>(t));
 <a name="l00082"></a>00082         }
 <a name="l00083"></a>00083         
-<a name="l00084"></a>00084         <span class="keywordtype">float</span> RDRainrateFromDezibels(RDDataType dezibels)
+<a name="l00084"></a><a class="code" href="radolan__utils_8cpp.html#aff5f4a96b528c38cf6299278ded3e665">00084</a>         <span class="keywordtype">float</span> <a class="code" href="radolan__utils_8h.html#aff5f4a96b528c38cf6299278ded3e665">RDRainrateFromDezibels</a>(<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> dezibels)
 <a name="l00085"></a>00085         {
 <a name="l00086"></a>00086                 <span class="keywordflow">return</span> powf(dezibels/256.0f,1.0f/1.42f);
 <a name="l00087"></a>00087         }
 <a name="l00088"></a>00088         
-<a name="l00089"></a>00089         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> RDRVP6ToByteValue( <span class="keywordtype">float</span> rvp6 )
+<a name="l00089"></a><a class="code" href="radolan__utils_8cpp.html#a768e4f2cec213f1fe3e28c70be7e0b24">00089</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="radolan__utils_8h.html#a768e4f2cec213f1fe3e28c70be7e0b24">RDRVP6ToByteValue</a>( <span class="keywordtype">float</span> rvp6 )
 <a name="l00090"></a>00090         {
-<a name="l00091"></a>00091                 <span class="keywordflow">return</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) 2u * (rvp6 - RVP6_BASE_VALUE);
+<a name="l00091"></a>00091                 <span class="keywordflow">return</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) 2u * (rvp6 - <a class="code" href="radolan__utils_8cpp.html#acf730e2279923b38880d8d620cb906c3">RVP6_BASE_VALUE</a>);
 <a name="l00092"></a>00092         }
 <a name="l00093"></a>00093         
-<a name="l00094"></a>00094         <span class="keywordtype">float</span> RDByteToRVP6Value( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> byteValue )
+<a name="l00094"></a><a class="code" href="radolan__utils_8cpp.html#af3312e43d28079276acfbaebdb161d5a">00094</a>         <span class="keywordtype">float</span> <a class="code" href="radolan__utils_8h.html#af3312e43d28079276acfbaebdb161d5a">RDByteToRVP6Value</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> byteValue )
 <a name="l00095"></a>00095         {
-<a name="l00096"></a>00096                 <span class="keywordflow">return</span> RVP6_BASE_VALUE + ((float)byteValue) / 2.0f;
+<a name="l00096"></a>00096                 <span class="keywordflow">return</span> <a class="code" href="radolan__utils_8cpp.html#acf730e2279923b38880d8d620cb906c3">RVP6_BASE_VALUE</a> + ((float)byteValue) / 2.0f;
 <a name="l00097"></a>00097         }
 <a name="l00098"></a>00098         
-<a name="l00099"></a>00099         <span class="keywordtype">void</span> RDScanTime(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keyword">struct</span> tm * t)
+<a name="l00099"></a><a class="code" href="radolan__utils_8cpp.html#a2b881727f4a83d14608660aed7817eac">00099</a>         <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#acfd9723543d916fbb6b1d036c3c223ac">RDScanTime</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keyword">struct</span> tm * t)
 <a name="l00100"></a>00100         {
 <a name="l00101"></a>00101           <span class="comment">// find out if Daylight Saving Time is on</span>
 <a name="l00102"></a>00102           <span class="comment">// by obtaining local time</span>
@@ -209,22 +211,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00112"></a>00112 
 <a name="l00113"></a>00113           <span class="comment">// construct the server timestamp @ GMT with DST set up correctly</span>
 <a name="l00114"></a>00114           t-&gt;tm_sec = 0;
-<a name="l00115"></a>00115           t-&gt;tm_min = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.minute;
-<a name="l00116"></a>00116           t-&gt;tm_hour = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.hour;
-<a name="l00117"></a>00117           t-&gt;tm_mday = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.day;
-<a name="l00118"></a>00118           t-&gt;tm_mon = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.month;
+<a name="l00115"></a>00115           t-&gt;tm_min = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a541775e6ff7412a83648dd105193df02">minute</a>;
+<a name="l00116"></a>00116           t-&gt;tm_hour = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a39050709e2f83542f48774ab145f49da">hour</a>;
+<a name="l00117"></a>00117           t-&gt;tm_mday = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a80d507134e41e21cff7c4405c7033a6d">day</a>;
+<a name="l00118"></a>00118           t-&gt;tm_mon = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#aff58e4d175a5efb321df4d4e94aaf4f0">month</a>;
 <a name="l00119"></a>00119           
-<a name="l00120"></a>00120           printf(<span class="stringliteral">&quot;SCAN HEADER MONTH = %d\n&quot;</span>,scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.month );
+<a name="l00120"></a>00120           printf(<span class="stringliteral">&quot;SCAN HEADER MONTH = %d\n&quot;</span>,scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#aff58e4d175a5efb321df4d4e94aaf4f0">month</a> );
 <a name="l00121"></a>00121 
-<a name="l00122"></a>00122           t-&gt;tm_year = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.year + 100; <span class="comment">// man mktime</span>
+<a name="l00122"></a>00122           t-&gt;tm_year = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#ae5a3a867e44291b5de5357f5794278d7">year</a> + 100; <span class="comment">// man mktime</span>
 <a name="l00123"></a>00123         }
 <a name="l00124"></a>00124         
-<a name="l00125"></a>00125         <span class="keywordtype">size_t</span> RDBytesPerPixel(RDScanType type)
+<a name="l00125"></a><a class="code" href="radolan__utils_8cpp.html#aa18332d1789571d9185e270bf76b5901">00125</a>         <span class="keywordtype">size_t</span> <a class="code" href="radolan__utils_8h.html#aa18332d1789571d9185e270bf76b5901">RDBytesPerPixel</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type)
 <a name="l00126"></a>00126         {
 <a name="l00127"></a>00127                 <span class="keywordflow">switch</span> (type) 
 <a name="l00128"></a>00128                 {
-<a name="l00129"></a>00129                         <span class="keywordflow">case</span> RD_RX: 
-<a name="l00130"></a>00130                         <span class="keywordflow">case</span> RD_EX:
+<a name="l00129"></a>00129                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>: 
+<a name="l00130"></a>00130                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
 <a name="l00131"></a>00131                                 <span class="keywordflow">return</span> 1;
 <a name="l00132"></a>00132                                 <span class="keywordflow">break</span>;
 <a name="l00133"></a>00133                         <span class="keywordflow">default</span>:
@@ -232,40 +234,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00135"></a>00135                 }
 <a name="l00136"></a>00136         }
 <a name="l00137"></a>00137         
-<a name="l00138"></a>00138         <span class="keywordtype">float</span> RDMMPerHour(RDScanType t, RDDataType value)
+<a name="l00138"></a><a class="code" href="radolan__utils_8cpp.html#aeb080085895141fb4339532d34935a2c">00138</a>         <span class="keywordtype">float</span> <a class="code" href="radolan__utils_8h.html#aeb080085895141fb4339532d34935a2c">RDMMPerHour</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> value)
 <a name="l00139"></a>00139         {
 <a name="l00140"></a>00140                 <span class="keywordtype">float</span> result = (float)value;
 <a name="l00141"></a>00141                 <span class="keywordflow">switch</span> (t) {
-<a name="l00142"></a>00142                         <span class="keywordflow">case</span> RD_RX:
-<a name="l00143"></a>00143                         <span class="keywordflow">case</span> RD_EX:
+<a name="l00142"></a>00142                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>:
+<a name="l00143"></a>00143                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
 <a name="l00144"></a>00144                                 result = -INFINITY;
 <a name="l00145"></a>00145                                 <span class="keywordflow">break</span>;
-<a name="l00146"></a>00146                         <span class="keywordflow">case</span> RD_RZ:
-<a name="l00147"></a>00147                         <span class="keywordflow">case</span> RD_RY:
-<a name="l00148"></a>00148                         <span class="keywordflow">case</span> RD_RV:     
-<a name="l00149"></a>00149                         <span class="keywordflow">case</span> RD_EZ:
+<a name="l00146"></a>00146                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a55c27e5c384c37c769d192f8ae4aff0f">RD_RZ</a>:
+<a name="l00147"></a>00147                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a026456c22055e50119e12adf7d4e245f">RD_RY</a>:
+<a name="l00148"></a>00148                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aa1bf738c4f5ab522cf40fdbee065f8dc">RD_RV</a>:     
+<a name="l00149"></a>00149                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a7694e02b3f380d4be66ee9e604238251">RD_EZ</a>:
 <a name="l00150"></a>00150                                 <span class="comment">// 1/100 mm / 5 min</span>
 <a name="l00151"></a>00151                                 result = value * 12.0f / 100.0f;
 <a name="l00152"></a>00152                                 <span class="keywordflow">break</span>;
-<a name="l00153"></a>00153                         <span class="keywordflow">case</span> RD_RH:
-<a name="l00154"></a>00154                         <span class="keywordflow">case</span> RD_RB:
-<a name="l00155"></a>00155                         <span class="keywordflow">case</span> RD_RW:
-<a name="l00156"></a>00156                         <span class="keywordflow">case</span> RD_RL:
-<a name="l00157"></a>00157                         <span class="keywordflow">case</span> RD_RU:
-<a name="l00158"></a>00158                         <span class="keywordflow">case</span> RD_RS:
-<a name="l00159"></a>00159                         <span class="keywordflow">case</span> RD_RQ:
+<a name="l00153"></a>00153                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6ea2b3411008b32316c77b2e81a8c1e3">RD_RH</a>:
+<a name="l00154"></a>00154                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a2fbf2dbd955073f09de6195c5100726f">RD_RB</a>:
+<a name="l00155"></a>00155                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6751fd644965de8610813ac1b9bbc0a2">RD_RW</a>:
+<a name="l00156"></a>00156                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a81209edefd28694917e67730c74c1abd">RD_RL</a>:
+<a name="l00157"></a>00157                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae21b0f1d80524523104df779a7c56abd">RD_RU</a>:
+<a name="l00158"></a>00158                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb5b86a87d42a00625ad72224e2c00fc">RD_RS</a>:
+<a name="l00159"></a>00159                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a14fea87cc9e07d49ae06c7c400d574c9">RD_RQ</a>:
 <a name="l00160"></a>00160                                 <span class="comment">// 1/10 mm / h</span>
 <a name="l00161"></a>00161                                 result /= 10.0f;
 <a name="l00162"></a>00162                                 <span class="keywordflow">break</span>;
-<a name="l00163"></a>00163                         <span class="keywordflow">case</span> RD_SQ:
+<a name="l00163"></a>00163                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a17926e3592d6385c5caf8da92eb1427c">RD_SQ</a>:
 <a name="l00164"></a>00164                                 <span class="comment">// 1/10 mm / 6h</span>
 <a name="l00165"></a>00165                                 result = value / 10.0f;
 <a name="l00166"></a>00166                                 <span class="keywordflow">break</span>;
-<a name="l00167"></a>00167                         <span class="keywordflow">case</span> RD_SH:
+<a name="l00167"></a>00167                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a68ab6de6aabd4e6899ea7ea9601206a5">RD_SH</a>:
 <a name="l00168"></a>00168                                 <span class="comment">// 1/10 mm / 12h</span>
 <a name="l00169"></a>00169                                 result = value / 10.0f;
 <a name="l00170"></a>00170                                 <span class="keywordflow">break</span>;
-<a name="l00171"></a>00171                         <span class="keywordflow">case</span> RD_SF:
+<a name="l00171"></a>00171                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a575ecce3e7d60bd00acbbf7025a34789">RD_SF</a>:
 <a name="l00172"></a>00172                                 <span class="comment">// 1/10 mm / 24h</span>
 <a name="l00173"></a>00173                                 <span class="keywordflow">break</span>;
 <a name="l00174"></a>00174                         <span class="keywordflow">default</span>:
@@ -275,163 +277,163 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00178"></a>00178                 <span class="keywordflow">return</span> result;
 <a name="l00179"></a>00179         }
 <a name="l00180"></a>00180         
-<a name="l00181"></a>00181         <span class="keyword">const</span> <span class="keywordtype">char</span>* RDScanTypeToString(RDScanType type) 
+<a name="l00181"></a><a class="code" href="radolan__utils_8cpp.html#af1e558a35e52cf297689ee2831bc27fc">00181</a>         <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="radolan__utils_8h.html#af1e558a35e52cf297689ee2831bc27fc">RDScanTypeToString</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type) 
 <a name="l00182"></a>00182         {
 <a name="l00183"></a>00183                 <span class="keywordflow">switch</span> (type) 
 <a name="l00184"></a>00184                 {
-<a name="l00185"></a>00185                         <span class="keywordflow">case</span> RD_RX: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RX&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00186"></a>00186                         <span class="keywordflow">case</span> RD_RO: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RO&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00187"></a>00187                         <span class="keywordflow">case</span> RD_RK: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RK&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00188"></a>00188                         <span class="keywordflow">case</span> RD_RZ: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RZ&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00189"></a>00189                         <span class="keywordflow">case</span> RD_RY: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RY&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00190"></a>00190                         <span class="keywordflow">case</span> RD_RH: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RH&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00191"></a>00191                         <span class="keywordflow">case</span> RD_RJ: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RJ&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00192"></a>00192                         <span class="keywordflow">case</span> RD_RP: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RP&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00193"></a>00193                         <span class="keywordflow">case</span> RD_RT: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RT&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00194"></a>00194                         <span class="keywordflow">case</span> RD_RC: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RC&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00195"></a>00195                         <span class="keywordflow">case</span> RD_RI: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RI&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00196"></a>00196                         <span class="keywordflow">case</span> RD_RG: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RG&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00197"></a>00197                         <span class="keywordflow">case</span> RD_RB: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RB&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00198"></a>00198                         <span class="keywordflow">case</span> RD_RA: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RA&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00199"></a>00199                         <span class="keywordflow">case</span> RD_RM: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RM&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00200"></a>00200                         <span class="keywordflow">case</span> RD_RL: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RL&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00201"></a>00201                         <span class="keywordflow">case</span> RD_RN: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RN&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00202"></a>00202                         <span class="keywordflow">case</span> RD_RD: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RD&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00203"></a>00203                         <span class="keywordflow">case</span> RD_RF: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RF&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00204"></a>00204                         <span class="keywordflow">case</span> RD_RW: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RW&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00205"></a>00205                         <span class="keywordflow">case</span> RD_RU: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RU&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00206"></a>00206                         <span class="keywordflow">case</span> RD_RR: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RR&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00207"></a>00207                         <span class="keywordflow">case</span> RD_SQ: <span class="keywordflow">return</span> <span class="stringliteral">&quot;SQ&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00208"></a>00208                         <span class="keywordflow">case</span> RD_SH: <span class="keywordflow">return</span> <span class="stringliteral">&quot;SH&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00209"></a>00209                         <span class="keywordflow">case</span> RD_SF: <span class="keywordflow">return</span> <span class="stringliteral">&quot;SF&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00210"></a>00210                         <span class="keywordflow">case</span> RD_RV: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RV&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00211"></a>00211                         <span class="keywordflow">case</span> RD_RS: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RS&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00212"></a>00212                         <span class="keywordflow">case</span> RD_RQ: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RQ&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00213"></a>00213                         <span class="keywordflow">case</span> RD_TZ: <span class="keywordflow">return</span> <span class="stringliteral">&quot;TZ&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00214"></a>00214                         <span class="keywordflow">case</span> RD_TH: <span class="keywordflow">return</span> <span class="stringliteral">&quot;TH&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00215"></a>00215                 <span class="keywordflow">case</span> RD_EX: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EX&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00216"></a>00216                         <span class="keywordflow">case</span> RD_EZ: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EZ&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00217"></a>00217                         <span class="keywordflow">case</span> RD_EH: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EH&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00218"></a>00218                         <span class="keywordflow">case</span> RD_EB: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EB&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00219"></a>00219                         <span class="keywordflow">case</span> RD_EW: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EW&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00185"></a>00185                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RX&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00186"></a>00186                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a36dc771af56a3daa0520fb70a59359e7">RD_RO</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RO&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00187"></a>00187                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8000df036c3cafd902b01d45fbddf963">RD_RK</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RK&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00188"></a>00188                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a55c27e5c384c37c769d192f8ae4aff0f">RD_RZ</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RZ&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00189"></a>00189                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a026456c22055e50119e12adf7d4e245f">RD_RY</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RY&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00190"></a>00190                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6ea2b3411008b32316c77b2e81a8c1e3">RD_RH</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RH&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00191"></a>00191                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aad526b4a1aa52a78e479e9db17b17ad8">RD_RJ</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RJ&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00192"></a>00192                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adfe712bb588d589ac41fa12c848f4212">RD_RP</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RP&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00193"></a>00193                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0a404103933348e3d950ee724e052b41">RD_RT</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RT&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00194"></a>00194                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a49cd58d6cec4c0528480bd653f253bef">RD_RC</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RC&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00195"></a>00195                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57add108899a73bd58819aecb0b0c598491">RD_RI</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RI&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00196"></a>00196                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aac71fb98d247605711edddb8f1efaef0">RD_RG</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RG&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00197"></a>00197                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a2fbf2dbd955073f09de6195c5100726f">RD_RB</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RB&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00198"></a>00198                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57afeb9eaf496b0305009733bec9a259675">RD_RA</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RA&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00199"></a>00199                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8eff6ee2bdaf75c9d0280544803ec964">RD_RM</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RM&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00200"></a>00200                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a81209edefd28694917e67730c74c1abd">RD_RL</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RL&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00201"></a>00201                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0e5661c0bbd80e95dc8e3ef3a4ecfae3">RD_RN</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RN&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00202"></a>00202                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a18d9a52bdd558335036c6aa6aa3bbaec">RD_RD</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RD&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00203"></a>00203                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a776a8872059f757f659e0ae0df72134c">RD_RF</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RF&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00204"></a>00204                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6751fd644965de8610813ac1b9bbc0a2">RD_RW</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RW&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00205"></a>00205                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae21b0f1d80524523104df779a7c56abd">RD_RU</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RU&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00206"></a>00206                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aba14e71748ca8a45630a530ea28d904c">RD_RR</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RR&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00207"></a>00207                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a17926e3592d6385c5caf8da92eb1427c">RD_SQ</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;SQ&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00208"></a>00208                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a68ab6de6aabd4e6899ea7ea9601206a5">RD_SH</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;SH&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00209"></a>00209                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a575ecce3e7d60bd00acbbf7025a34789">RD_SF</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;SF&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00210"></a>00210                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aa1bf738c4f5ab522cf40fdbee065f8dc">RD_RV</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RV&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00211"></a>00211                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb5b86a87d42a00625ad72224e2c00fc">RD_RS</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RS&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00212"></a>00212                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a14fea87cc9e07d49ae06c7c400d574c9">RD_RQ</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;RQ&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00213"></a>00213                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a09e2819f00a8e051c582ad1b9a1f8809">RD_TZ</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;TZ&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00214"></a>00214                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae15640e5d43b7be7a36c22c825f92dfb">RD_TH</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;TH&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00215"></a>00215                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EX&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00216"></a>00216                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a7694e02b3f380d4be66ee9e604238251">RD_EZ</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EZ&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00217"></a>00217                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb43a1abba544b0d4614824a569a62a8">RD_EH</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EH&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00218"></a>00218                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a657af16e748d1af2a6ae937453977ec9">RD_EB</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EB&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00219"></a>00219                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a9da210fbab14243c9de78d375dea74d4">RD_EW</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EW&quot;</span>; <span class="keywordflow">break</span>;
 <a name="l00220"></a>00220                         <span class="keywordflow">default</span>:        
 <a name="l00221"></a>00221                                 <span class="keywordflow">return</span> <span class="stringliteral">&quot;UNKNOWN&quot;</span>;
 <a name="l00222"></a>00222                 }
 <a name="l00223"></a>00223         }
 <a name="l00224"></a>00224         
-<a name="l00225"></a>00225         RDScanType RDScanTypeFromString(<span class="keyword">const</span> <span class="keywordtype">char</span>* str)
+<a name="l00225"></a><a class="code" href="radolan__utils_8cpp.html#a7283ebe5af25f7c563f09a7d7a66c9fe">00225</a>         <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> <a class="code" href="radolan__utils_8h.html#a7283ebe5af25f7c563f09a7d7a66c9fe">RDScanTypeFromString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str)
 <a name="l00226"></a>00226         {
-<a name="l00227"></a>00227                 RDScanType type = RD_UNKNOWN;
+<a name="l00227"></a>00227                 <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8eb82c7d125206f128b36e50250d940a">RD_UNKNOWN</a>;
 <a name="l00228"></a>00228                 <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RX&quot;</span>)==0) {
-<a name="l00229"></a>00229                         type = RD_RX;
+<a name="l00229"></a>00229                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>;
 <a name="l00230"></a>00230                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RO&quot;</span>)==0) {
-<a name="l00231"></a>00231                         type = RD_RO;
+<a name="l00231"></a>00231                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a36dc771af56a3daa0520fb70a59359e7">RD_RO</a>;
 <a name="l00232"></a>00232                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RK&quot;</span>)==0) {
-<a name="l00233"></a>00233                         type = RD_RK;
+<a name="l00233"></a>00233                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8000df036c3cafd902b01d45fbddf963">RD_RK</a>;
 <a name="l00234"></a>00234                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RZ&quot;</span>)==0) {
-<a name="l00235"></a>00235                         type = RD_RZ;
+<a name="l00235"></a>00235                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a55c27e5c384c37c769d192f8ae4aff0f">RD_RZ</a>;
 <a name="l00236"></a>00236                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RX&quot;</span>)==0) {
-<a name="l00237"></a>00237                         type = RD_RX;
+<a name="l00237"></a>00237                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>;
 <a name="l00238"></a>00238                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RY&quot;</span>)==0) {
-<a name="l00239"></a>00239                         type = RD_RY;
+<a name="l00239"></a>00239                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a026456c22055e50119e12adf7d4e245f">RD_RY</a>;
 <a name="l00240"></a>00240                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RH&quot;</span>)==0) {
-<a name="l00241"></a>00241                         type = RD_RH;
+<a name="l00241"></a>00241                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6ea2b3411008b32316c77b2e81a8c1e3">RD_RH</a>;
 <a name="l00242"></a>00242                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RJ&quot;</span>)==0) {
-<a name="l00243"></a>00243                         type = RD_RJ;
+<a name="l00243"></a>00243                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aad526b4a1aa52a78e479e9db17b17ad8">RD_RJ</a>;
 <a name="l00244"></a>00244                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RP&quot;</span>)==0) {
-<a name="l00245"></a>00245                         type = RD_RP;
+<a name="l00245"></a>00245                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adfe712bb588d589ac41fa12c848f4212">RD_RP</a>;
 <a name="l00246"></a>00246                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RT&quot;</span>)==0) {
-<a name="l00247"></a>00247                         type = RD_RT;
+<a name="l00247"></a>00247                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0a404103933348e3d950ee724e052b41">RD_RT</a>;
 <a name="l00248"></a>00248                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RC&quot;</span>)==0) {
-<a name="l00249"></a>00249                         type = RD_RC;
+<a name="l00249"></a>00249                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a49cd58d6cec4c0528480bd653f253bef">RD_RC</a>;
 <a name="l00250"></a>00250                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RI&quot;</span>)==0) {
-<a name="l00251"></a>00251                         type = RD_RI;
+<a name="l00251"></a>00251                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57add108899a73bd58819aecb0b0c598491">RD_RI</a>;
 <a name="l00252"></a>00252                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RG&quot;</span>)==0) {
-<a name="l00253"></a>00253                         type = RD_RG;
+<a name="l00253"></a>00253                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aac71fb98d247605711edddb8f1efaef0">RD_RG</a>;
 <a name="l00254"></a>00254                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RB&quot;</span>)==0) {
-<a name="l00255"></a>00255                         type = RD_RB;
+<a name="l00255"></a>00255                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a2fbf2dbd955073f09de6195c5100726f">RD_RB</a>;
 <a name="l00256"></a>00256                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RA&quot;</span>)==0) {
-<a name="l00257"></a>00257                         type = RD_RA;
+<a name="l00257"></a>00257                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57afeb9eaf496b0305009733bec9a259675">RD_RA</a>;
 <a name="l00258"></a>00258                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RM&quot;</span>)==0) {
-<a name="l00259"></a>00259                         type = RD_RM;
+<a name="l00259"></a>00259                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8eff6ee2bdaf75c9d0280544803ec964">RD_RM</a>;
 <a name="l00260"></a>00260                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RL&quot;</span>)==0) {
-<a name="l00261"></a>00261                         type = RD_RL;
+<a name="l00261"></a>00261                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a81209edefd28694917e67730c74c1abd">RD_RL</a>;
 <a name="l00262"></a>00262                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RN&quot;</span>)==0) {
-<a name="l00263"></a>00263                         type = RD_RN;
+<a name="l00263"></a>00263                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0e5661c0bbd80e95dc8e3ef3a4ecfae3">RD_RN</a>;
 <a name="l00264"></a>00264                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RD&quot;</span>)==0) {
-<a name="l00265"></a>00265                         type = RD_RD;
+<a name="l00265"></a>00265                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a18d9a52bdd558335036c6aa6aa3bbaec">RD_RD</a>;
 <a name="l00266"></a>00266                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RF&quot;</span>)==0) {
-<a name="l00267"></a>00267                         type = RD_RF;
+<a name="l00267"></a>00267                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a776a8872059f757f659e0ae0df72134c">RD_RF</a>;
 <a name="l00268"></a>00268                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RW&quot;</span>)==0) {
-<a name="l00269"></a>00269                         type = RD_RW;
+<a name="l00269"></a>00269                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6751fd644965de8610813ac1b9bbc0a2">RD_RW</a>;
 <a name="l00270"></a>00270                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RU&quot;</span>)==0) {
-<a name="l00271"></a>00271                         type = RD_RU;
+<a name="l00271"></a>00271                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae21b0f1d80524523104df779a7c56abd">RD_RU</a>;
 <a name="l00272"></a>00272                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RR&quot;</span>)==0) {
-<a name="l00273"></a>00273                         type = RD_RR;
+<a name="l00273"></a>00273                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aba14e71748ca8a45630a530ea28d904c">RD_RR</a>;
 <a name="l00274"></a>00274                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;SQ&quot;</span>)==0) {
-<a name="l00275"></a>00275                         type = RD_SQ;
+<a name="l00275"></a>00275                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a17926e3592d6385c5caf8da92eb1427c">RD_SQ</a>;
 <a name="l00276"></a>00276                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;SH&quot;</span>)==0) {
-<a name="l00277"></a>00277                         type = RD_SH;
+<a name="l00277"></a>00277                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a68ab6de6aabd4e6899ea7ea9601206a5">RD_SH</a>;
 <a name="l00278"></a>00278                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;SF&quot;</span>)==0) {
-<a name="l00279"></a>00279                         type = RD_SF;
+<a name="l00279"></a>00279                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a575ecce3e7d60bd00acbbf7025a34789">RD_SF</a>;
 <a name="l00280"></a>00280                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RV&quot;</span>)==0) {
-<a name="l00281"></a>00281                         type = RD_RV;
+<a name="l00281"></a>00281                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aa1bf738c4f5ab522cf40fdbee065f8dc">RD_RV</a>;
 <a name="l00282"></a>00282                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RS&quot;</span>)==0) {
-<a name="l00283"></a>00283                         type = RD_RS;
+<a name="l00283"></a>00283                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb5b86a87d42a00625ad72224e2c00fc">RD_RS</a>;
 <a name="l00284"></a>00284                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;RQ&quot;</span>)==0) {
-<a name="l00285"></a>00285                         type = RD_RQ;
+<a name="l00285"></a>00285                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a14fea87cc9e07d49ae06c7c400d574c9">RD_RQ</a>;
 <a name="l00286"></a>00286                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;TZ&quot;</span>)==0) {
-<a name="l00287"></a>00287                         type = RD_TZ;
+<a name="l00287"></a>00287                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a09e2819f00a8e051c582ad1b9a1f8809">RD_TZ</a>;
 <a name="l00288"></a>00288                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;TH&quot;</span>)==0) {
-<a name="l00289"></a>00289                         type = RD_TH;
+<a name="l00289"></a>00289                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae15640e5d43b7be7a36c22c825f92dfb">RD_TH</a>;
 <a name="l00290"></a>00290                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;EX&quot;</span>)==0) {
-<a name="l00291"></a>00291                         type = RD_EX;
+<a name="l00291"></a>00291                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>;
 <a name="l00292"></a>00292                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;EZ&quot;</span>)==0) {
-<a name="l00293"></a>00293                         type = RD_EZ;
+<a name="l00293"></a>00293                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a7694e02b3f380d4be66ee9e604238251">RD_EZ</a>;
 <a name="l00294"></a>00294                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;EH&quot;</span>)==0) {
-<a name="l00295"></a>00295                         type = RD_EH;
+<a name="l00295"></a>00295                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb43a1abba544b0d4614824a569a62a8">RD_EH</a>;
 <a name="l00296"></a>00296                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;EB&quot;</span>)==0) {
-<a name="l00297"></a>00297                         type = RD_EB;
+<a name="l00297"></a>00297                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a657af16e748d1af2a6ae937453977ec9">RD_EB</a>;
 <a name="l00298"></a>00298                 } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(str,<span class="stringliteral">&quot;EW&quot;</span>)==0) {
-<a name="l00299"></a>00299                         type = RD_EW;
+<a name="l00299"></a>00299                         type = <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a9da210fbab14243c9de78d375dea74d4">RD_EW</a>;
 <a name="l00300"></a>00300                 }
 <a name="l00301"></a>00301                 <span class="keywordflow">return</span> type;
 <a name="l00302"></a>00302         }
 <a name="l00303"></a>00303         
-<a name="l00304"></a>00304         <span class="keywordtype">void</span> RDGridSize( RDScanType t, <span class="keywordtype">size_t</span>* width, <span class="keywordtype">size_t</span>* height )
+<a name="l00304"></a><a class="code" href="radolan__utils_8cpp.html#a269c6dfa0cb314e508067bfb6c70a2ea">00304</a>         <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#a269c6dfa0cb314e508067bfb6c70a2ea">RDGridSize</a>( <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <span class="keywordtype">size_t</span>* width, <span class="keywordtype">size_t</span>* height )
 <a name="l00305"></a>00305         {
 <a name="l00306"></a>00306                 <span class="keywordflow">switch</span> ( t ) 
 <a name="l00307"></a>00307                 {
-<a name="l00308"></a>00308                         <span class="keywordflow">case</span> RD_RX: 
-<a name="l00309"></a>00309                         <span class="keywordflow">case</span> RD_RO: 
-<a name="l00310"></a>00310                         <span class="keywordflow">case</span> RD_RK: 
-<a name="l00311"></a>00311                         <span class="keywordflow">case</span> RD_RZ: 
-<a name="l00312"></a>00312                         <span class="keywordflow">case</span> RD_RY: 
-<a name="l00313"></a>00313                         <span class="keywordflow">case</span> RD_RH: 
-<a name="l00314"></a>00314                         <span class="keywordflow">case</span> RD_RJ: 
-<a name="l00315"></a>00315                         <span class="keywordflow">case</span> RD_RP: 
-<a name="l00316"></a>00316                         <span class="keywordflow">case</span> RD_RT: 
-<a name="l00317"></a>00317                         <span class="keywordflow">case</span> RD_RC: 
-<a name="l00318"></a>00318                         <span class="keywordflow">case</span> RD_RI: 
-<a name="l00319"></a>00319                         <span class="keywordflow">case</span> RD_RG: 
-<a name="l00320"></a>00320                         <span class="keywordflow">case</span> RD_RB: 
-<a name="l00321"></a>00321                         <span class="keywordflow">case</span> RD_RA: 
-<a name="l00322"></a>00322                         <span class="keywordflow">case</span> RD_RM: 
-<a name="l00323"></a>00323                         <span class="keywordflow">case</span> RD_RL: 
-<a name="l00324"></a>00324                         <span class="keywordflow">case</span> RD_RN: 
-<a name="l00325"></a>00325                         <span class="keywordflow">case</span> RD_RD: 
-<a name="l00326"></a>00326                         <span class="keywordflow">case</span> RD_RF: 
-<a name="l00327"></a>00327                         <span class="keywordflow">case</span> RD_RW: 
-<a name="l00328"></a>00328                         <span class="keywordflow">case</span> RD_RU: 
-<a name="l00329"></a>00329                         <span class="keywordflow">case</span> RD_RR: 
-<a name="l00330"></a>00330                         <span class="keywordflow">case</span> RD_SQ:
-<a name="l00331"></a>00331                         <span class="keywordflow">case</span> RD_SH:
-<a name="l00332"></a>00332                         <span class="keywordflow">case</span> RD_SF:
-<a name="l00333"></a>00333                         <span class="keywordflow">case</span> RD_RV:
-<a name="l00334"></a>00334                         <span class="keywordflow">case</span> RD_RS:
-<a name="l00335"></a>00335                         <span class="keywordflow">case</span> RD_RQ:
-<a name="l00336"></a>00336                         <span class="keywordflow">case</span> RD_TZ:
-<a name="l00337"></a>00337                         <span class="keywordflow">case</span> RD_TH:
+<a name="l00308"></a>00308                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>: 
+<a name="l00309"></a>00309                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a36dc771af56a3daa0520fb70a59359e7">RD_RO</a>: 
+<a name="l00310"></a>00310                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8000df036c3cafd902b01d45fbddf963">RD_RK</a>: 
+<a name="l00311"></a>00311                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a55c27e5c384c37c769d192f8ae4aff0f">RD_RZ</a>: 
+<a name="l00312"></a>00312                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a026456c22055e50119e12adf7d4e245f">RD_RY</a>: 
+<a name="l00313"></a>00313                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6ea2b3411008b32316c77b2e81a8c1e3">RD_RH</a>: 
+<a name="l00314"></a>00314                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aad526b4a1aa52a78e479e9db17b17ad8">RD_RJ</a>: 
+<a name="l00315"></a>00315                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adfe712bb588d589ac41fa12c848f4212">RD_RP</a>: 
+<a name="l00316"></a>00316                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0a404103933348e3d950ee724e052b41">RD_RT</a>: 
+<a name="l00317"></a>00317                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a49cd58d6cec4c0528480bd653f253bef">RD_RC</a>: 
+<a name="l00318"></a>00318                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57add108899a73bd58819aecb0b0c598491">RD_RI</a>: 
+<a name="l00319"></a>00319                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aac71fb98d247605711edddb8f1efaef0">RD_RG</a>: 
+<a name="l00320"></a>00320                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a2fbf2dbd955073f09de6195c5100726f">RD_RB</a>: 
+<a name="l00321"></a>00321                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57afeb9eaf496b0305009733bec9a259675">RD_RA</a>: 
+<a name="l00322"></a>00322                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8eff6ee2bdaf75c9d0280544803ec964">RD_RM</a>: 
+<a name="l00323"></a>00323                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a81209edefd28694917e67730c74c1abd">RD_RL</a>: 
+<a name="l00324"></a>00324                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0e5661c0bbd80e95dc8e3ef3a4ecfae3">RD_RN</a>: 
+<a name="l00325"></a>00325                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a18d9a52bdd558335036c6aa6aa3bbaec">RD_RD</a>: 
+<a name="l00326"></a>00326                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a776a8872059f757f659e0ae0df72134c">RD_RF</a>: 
+<a name="l00327"></a>00327                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a6751fd644965de8610813ac1b9bbc0a2">RD_RW</a>: 
+<a name="l00328"></a>00328                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae21b0f1d80524523104df779a7c56abd">RD_RU</a>: 
+<a name="l00329"></a>00329                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aba14e71748ca8a45630a530ea28d904c">RD_RR</a>: 
+<a name="l00330"></a>00330                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a17926e3592d6385c5caf8da92eb1427c">RD_SQ</a>:
+<a name="l00331"></a>00331                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a68ab6de6aabd4e6899ea7ea9601206a5">RD_SH</a>:
+<a name="l00332"></a>00332                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a575ecce3e7d60bd00acbbf7025a34789">RD_SF</a>:
+<a name="l00333"></a>00333                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57aa1bf738c4f5ab522cf40fdbee065f8dc">RD_RV</a>:
+<a name="l00334"></a>00334                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb5b86a87d42a00625ad72224e2c00fc">RD_RS</a>:
+<a name="l00335"></a>00335                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a14fea87cc9e07d49ae06c7c400d574c9">RD_RQ</a>:
+<a name="l00336"></a>00336                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a09e2819f00a8e051c582ad1b9a1f8809">RD_TZ</a>:
+<a name="l00337"></a>00337                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae15640e5d43b7be7a36c22c825f92dfb">RD_TH</a>:
 <a name="l00338"></a>00338                                 
 <a name="l00339"></a>00339                                 *width = 900;
 <a name="l00340"></a>00340                                 
@@ -439,11 +441,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00342"></a>00342                                 
 <a name="l00343"></a>00343                                 <span class="keywordflow">break</span>;
 <a name="l00344"></a>00344                                 
-<a name="l00345"></a>00345                 <span class="keywordflow">case</span> RD_EX:
-<a name="l00346"></a>00346                         <span class="keywordflow">case</span> RD_EZ:
-<a name="l00347"></a>00347                         <span class="keywordflow">case</span> RD_EH:
-<a name="l00348"></a>00348                         <span class="keywordflow">case</span> RD_EB:
-<a name="l00349"></a>00349                         <span class="keywordflow">case</span> RD_EW:
+<a name="l00345"></a>00345                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
+<a name="l00346"></a>00346                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a7694e02b3f380d4be66ee9e604238251">RD_EZ</a>:
+<a name="l00347"></a>00347                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57adb43a1abba544b0d4614824a569a62a8">RD_EH</a>:
+<a name="l00348"></a>00348                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a657af16e748d1af2a6ae937453977ec9">RD_EB</a>:
+<a name="l00349"></a>00349                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a9da210fbab14243c9de78d375dea74d4">RD_EW</a>:
 <a name="l00350"></a>00350                                 
 <a name="l00351"></a>00351                                 *width = 1500;
 <a name="l00352"></a>00352                                 
@@ -451,7 +453,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00354"></a>00354                                 
 <a name="l00355"></a>00355                                 <span class="keywordflow">break</span>;
 <a name="l00356"></a>00356                                 
-<a name="l00357"></a>00357                         <span class="keywordflow">case</span> RD_UNKNOWN:
+<a name="l00357"></a>00357                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a8eb82c7d125206f128b36e50250d940a">RD_UNKNOWN</a>:
 <a name="l00358"></a>00358                                 
 <a name="l00359"></a>00359                                 *width = -1;
 <a name="l00360"></a>00360                                 
@@ -459,32 +461,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00362"></a>00362                 }
 <a name="l00363"></a>00363         }
 <a name="l00364"></a>00364         
-<a name="l00365"></a>00365         <span class="keywordtype">void</span> RDPrintHeaderInformation(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan) 
+<a name="l00365"></a><a class="code" href="radolan__utils_8cpp.html#ad32403cb47ec57b8408d21474dc75a1f">00365</a>         <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#ad32403cb47ec57b8408d21474dc75a1f">RDPrintHeaderInformation</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan) 
 <a name="l00366"></a>00366         {
 <a name="l00367"></a>00367                 <span class="comment">// TODO: Extend</span>
-<a name="l00368"></a>00368                 printf(<span class="stringliteral">&quot;\nHeader of file %s\n&quot;</span>,scan-&gt;filename);
-<a name="l00369"></a>00369                 <a class="code" href="struct_r_d_radolan_header.html">RDRadolanHeader</a> h = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>;
-<a name="l00370"></a>00370                 printf(<span class="stringliteral">&quot;Scan Type: %s\n&quot;</span>,RDScanTypeToString(h.scanType));
-<a name="l00371"></a>00371                 printf(<span class="stringliteral">&quot;Zeitstempel %02i:%02i GMT %02i.%02i.%02i\n&quot;</span>,h.hour,h.minute,h.day,h.month,h.year);
-<a name="l00372"></a>00372                 printf(<span class="stringliteral">&quot;Precision : %5.4f\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag SW">precision</a>);
-<a name="l00373"></a>00373                 printf(<span class="stringliteral">&quot;Min value : %f Max value : %f\n&quot;</span>,scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>,scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>);
-<a name="l00374"></a>00374                 printf(<span class="stringliteral">&quot;Header size %li , payload size %li\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="100000 for composite (see Section 1, Radolan spec v2.1">headerSize</a>,h.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a>);
-<a name="l00375"></a>00375                 printf(<span class="stringliteral">&quot;Stations %s\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. Number of radar stations.">radarStations</a>);
+<a name="l00368"></a>00368                 printf(<span class="stringliteral">&quot;\nHeader of file %s\n&quot;</span>,scan-&gt;<a class="code" href="struct_r_d_scan.html#a543b09d7ef52deea2531a22a71806f7e" title="Name of file containing data when read.">filename</a>);
+<a name="l00369"></a>00369                 <a class="code" href="struct_r_d_radolan_header.html">RDRadolanHeader</a> h = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>;
+<a name="l00370"></a>00370                 printf(<span class="stringliteral">&quot;Scan Type: %s\n&quot;</span>,<a class="code" href="radolan__utils_8h.html#af1e558a35e52cf297689ee2831bc27fc">RDScanTypeToString</a>(h.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>));
+<a name="l00371"></a>00371                 printf(<span class="stringliteral">&quot;Zeitstempel %02i:%02i GMT %02i.%02i.%02i\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#a39050709e2f83542f48774ab145f49da">hour</a>,h.<a class="code" href="struct_r_d_radolan_header.html#a541775e6ff7412a83648dd105193df02">minute</a>,h.<a class="code" href="struct_r_d_radolan_header.html#a80d507134e41e21cff7c4405c7033a6d">day</a>,h.<a class="code" href="struct_r_d_radolan_header.html#aff58e4d175a5efb321df4d4e94aaf4f0">month</a>,h.<a class="code" href="struct_r_d_radolan_header.html#ae5a3a867e44291b5de5357f5794278d7">year</a>);
+<a name="l00372"></a>00372                 printf(<span class="stringliteral">&quot;Precision : %5.4f\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag PR 1, 0.1, 0.01.">precision</a>);
+<a name="l00373"></a>00373                 printf(<span class="stringliteral">&quot;Min value : %f Max value : %f\n&quot;</span>,scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>,scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>);
+<a name="l00374"></a>00374                 printf(<span class="stringliteral">&quot;Header size %li , payload size %li\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="Number of bytes actually read from the header.">headerSize</a>,h.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a>);
+<a name="l00375"></a>00375                 printf(<span class="stringliteral">&quot;Stations %s\n&quot;</span>,h.<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. List of radar station id&#39;s (c-strings)">radarStations</a>);
 <a name="l00376"></a>00376                 
 <a name="l00377"></a>00377         }
 <a name="l00378"></a>00378         
-<a name="l00379"></a>00379         <span class="keywordtype">void</span> RDPrintScan(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keywordtype">int</span> latCount, <span class="keywordtype">int</span> lonCount) 
+<a name="l00379"></a><a class="code" href="radolan__utils_8cpp.html#a69f5c8e8981178236f43fa0cc581e9e3">00379</a>         <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#a69f5c8e8981178236f43fa0cc581e9e3">RDPrintScan</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keywordtype">int</span> latCount, <span class="keywordtype">int</span> lonCount) 
 <a name="l00380"></a>00380         {
 <a name="l00381"></a>00381                 <span class="keywordtype">int</span> lat,lon;
-<a name="l00382"></a>00382                 <span class="keywordflow">for</span> (lat=0; lat&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>; lat++) 
+<a name="l00382"></a>00382                 <span class="keywordflow">for</span> (lat=0; lat&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>; lat++) 
 <a name="l00383"></a>00383                 {
 <a name="l00384"></a>00384                         <span class="keywordflow">if</span> (lat%latCount==0) 
 <a name="l00385"></a>00385                         {
-<a name="l00386"></a>00386                                 <span class="keywordflow">for</span> (lon=0; lon&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>; lon++) {
+<a name="l00386"></a>00386                                 <span class="keywordflow">for</span> (lon=0; lon&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>; lon++) {
 <a name="l00387"></a>00387                                         <span class="keywordflow">if</span> (lon%lonCount==0) 
 <a name="l00388"></a>00388                                         {
-<a name="l00389"></a>00389                                                 <span class="keywordtype">float</span> value = scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[lat*scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>+lon];
-<a name="l00390"></a>00390                                                 printf(RDIsCleanMeasurementAndNotMin(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType, value) ? <span class="stringliteral">&quot;*&quot;</span>:<span class="stringliteral">&quot; &quot;</span>);
+<a name="l00389"></a>00389                                                 <span class="keywordtype">float</span> value = scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[lat*scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>+lon];
+<a name="l00390"></a>00390                                                 printf(<a class="code" href="radolan__utils_8h.html#a1b63f0fd9a68075c714d50fe4ab95335">RDIsCleanMeasurementAndNotMin</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>, value) ? <span class="stringliteral">&quot;*&quot;</span>:<span class="stringliteral">&quot; &quot;</span>);
 <a name="l00391"></a>00391                                         }
 <a name="l00392"></a>00392                                 }
 <a name="l00393"></a>00393                                 printf(<span class="stringliteral">&quot;\n&quot;</span>);
@@ -492,7 +494,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00395"></a>00395                 }
 <a name="l00396"></a>00396         }
 <a name="l00397"></a>00397         
-<a name="l00398"></a>00398         <span class="keywordtype">void</span> convertToLowercase( <span class="keywordtype">char</span>* s )
+<a name="l00398"></a><a class="code" href="radolan__utils_8cpp.html#a5a90d03446f4b923c68edd49eacf75e0">00398</a>         <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8cpp.html#a5a90d03446f4b923c68edd49eacf75e0">convertToLowercase</a>( <span class="keywordtype">char</span>* s )
 <a name="l00399"></a>00399         {
 <a name="l00400"></a>00400                 <span class="keywordtype">size_t</span> len = strlen( s );
 <a name="l00401"></a>00401                 
@@ -504,7 +506,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00407"></a>00407                 }
 <a name="l00408"></a>00408         } 
 <a name="l00409"></a>00409         
-<a name="l00410"></a>00410         <span class="keywordtype">char</span>* RDGuessFilename( RDScanType type, time_t timestamp )
+<a name="l00410"></a><a class="code" href="radolan__utils_8cpp.html#af14de4ef8d67807311023dfae6ebc71b">00410</a>         <span class="keywordtype">char</span>* <a class="code" href="radolan__utils_8h.html#af14de4ef8d67807311023dfae6ebc71b">RDGuessFilename</a>( <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type, time_t timestamp )
 <a name="l00411"></a>00411         {
 <a name="l00412"></a>00412                 <span class="comment">// raa01-rx_10000-0909030000-dwd---bin</span>
 <a name="l00413"></a>00413                 
@@ -514,9 +516,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00417"></a>00417                 
 <a name="l00418"></a>00418                 <span class="comment">// get string for scan type and convert to lower case</span>
 <a name="l00419"></a>00419                 
-<a name="l00420"></a>00420                 <span class="keywordtype">char</span>* typeString = strdup( RDScanTypeToString( type ) ); 
+<a name="l00420"></a>00420                 <span class="keywordtype">char</span>* typeString = strdup( <a class="code" href="radolan__utils_8h.html#af1e558a35e52cf297689ee2831bc27fc">RDScanTypeToString</a>( type ) ); 
 <a name="l00421"></a>00421                 
-<a name="l00422"></a>00422                 convertToLowercase( typeString );
+<a name="l00422"></a>00422                 <a class="code" href="radolan__utils_8cpp.html#a5a90d03446f4b923c68edd49eacf75e0">convertToLowercase</a>( typeString );
 <a name="l00423"></a>00423                 
 <a name="l00424"></a>00424                 <span class="comment">// now for the time pokery</span>
 <a name="l00425"></a>00425                 
@@ -553,13 +555,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>radolan_utils.cpp</b>      </li>
+      <li class="navelem"><a class="el" href="radolan__utils_8cpp.html">radolan_utils.cpp</a>      </li>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -569,7 +571,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 12:51:02 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

@@ -51,7 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -73,9 +74,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -101,12 +102,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <!-- doxytag: class="Radolan::RDCoordinateSystem" -->
 <p><code>#include &lt;<a class="el" href="coordinatesystem_8h_source.html">coordinatesystem.h</a>&gt;</code></p>
+
+<p><a href="class_radolan_1_1_r_d_coordinate_system-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74b4d6b43f0272d220b3bdfbc1ae2c04"></a><!-- doxytag: member="Radolan::RDCoordinateSystem::RDCoordinateSystem" ref="a74b4d6b43f0272d220b3bdfbc1ae2c04" args="(RDScanType type)" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>RDCoordinateSystem</b> (RDScanType type)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a9f1d88aa680c912fc45d44f267217df8">setScanType</a> (RDScanType type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a74b4d6b43f0272d220b3bdfbc1ae2c04">RDCoordinateSystem</a> (<a class="el" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a9ea40fbd0c98efcaf55939e9c864b289">~RDCoordinateSystem</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a9f1d88aa680c912fc45d44f267217df8">setScanType</a> (<a class="el" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#add29785e754b62063e64eff83a93b48e">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a032f8ee68a3d27fe098404d6b2fdf3a6">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>)</td></tr>
@@ -120,13 +123,51 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a007de99f6659b8d6c74096d4f0056892">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>, bool &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a84a0e9b98443638367967334e4b76b17">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>, bool &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ae4fb89e828dde59339a72f7a50d92a1a">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> g, bool &amp;isInside)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">RDGridQuadrant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4e95184baf0cd5c6e515d3c202b195ce">RDQuadrant</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53">RDGridQuadrant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4e95184baf0cd5c6e515d3c202b195ce">RDQuadrant</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This class wraps a number of routines to deal with the radolan specific coordinate systems. It provides methods for converting geographical coordinates into cartesian coordinates (within the radolan grid) as well as conversion from and to grid points - aka index pairs. </p>
 
 <p>Definition at line <a class="el" href="coordinatesystem_8h_source.html#l00126">126</a> of file <a class="el" href="coordinatesystem_8h_source.html">coordinatesystem.h</a>.</p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a74b4d6b43f0272d220b3bdfbc1ae2c04"></a><!-- doxytag: member="Radolan::RDCoordinateSystem::RDCoordinateSystem" ref="a74b4d6b43f0272d220b3bdfbc1ae2c04" args="(RDScanType type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Radolan::RDCoordinateSystem::RDCoordinateSystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00023">23</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ea40fbd0c98efcaf55939e9c864b289"></a><!-- doxytag: member="Radolan::RDCoordinateSystem::~RDCoordinateSystem" ref="a9ea40fbd0c98efcaf55939e9c864b289" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Radolan::RDCoordinateSystem::~RDCoordinateSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00029">29</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="adeac29d8909b1bd0fcdaf47c23fd374d"></a><!-- doxytag: member="Radolan::RDCoordinateSystem::cartesianCoordinate" ref="adeac29d8909b1bd0fcdaf47c23fd374d" args="(RDGeographicalPointRad)" -->
 <div class="memitem">
 <div class="memproto">
@@ -473,7 +514,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">RDGridQuadrant Radolan::RDCoordinateSystem::RDQuadrant </td>
+          <td class="memname"><a class="el" href="namespace_radolan.html#a2bedc1ddfe0faac38119ba333523ae53">RDGridQuadrant</a> Radolan::RDCoordinateSystem::RDQuadrant </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -495,7 +536,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Radolan::RDCoordinateSystem::setScanType </td>
           <td>(</td>
-          <td class="paramtype">RDScanType&#160;</td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -570,14 +611,14 @@ Public Member Functions</h2></td></tr>
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>Radolan</b>      </li>
+      <li class="navelem"><a class="el" href="namespace_radolan.html">Radolan</a>      </li>
       <li class="navelem"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html">RDCoordinateSystem</a>      </li>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -587,7 +628,7 @@ Public Member Functions</h2></td></tr>
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 12:51:02 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

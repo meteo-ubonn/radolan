@@ -51,7 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -73,9 +74,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li><a href="classes.html"><span>Data&#160;Structure&#160;Index</span></a></li>
-      <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -94,45 +95,177 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Data Fields</a>  </div>
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">RDScan Struct Reference</div>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="RDScan" -->
 <p><code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code></p>
+
+<p><a href="struct_r_d_scan-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a543b09d7ef52deea2531a22a71806f7e"></a><!-- doxytag: member="RDScan::filename" ref="a543b09d7ef52deea2531a22a71806f7e" args="[1024]" -->
-char&#160;</td><td class="memItemRight" valign="bottom"><b>filename</b> [1024]</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70cb9eb16151606ab55df2b03470a1b8"></a><!-- doxytag: member="RDScan::header" ref="a70cb9eb16151606ab55df2b03470a1b8" args="" -->
-<a class="el" href="struct_r_d_radolan_header.html">RDRadolanHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8">header</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of file containing data when read. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9349ba0b1d1fc40152afb256755a344c"></a><!-- doxytag: member="RDScan::data" ref="a9349ba0b1d1fc40152afb256755a344c" args="" -->
-RDDataType *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c">data</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Header info (when read from radolan binary format) <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73ef1a84844c119395a72a1066204393"></a><!-- doxytag: member="RDScan::dimLon" ref="a73ef1a84844c119395a72a1066204393" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393">dimLon</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of rd_data[header.payloadSize]. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a431bfacba82f744f947b997c353858f2"></a><!-- doxytag: member="RDScan::dimLat" ref="a431bfacba82f744f947b997c353858f2" args="" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2">dimLat</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of longitudinal vertices. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1ae9916502cc8bad25935a67b877b4f"></a><!-- doxytag: member="RDScan::min_value" ref="ab1ae9916502cc8bad25935a67b877b4f" args="" -->
-RDDataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f">min_value</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of latitudinal vertices. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76e6c44aa0e9be91927023864f4e9545"></a><!-- doxytag: member="RDScan::max_value" ref="a76e6c44aa0e9be91927023864f4e9545" args="" -->
-RDDataType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545">max_value</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value found in the actual data. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab59f19c805d6603accff5dad9f676e0a"></a><!-- doxytag: member="RDScan::dbZPerUnit" ref="ab59f19c805d6603accff5dad9f676e0a" args="" -->
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#ab59f19c805d6603accff5dad9f676e0a">dbZPerUnit</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value found in the actual data. <br/></td></tr>
+Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a543b09d7ef52deea2531a22a71806f7e">filename</a> [1024]</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of file containing data when read.  <a href="#a543b09d7ef52deea2531a22a71806f7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_r_d_radolan_header.html">RDRadolanHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8">header</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Header info (when read from radolan binary format)  <a href="#a70cb9eb16151606ab55df2b03470a1b8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c">data</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of rd_data[header.payloadSize].  <a href="#a9349ba0b1d1fc40152afb256755a344c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393">dimLon</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of longitudinal vertices.  <a href="#a73ef1a84844c119395a72a1066204393"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2">dimLat</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of latitudinal vertices.  <a href="#a431bfacba82f744f947b997c353858f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f">min_value</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum value found in the actual data.  <a href="#ab1ae9916502cc8bad25935a67b877b4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545">max_value</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum value found in the actual data.  <a href="#a76e6c44aa0e9be91927023864f4e9545"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_d_scan.html#ab59f19c805d6603accff5dad9f676e0a">dbZPerUnit</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion factor from RVP6 units to DBZ.  <a href="#ab59f19c805d6603accff5dad9f676e0a"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Data type for reading and handling radolan products. When read from the radolan file directly, the header contains information. When read from GeoTIFF, the header will be empty. Use RDAllocate and RDFree to create and dispose of instances. </p>
 
-<p>Definition at line <a class="el" href="types_8h_source.html#l00117">117</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<p>Definition at line <a class="el" href="types_8h_source.html#l00149">149</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+</div><hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a9349ba0b1d1fc40152afb256755a344c"></a><!-- doxytag: member="RDScan::data" ref="a9349ba0b1d1fc40152afb256755a344c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>* <a class="el" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c">RDScan::data</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Array of rd_data[header.payloadSize]. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00158">158</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab59f19c805d6603accff5dad9f676e0a"></a><!-- doxytag: member="RDScan::dbZPerUnit" ref="ab59f19c805d6603accff5dad9f676e0a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="struct_r_d_scan.html#ab59f19c805d6603accff5dad9f676e0a">RDScan::dbZPerUnit</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Conversion factor from RVP6 units to DBZ. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00173">173</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a431bfacba82f744f947b997c353858f2"></a><!-- doxytag: member="RDScan::dimLat" ref="a431bfacba82f744f947b997c353858f2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2">RDScan::dimLat</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Number of latitudinal vertices. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00164">164</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73ef1a84844c119395a72a1066204393"></a><!-- doxytag: member="RDScan::dimLon" ref="a73ef1a84844c119395a72a1066204393" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393">RDScan::dimLon</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Number of longitudinal vertices. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00161">161</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a543b09d7ef52deea2531a22a71806f7e"></a><!-- doxytag: member="RDScan::filename" ref="a543b09d7ef52deea2531a22a71806f7e" args="[1024]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char <a class="el" href="struct_r_d_scan.html#a543b09d7ef52deea2531a22a71806f7e">RDScan::filename</a>[1024]</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Name of file containing data when read. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00152">152</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70cb9eb16151606ab55df2b03470a1b8"></a><!-- doxytag: member="RDScan::header" ref="a70cb9eb16151606ab55df2b03470a1b8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_r_d_radolan_header.html">RDRadolanHeader</a> <a class="el" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8">RDScan::header</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Header info (when read from radolan binary format) </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00155">155</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76e6c44aa0e9be91927023864f4e9545"></a><!-- doxytag: member="RDScan::max_value" ref="a76e6c44aa0e9be91927023864f4e9545" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="el" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545">RDScan::max_value</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Maximum value found in the actual data. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00170">170</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab1ae9916502cc8bad25935a67b877b4f"></a><!-- doxytag: member="RDScan::min_value" ref="ab1ae9916502cc8bad25935a67b877b4f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="el" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f">RDScan::min_value</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Minimum value found in the actual data. </p>
+
+<p>Definition at line <a class="el" href="types_8h_source.html#l00167">167</a> of file <a class="el" href="types_8h_source.html">types.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/radolan/<a class="el" href="types_8h_source.html">types.h</a></li>
 </ul>
 </div>
@@ -145,7 +278,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -155,7 +288,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 12:51:02 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

@@ -43,6 +43,8 @@ ELSE()
   MESSAGE(FATAL_ERROR "unknown compiler")
 ENDIF()
 
+SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
+
 #################################
 #dependencies on other libraries#
 #################################
@@ -51,10 +53,11 @@ ENDIF()
 SET(LIBZ_INCLUDEDIR "/usr/include")
 SET(LIBZ_LIBRARIES  "/usr/lib/libz.dylib")
 
-# HDF5 1.8.3
-SET( HDF5_INCLUDEDIR            "/opt/local/include" )
-SET( HDF5_LIBRARIES             "/opt/local/lib/libhdf5.dylib"
-                                "/opt/local/lib/libhdf5_cpp.dylib" )
+# HDF5
+FIND_PACKAGE(HDF5)
+IF (NOT HDF5_FOUND)
+   MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
+ENDIF()
 
 #add include directories
 INCLUDE_DIRECTORIES(

@@ -51,7 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -74,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -95,10 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">include/radolan/radolan_utils.h</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __RADOLAN_UTILS__</span>
+<a href="radolan__utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef __RADOLAN_UTILS__</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define __RADOLAN_UTILS__</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;radolan/types.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">radolan/types.h</a>&gt;</span>
 <a name="l00005"></a>00005 
 <a name="l00006"></a>00006 <span class="preprocessor">#ifdef __cplusplus</span>
 <a name="l00007"></a>00007 <span class="preprocessor"></span>
@@ -114,43 +116,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00017"></a>00017                 
 <a name="l00018"></a>00018 <span class="preprocessor">#endif</span>
 <a name="l00019"></a>00019 <span class="preprocessor"></span>
-<a name="l00029"></a>00029                 <span class="keywordtype">void</span> RDPrintPolarStereographic(<a class="code" href="struct_r_d_scan.html">RDScan</a>*,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);
+<a name="l00029"></a>00029                 <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#a1153b52af7508bbe229a3d1b49def248">RDPrintPolarStereographic</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>*,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);
 <a name="l00030"></a>00030                 
-<a name="l00032"></a>00032                 <span class="keywordtype">void</span> RDPrintHeaderInformation(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan);
+<a name="l00032"></a>00032                 <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#ad32403cb47ec57b8408d21474dc75a1f">RDPrintHeaderInformation</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan);
 <a name="l00033"></a>00033                 
-<a name="l00037"></a>00037                 <span class="keywordtype">void</span> RDPrintScan(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keywordtype">int</span> latCount, <span class="keywordtype">int</span> lonCount);
+<a name="l00037"></a>00037                 <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#a69f5c8e8981178236f43fa0cc581e9e3">RDPrintScan</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keywordtype">int</span> latCount, <span class="keywordtype">int</span> lonCount);
 <a name="l00038"></a>00038                 
-<a name="l00040"></a>00040                 <span class="keyword">const</span> <span class="keywordtype">char</span>* RDScanTypeToString(RDScanType type);
+<a name="l00040"></a>00040                 <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="radolan__utils_8h.html#af1e558a35e52cf297689ee2831bc27fc">RDScanTypeToString</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type);
 <a name="l00041"></a>00041                 
-<a name="l00045"></a>00045                 RDScanType RDScanTypeFromString(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);
+<a name="l00045"></a>00045                 <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> <a class="code" href="radolan__utils_8h.html#a7283ebe5af25f7c563f09a7d7a66c9fe">RDScanTypeFromString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str);
 <a name="l00046"></a>00046                 
-<a name="l00048"></a>00048         RDDataType RDMinValue(RDScanType t);
+<a name="l00048"></a>00048         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t);
 <a name="l00049"></a>00049                 
-<a name="l00051"></a>00051         RDDataType RDMaxValue(RDScanType t);
+<a name="l00051"></a>00051         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t);
 <a name="l00052"></a>00052                 
-<a name="l00054"></a>00054         RDDataType RDMissingValue(RDScanType t);
+<a name="l00054"></a>00054         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a6269d2a21ecad7c4f01afc82332565ed">RDMissingValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t);
 <a name="l00055"></a>00055                 
-<a name="l00057"></a>00057         RDDataType RDClutterValue(RDScanType t);
+<a name="l00057"></a>00057         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> <a class="code" href="radolan__utils_8h.html#a6a1537cca5f0b597d2970e8549b874f5">RDClutterValue</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t);
 <a name="l00058"></a>00058                 
-<a name="l00060"></a>00060                 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> RDRVP6ToByteValue( <span class="keywordtype">float</span> rvp6 );
+<a name="l00060"></a>00060                 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="radolan__utils_8h.html#a768e4f2cec213f1fe3e28c70be7e0b24">RDRVP6ToByteValue</a>( <span class="keywordtype">float</span> rvp6 );
 <a name="l00061"></a>00061                 
-<a name="l00063"></a>00063                 <span class="keywordtype">float</span> RDByteToRVP6Value( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> byteValue );
+<a name="l00063"></a>00063                 <span class="keywordtype">float</span> <a class="code" href="radolan__utils_8h.html#af3312e43d28079276acfbaebdb161d5a">RDByteToRVP6Value</a>( <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> byteValue );
 <a name="l00064"></a>00064                 
-<a name="l00066"></a>00066         <span class="keywordtype">int</span> RDIsCleanMeasurement(RDScanType t, RDDataType value);
+<a name="l00066"></a>00066         <span class="keywordtype">int</span> <a class="code" href="radolan__utils_8h.html#a9930a364403d3d7a589d13eff9c8d709">RDIsCleanMeasurement</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> value);
 <a name="l00067"></a>00067                 
-<a name="l00069"></a>00069         <span class="keywordtype">int</span> RDIsCleanMeasurementAndNotMin(RDScanType t, RDDataType value);
+<a name="l00069"></a>00069         <span class="keywordtype">int</span> <a class="code" href="radolan__utils_8h.html#a1b63f0fd9a68075c714d50fe4ab95335">RDIsCleanMeasurementAndNotMin</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> value);
 <a name="l00070"></a>00070                 
-<a name="l00072"></a>00072                 <span class="keywordtype">size_t</span> RDBytesPerPixel(RDScanType type);
+<a name="l00072"></a>00072                 <span class="keywordtype">size_t</span> <a class="code" href="radolan__utils_8h.html#aa18332d1789571d9185e270bf76b5901">RDBytesPerPixel</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type);
 <a name="l00073"></a>00073                 
-<a name="l00075"></a>00075                 <span class="keywordtype">float</span> RDRainrateFromDezibels(RDDataType dezibels);
+<a name="l00075"></a>00075                 <span class="keywordtype">float</span> <a class="code" href="radolan__utils_8h.html#aff5f4a96b528c38cf6299278ded3e665">RDRainrateFromDezibels</a>(<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> dezibels);
 <a name="l00076"></a>00076                 
-<a name="l00082"></a>00082                 <span class="keywordtype">void</span> RDGridSize( RDScanType t, <span class="keywordtype">size_t</span>* width, <span class="keywordtype">size_t</span>* height );
+<a name="l00082"></a>00082                 <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#a269c6dfa0cb314e508067bfb6c70a2ea">RDGridSize</a>( <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <span class="keywordtype">size_t</span>* width, <span class="keywordtype">size_t</span>* height );
 <a name="l00083"></a>00083                 
-<a name="l00089"></a>00089                 <span class="keywordtype">void</span> RDScanTime(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keyword">struct</span> tm *);
+<a name="l00089"></a>00089                 <span class="keywordtype">void</span> <a class="code" href="radolan__utils_8h.html#acfd9723543d916fbb6b1d036c3c223ac">RDScanTime</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, <span class="keyword">struct</span> tm *);
 <a name="l00090"></a>00090                 
-<a name="l00102"></a>00102                 <span class="keywordtype">float</span> RDMMPerHour(RDScanType t, RDDataType value);
+<a name="l00102"></a>00102                 <span class="keywordtype">float</span> <a class="code" href="radolan__utils_8h.html#aeb080085895141fb4339532d34935a2c">RDMMPerHour</a>(<a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> t, <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a> value);
 <a name="l00103"></a>00103                 
-<a name="l00111"></a>00111                 <span class="keywordtype">char</span>* RDGuessFilename( RDScanType type, time_t timestamp );
+<a name="l00111"></a>00111                 <span class="keywordtype">char</span>* <a class="code" href="radolan__utils_8h.html#af14de4ef8d67807311023dfae6ebc71b">RDGuessFilename</a>( <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57">RDScanType</a> type, time_t timestamp );
 <a name="l00112"></a>00112                 
 <a name="l00113"></a>00113                 
 <a name="l00114"></a>00114 <span class="preprocessor">#ifdef __cplusplus</span>
@@ -165,13 +167,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>radolan_utils.h</b>      </li>
+      <li class="navelem"><a class="el" href="radolan__utils_8h.html">radolan_utils.h</a>      </li>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -181,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 12:51:02 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>

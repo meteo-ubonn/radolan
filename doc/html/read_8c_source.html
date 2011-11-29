@@ -51,7 +51,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -74,6 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -95,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">src/read.c</div>  </div>
 </div>
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a href="read_8c.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
 <a name="l00002"></a>00002 <span class="comment"> *  radolan_to_cartesian.c</span>
 <a name="l00003"></a>00003 <span class="comment"> *  RadolanConversion</span>
 <a name="l00004"></a>00004 <span class="comment"> *</span>
@@ -104,8 +106,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00007"></a>00007 <span class="comment"> *</span>
 <a name="l00008"></a>00008 <span class="comment"> */</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;radolan/read.h&gt;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;radolan/radolan_utils.h&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;<a class="code" href="read_8h.html">radolan/read.h</a>&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;<a class="code" href="radolan__utils_8h.html">radolan/radolan_utils.h</a>&gt;</span>
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
@@ -117,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
 <a name="l00021"></a>00021 <span class="preprocessor"></span>        <span class="comment">// Define the static variables</span>
 <a name="l00022"></a>00022         
-<a name="l00026"></a>00026         _Bool readUnsignedInt(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* value) {
+<a name="l00026"></a><a class="code" href="read_8c.html#a2e417db5e27b928cdc4ec7f3875d9410">00026</a>         _Bool <a class="code" href="read_8c.html#a2e417db5e27b928cdc4ec7f3875d9410">readUnsignedInt</a>(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* value) {
 <a name="l00027"></a>00027                 <span class="keywordtype">char</span> buf[len+1];
 <a name="l00028"></a>00028                 <span class="keywordtype">int</span> objectsRead = gzread(f,&amp;buf[0],len);
 <a name="l00029"></a>00029                 buf[len]=<span class="charliteral">&#39;\0&#39;</span>;
@@ -129,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00035"></a>00035                 }
 <a name="l00036"></a>00036         }
 <a name="l00037"></a>00037         
-<a name="l00041"></a>00041         _Bool readUnsignedShortInt(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>* value) {
+<a name="l00041"></a><a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">00041</a>         _Bool <a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">readUnsignedShortInt</a>(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>* value) {
 <a name="l00042"></a>00042                 <span class="keywordtype">char</span> buf[len+1];
 <a name="l00043"></a>00043                 <span class="keywordtype">int</span> bytesRead = gzread(f,&amp;buf[0],len);
 <a name="l00044"></a>00044                 buf[len]=<span class="charliteral">&#39;\0&#39;</span>;
@@ -141,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00050"></a>00050                 }
 <a name="l00051"></a>00051         }
 <a name="l00052"></a>00052         
-<a name="l00056"></a>00056         _Bool readInt(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">int</span>* value) {
+<a name="l00056"></a><a class="code" href="read_8c.html#a16f53d24a6014cdd8cb6ab2d3d2495fa">00056</a>         _Bool <a class="code" href="read_8c.html#a16f53d24a6014cdd8cb6ab2d3d2495fa">readInt</a>(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">int</span>* value) {
 <a name="l00057"></a>00057                 <span class="keywordtype">char</span> buf[len+1];
 <a name="l00058"></a>00058                 <span class="keywordtype">int</span> bytesRead = gzread(f,&amp;buf[0],len);
 <a name="l00059"></a>00059                 buf[len]=<span class="charliteral">&#39;\0&#39;</span>;
@@ -153,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00065"></a>00065                 }
 <a name="l00066"></a>00066         }
 <a name="l00067"></a>00067         
-<a name="l00071"></a>00071         _Bool readLong(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">long</span>* value) {
+<a name="l00071"></a><a class="code" href="read_8c.html#a46e9fc3fcd6864823c8c669cbefe5cdc">00071</a>         _Bool <a class="code" href="read_8c.html#a46e9fc3fcd6864823c8c669cbefe5cdc">readLong</a>(gzFile* f, <span class="keywordtype">int</span> len, <span class="keywordtype">long</span>* value) {
 <a name="l00072"></a>00072                 <span class="keywordtype">char</span> buf[len+1];
 <a name="l00073"></a>00073                 <span class="keywordtype">int</span> bytesRead = gzread(f,&amp;buf[0],len);
 <a name="l00074"></a>00074                 buf[len]=<span class="charliteral">&#39;\0&#39;</span>;
@@ -166,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00081"></a>00081         }
 <a name="l00082"></a>00082         
 <a name="l00083"></a>00083 
-<a name="l00084"></a>00084         <span class="keywordtype">void</span> RDReadRadolanHeader(gzFile* f, <a class="code" href="struct_r_d_radolan_header.html">RDRadolanHeader</a>* header) 
+<a name="l00084"></a><a class="code" href="read_8c.html#a8e33576c8238955951761521e43e7a16">00084</a>         <span class="keywordtype">void</span> <a class="code" href="read_8h.html#a8e33576c8238955951761521e43e7a16">RDReadRadolanHeader</a>(gzFile* f, <a class="code" href="struct_r_d_radolan_header.html">RDRadolanHeader</a>* header) 
 <a name="l00085"></a>00085         {
 <a name="l00086"></a>00086                 
 <a name="l00087"></a>00087                 <span class="comment">// just a char buffer used throughout the function to store data temporarily</span>
@@ -176,14 +178,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00091"></a>00091                 <span class="comment">// at the start of the header</span>
 <a name="l00092"></a>00092                 gzread(f,valueBuffer,2);
 <a name="l00093"></a>00093                 valueBuffer[2]=<span class="charliteral">&#39;\0&#39;</span>;
-<a name="l00094"></a>00094                 header-&gt;scanType = RDScanTypeFromString(valueBuffer);
+<a name="l00094"></a>00094                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a> = <a class="code" href="radolan__utils_8h.html#a7283ebe5af25f7c563f09a7d7a66c9fe">RDScanTypeFromString</a>(valueBuffer);
 <a name="l00095"></a>00095                 
-<a name="l00096"></a>00096                 readUnsignedShortInt(f,2,&amp;header-&gt;day);
-<a name="l00097"></a>00097                 readUnsignedShortInt(f,2,&amp;header-&gt;hour);
-<a name="l00098"></a>00098                 readUnsignedShortInt(f,2,&amp;header-&gt;minute);
-<a name="l00099"></a>00099                 readUnsignedInt(f,5,&amp;header-&gt;radarLocation);
-<a name="l00100"></a>00100                 readUnsignedShortInt(f,2,&amp;header-&gt;month);
-<a name="l00101"></a>00101                 readUnsignedShortInt(f,2,&amp;header-&gt;year);
+<a name="l00096"></a>00096                 <a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">readUnsignedShortInt</a>(f,2,&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a80d507134e41e21cff7c4405c7033a6d">day</a>);
+<a name="l00097"></a>00097                 <a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">readUnsignedShortInt</a>(f,2,&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a39050709e2f83542f48774ab145f49da">hour</a>);
+<a name="l00098"></a>00098                 <a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">readUnsignedShortInt</a>(f,2,&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a541775e6ff7412a83648dd105193df02">minute</a>);
+<a name="l00099"></a>00099                 <a class="code" href="read_8c.html#a2e417db5e27b928cdc4ec7f3875d9410">readUnsignedInt</a>(f,5,&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a474c9059b5b623d8152869e4cd472f46" title="100000 for composite (see Section 1, Radolan spec v2.1">radarLocation</a>);
+<a name="l00100"></a>00100                 <a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">readUnsignedShortInt</a>(f,2,&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#aff58e4d175a5efb321df4d4e94aaf4f0">month</a>);
+<a name="l00101"></a>00101                 <a class="code" href="read_8c.html#a9f7275e418e00be304ce3b2a65789576">readUnsignedShortInt</a>(f,2,&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ae5a3a867e44291b5de5357f5794278d7">year</a>);
 <a name="l00102"></a>00102                 
 <a name="l00103"></a>00103 <span class="comment">//              printf(&quot;\nSCAN TIME HEADER : %d:%d %d.%d.%d\n\n&quot;,header-&gt;hour,header-&gt;minute, header-&gt;day, header-&gt;month, header-&gt;year);</span>
 <a name="l00104"></a>00104                 
@@ -215,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00130"></a>00130                                 {
 <a name="l00131"></a>00131                                         strncpy(valueBuffer,pos,7);
 <a name="l00132"></a>00132                                         valueBuffer[7]=<span class="charliteral">&#39;\0&#39;</span>;
-<a name="l00133"></a>00133                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a> = atol(valueBuffer);
+<a name="l00133"></a>00133                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a> = atol(valueBuffer);
 <a name="l00134"></a>00134                                         bytesRead+=9;
 <a name="l00135"></a>00135                                 }
 <a name="l00136"></a>00136                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;VS&quot;</span>)==0)
@@ -224,31 +226,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00139"></a>00139                                         valueBuffer[2]=<span class="charliteral">&#39;\0&#39;</span>;
 <a name="l00140"></a>00140                                         <span class="keywordtype">int</span> val = atoi(valueBuffer);
 <a name="l00141"></a>00141                                         <span class="keywordflow">if</span> (val==1) {
-<a name="l00142"></a>00142                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1a94e528a2818888c2369a19b9de3a67" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">radarFormat</a> = R100km;
+<a name="l00142"></a>00142                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1a94e528a2818888c2369a19b9de3a67" title="Tag VS. 128km or 100km.">radarFormat</a> = <a class="code" href="types_8h.html#a52df4f86557e47613de56ddbff4fb0dea76886d51e602783be81673d4e0ca8e7f">R100km</a>;
 <a name="l00143"></a>00143                                         } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (val==2) {
-<a name="l00144"></a>00144                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1a94e528a2818888c2369a19b9de3a67" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">radarFormat</a> = R128km;
+<a name="l00144"></a>00144                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1a94e528a2818888c2369a19b9de3a67" title="Tag VS. 128km or 100km.">radarFormat</a> = <a class="code" href="types_8h.html#a52df4f86557e47613de56ddbff4fb0dea9f41903d07ba5d27999e36096d2d2de6">R128km</a>;
 <a name="l00145"></a>00145                                         }
 <a name="l00146"></a>00146                                         bytesRead+=4;
 <a name="l00147"></a>00147                                 }
 <a name="l00148"></a>00148                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;SW&quot;</span>)==0)
 <a name="l00149"></a>00149                                 {
-<a name="l00150"></a>00150                                         strncpy(&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1cfb674fbf61d0fe628ffcac369e476b" title="Tag VS. 128km or 100km.">softwareVersion</a>[0],pos,8);
-<a name="l00151"></a>00151                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1cfb674fbf61d0fe628ffcac369e476b" title="Tag VS. 128km or 100km.">softwareVersion</a>[8]=<span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00150"></a>00150                                         strncpy(&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1cfb674fbf61d0fe628ffcac369e476b" title="Tag SW">softwareVersion</a>[0],pos,8);
+<a name="l00151"></a>00151                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a1cfb674fbf61d0fe628ffcac369e476b" title="Tag SW">softwareVersion</a>[8]=<span class="charliteral">&#39;\0&#39;</span>;
 <a name="l00152"></a>00152                                         bytesRead+=10;
 <a name="l00153"></a>00153                                 }
 <a name="l00154"></a>00154                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;PR&quot;</span>)==0)
 <a name="l00155"></a>00155                                 {
 <a name="l00156"></a>00156                                         <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot; E-00&quot;</span>,5)==0)
 <a name="l00157"></a>00157                                         {
-<a name="l00158"></a>00158                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag SW">precision</a>=1.0f;
+<a name="l00158"></a>00158                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag PR 1, 0.1, 0.01.">precision</a>=1.0f;
 <a name="l00159"></a>00159                                         }
 <a name="l00160"></a>00160                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot; E-01&quot;</span>,5)==0)
 <a name="l00161"></a>00161                                         {
-<a name="l00162"></a>00162                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag SW">precision</a>=0.1f;
+<a name="l00162"></a>00162                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag PR 1, 0.1, 0.01.">precision</a>=0.1f;
 <a name="l00163"></a>00163                                         }
 <a name="l00164"></a>00164                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot; E-02&quot;</span>,5)==0)
 <a name="l00165"></a>00165                                         {
-<a name="l00166"></a>00166                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag SW">precision</a>=0.01f;
+<a name="l00166"></a>00166                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag PR 1, 0.1, 0.01.">precision</a>=0.01f;
 <a name="l00167"></a>00167                                         }
 <a name="l00168"></a>00168                                         bytesRead+=6;
 <a name="l00169"></a>00169                                 }
@@ -256,45 +258,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00171"></a>00171                                 {
 <a name="l00172"></a>00172                                         strncpy(valueBuffer,pos,4);
 <a name="l00173"></a>00173                                         valueBuffer[4]=<span class="charliteral">&#39;\0&#39;</span>;
-<a name="l00174"></a>00174                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ae897442983ecb50c64a78d4b0c9863ba" title="Tag PR 1, 0.1, 0.01.">intervalDuration</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> int)atoi(valueBuffer);
+<a name="l00174"></a>00174                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ae897442983ecb50c64a78d4b0c9863ba" title="Tag INT. scan interval in minutes.">intervalDuration</a> = (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> int)atoi(valueBuffer);
 <a name="l00175"></a>00175                                         bytesRead+=7;
 <a name="l00176"></a>00176                                 }
 <a name="l00177"></a>00177                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;GP&quot;</span>)==0)
 <a name="l00178"></a>00178                                 {
-<a name="l00179"></a>00179                                         strncpy(&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a0daa1be5f5f88d9608c2db7167ec02c9" title="Tag INT. scan interval in minutes.">resolution</a>[0],pos,9);
-<a name="l00180"></a>00180                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a0daa1be5f5f88d9608c2db7167ec02c9" title="Tag INT. scan interval in minutes.">resolution</a>[9]=<span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00179"></a>00179                                         strncpy(&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a0daa1be5f5f88d9608c2db7167ec02c9" title="Tag GP. 900x900 in most cases.">resolution</a>[0],pos,9);
+<a name="l00180"></a>00180                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a0daa1be5f5f88d9608c2db7167ec02c9" title="Tag GP. 900x900 in most cases.">resolution</a>[9]=<span class="charliteral">&#39;\0&#39;</span>;
 <a name="l00181"></a>00181                                         bytesRead+=11;
 <a name="l00182"></a>00182                                 }
 <a name="l00183"></a>00183                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;VV&quot;</span>)==0)
 <a name="l00184"></a>00184                                 {
 <a name="l00185"></a>00185                                         strncpy(valueBuffer,pos,3);
 <a name="l00186"></a>00186                                         valueBuffer[3]=<span class="charliteral">&#39;\0&#39;</span>;
-<a name="l00187"></a>00187                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a000b34992877df7ba22119184d7343ff" title="Tag GP. 900x900 in most cases.">predictionMinutes</a> = (<span class="keywordtype">unsigned</span> int)atoi(valueBuffer);
+<a name="l00187"></a>00187                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a000b34992877df7ba22119184d7343ff" title="Tag VVwhen prediction product, time of prediction in minutes from scan time.">predictionMinutes</a> = (<span class="keywordtype">unsigned</span> int)atoi(valueBuffer);
 <a name="l00188"></a>00188                                         bytesRead+=5;
 <a name="l00189"></a>00189                                 }
 <a name="l00190"></a>00190                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;MF&quot;</span>)==0)
 <a name="l00191"></a>00191                                 {
-<a name="l00192"></a>00192                                         strncpy(&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a0daa1be5f5f88d9608c2db7167ec02c9" title="Tag INT. scan interval in minutes.">resolution</a>[0],pos,8);
-<a name="l00193"></a>00193                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a90464ec45d157d3f611c4b9ce825780f" title="Tag VVwhen prediction product, time of prediction in minutes from scan time.">binaryFormat</a>[8]=<span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00192"></a>00192                                         strncpy(&amp;header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a0daa1be5f5f88d9608c2db7167ec02c9" title="Tag GP. 900x900 in most cases.">resolution</a>[0],pos,8);
+<a name="l00193"></a>00193                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a90464ec45d157d3f611c4b9ce825780f" title="Tag MF.">binaryFormat</a>[8]=<span class="charliteral">&#39;\0&#39;</span>;
 <a name="l00194"></a>00194                                         bytesRead+=10;
 <a name="l00195"></a>00195                                 }
 <a name="l00196"></a>00196                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(tokenList[i],<span class="stringliteral">&quot;QN&quot;</span>)==0)
 <a name="l00197"></a>00197                                 {
 <a name="l00198"></a>00198                                         <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot;001&quot;</span>,4)==0)
 <a name="l00199"></a>00199                                         {
-<a name="l00200"></a>00200                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag MF.">quantification</a> = RAVOQ_HV;
+<a name="l00200"></a>00200                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag QN.">quantification</a> = <a class="code" href="types_8h.html#ada7fdd98f3c9eff15f45dc9c69fcfc60a62c855c02fd04a5549bf5edf07a3cf4a">RAVOQ_HV</a>;
 <a name="l00201"></a>00201                                         }
 <a name="l00202"></a>00202                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot;002&quot;</span>,4)==0)
 <a name="l00203"></a>00203                                         {
-<a name="l00204"></a>00204                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag MF.">quantification</a> = RAVOQ_HV_ConfidenceEstimate;
+<a name="l00204"></a>00204                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag QN.">quantification</a> = <a class="code" href="types_8h.html#ada7fdd98f3c9eff15f45dc9c69fcfc60a2a3059f32eaee01c819b2822e7faa9b9">RAVOQ_HV_ConfidenceEstimate</a>;
 <a name="l00205"></a>00205                                         }
 <a name="l00206"></a>00206                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot;003&quot;</span>,4)==0)
 <a name="l00207"></a>00207                                         {
-<a name="l00208"></a>00208                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag MF.">quantification</a> = RAVOQ;
+<a name="l00208"></a>00208                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag QN.">quantification</a> = <a class="code" href="types_8h.html#ada7fdd98f3c9eff15f45dc9c69fcfc60ada678ee371451b9a056e6c51e2b50835">RAVOQ</a>;
 <a name="l00209"></a>00209                                         }
 <a name="l00210"></a>00210                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(pos,<span class="stringliteral">&quot;004&quot;</span>,4)==0)
 <a name="l00211"></a>00211                                         {
-<a name="l00212"></a>00212                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag MF.">quantification</a> = Winterrath;
+<a name="l00212"></a>00212                                                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a83fdb5f2544d15069444217e5e03d6cf" title="Tag QN.">quantification</a> = <a class="code" href="types_8h.html#ada7fdd98f3c9eff15f45dc9c69fcfc60af6960aab7a54a20de3a624c3f96f9673">Winterrath</a>;
 <a name="l00213"></a>00213                                         }
 <a name="l00214"></a>00214                                         bytesRead+=6;
 <a name="l00215"></a>00215                                 }
@@ -303,8 +305,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00218"></a>00218                                         strncpy(valueBuffer,pos,3);
 <a name="l00219"></a>00219                                         valueBuffer[3]=<span class="charliteral">&#39;\0&#39;</span>;
 <a name="l00220"></a>00220                                         <span class="keywordtype">int</span> len = atoi(valueBuffer);
-<a name="l00221"></a>00221                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. Number of radar stations.">radarStations</a>=(<span class="keywordtype">char</span>*)calloc(len,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
-<a name="l00222"></a>00222                                         strncpy(header-&gt;<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. Number of radar stations.">radarStations</a>,(pos+3),len);
+<a name="l00221"></a>00221                                         header-&gt;<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. List of radar station id&#39;s (c-strings)">radarStations</a>=(<span class="keywordtype">char</span>*)calloc(len,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
+<a name="l00222"></a>00222                                         strncpy(header-&gt;<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. List of radar station id&#39;s (c-strings)">radarStations</a>,(pos+3),len);
 <a name="l00223"></a>00223                                         bytesRead+=(5+len);
 <a name="l00224"></a>00224                                 }
 <a name="l00225"></a>00225                                 
@@ -313,26 +315,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00228"></a>00228                 
 <a name="l00229"></a>00229                 <span class="comment">// figure out the real header and payload size</span>
 <a name="l00230"></a>00230                 <span class="keywordtype">size_t</span> realPayloadSize = 0;
-<a name="l00231"></a>00231                 <span class="keywordflow">switch</span> (header-&gt;scanType) {
-<a name="l00232"></a>00232                         <span class="keywordflow">case</span> RD_TZ:
-<a name="l00233"></a>00233                         <span class="keywordflow">case</span> RD_TH:
-<a name="l00234"></a>00234                 <span class="keywordflow">case</span> RD_EX:
-<a name="l00235"></a>00235                 <span class="keywordflow">case</span> RD_EZ:
-<a name="l00236"></a>00236                 <span class="keywordflow">case</span> RD_EW:
-<a name="l00237"></a>00237                                 realPayloadSize = 1500*1400*RDBytesPerPixel(header-&gt;scanType);
+<a name="l00231"></a>00231                 <span class="keywordflow">switch</span> (header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>) {
+<a name="l00232"></a>00232                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a09e2819f00a8e051c582ad1b9a1f8809">RD_TZ</a>:
+<a name="l00233"></a>00233                         <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae15640e5d43b7be7a36c22c825f92dfb">RD_TH</a>:
+<a name="l00234"></a>00234                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
+<a name="l00235"></a>00235                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a7694e02b3f380d4be66ee9e604238251">RD_EZ</a>:
+<a name="l00236"></a>00236                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a9da210fbab14243c9de78d375dea74d4">RD_EW</a>:
+<a name="l00237"></a>00237                                 realPayloadSize = 1500*1400*<a class="code" href="radolan__utils_8h.html#aa18332d1789571d9185e270bf76b5901">RDBytesPerPixel</a>(header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>);
 <a name="l00238"></a>00238                                 <span class="keywordflow">break</span>;
 <a name="l00239"></a>00239                         <span class="keywordflow">default</span>:
-<a name="l00240"></a>00240                                 realPayloadSize = 900*900*RDBytesPerPixel(header-&gt;scanType);
+<a name="l00240"></a>00240                                 realPayloadSize = 900*900*<a class="code" href="radolan__utils_8h.html#aa18332d1789571d9185e270bf76b5901">RDBytesPerPixel</a>(header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>);
 <a name="l00241"></a>00241                                 <span class="keywordflow">break</span>;
 <a name="l00242"></a>00242                 }
-<a name="l00243"></a>00243                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="100000 for composite (see Section 1, Radolan spec v2.1">headerSize</a> = header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a> - realPayloadSize;
-<a name="l00244"></a>00244                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a> = realPayloadSize;
+<a name="l00243"></a>00243                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="Number of bytes actually read from the header.">headerSize</a> = header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a> - realPayloadSize;
+<a name="l00244"></a>00244                 header-&gt;<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a> = realPayloadSize;
 <a name="l00245"></a>00245                 
 <a name="l00246"></a>00246                 gzrewind(f);
-<a name="l00247"></a>00247                 gzseek(f,header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="100000 for composite (see Section 1, Radolan spec v2.1">headerSize</a>,0);
+<a name="l00247"></a>00247                 gzseek(f,header-&gt;<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="Number of bytes actually read from the header.">headerSize</a>,0);
 <a name="l00248"></a>00248         }
 <a name="l00249"></a>00249         
-<a name="l00250"></a>00250         <span class="keywordtype">int</span> RDReadScan(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, _Bool ommitOutside ) {
+<a name="l00250"></a><a class="code" href="read_8c.html#a3d0d036af52663f442f08571f84079db">00250</a>         <span class="keywordtype">int</span> <a class="code" href="read_8h.html#a3d0d036af52663f442f08571f84079db">RDReadScan</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <a class="code" href="struct_r_d_scan.html">RDScan</a>* scan, _Bool ommitOutside ) {
 <a name="l00251"></a>00251                 
 <a name="l00252"></a>00252                 gzFile* f = gzopen(filename,<span class="stringliteral">&quot;r&quot;</span>);
 <a name="l00253"></a>00253                 <span class="keywordflow">if</span> (f!=NULL)
@@ -348,45 +350,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00263"></a>00263                         }
 <a name="l00264"></a>00264                         
 <a name="l00265"></a>00265                         <span class="comment">// store the filename</span>
-<a name="l00266"></a>00266                         strcpy(scan-&gt;filename,filename);
+<a name="l00266"></a>00266                         strcpy(scan-&gt;<a class="code" href="struct_r_d_scan.html#a543b09d7ef52deea2531a22a71806f7e" title="Name of file containing data when read.">filename</a>,filename);
 <a name="l00267"></a>00267                         
 <a name="l00268"></a>00268                         <span class="comment">// read the header information</span>
-<a name="l00269"></a>00269                         RDReadRadolanHeader(f,&amp;scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>);
+<a name="l00269"></a>00269                         <a class="code" href="read_8h.html#a8e33576c8238955951761521e43e7a16">RDReadRadolanHeader</a>(f,&amp;scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>);
 <a name="l00270"></a>00270 
 <a name="l00271"></a>00271                         <span class="comment">// figure out the resolution lat x lon</span>
-<a name="l00272"></a>00272                         <span class="keywordflow">switch</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType) {
-<a name="l00273"></a>00273                                 <span class="keywordflow">case</span> RD_TZ:
-<a name="l00274"></a>00274                                 <span class="keywordflow">case</span> RD_TH:
-<a name="l00275"></a>00275                                 <span class="keywordflow">case</span> RD_EX:
-<a name="l00276"></a>00276                                 <span class="keywordflow">case</span> RD_EZ:
-<a name="l00277"></a>00277                                 <span class="keywordflow">case</span> RD_EW:
-<a name="l00278"></a>00278                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a> = 1500;
-<a name="l00279"></a>00279                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a> = 1400;
+<a name="l00272"></a>00272                         <span class="keywordflow">switch</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>) {
+<a name="l00273"></a>00273                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a09e2819f00a8e051c582ad1b9a1f8809">RD_TZ</a>:
+<a name="l00274"></a>00274                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57ae15640e5d43b7be7a36c22c825f92dfb">RD_TH</a>:
+<a name="l00275"></a>00275                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
+<a name="l00276"></a>00276                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a7694e02b3f380d4be66ee9e604238251">RD_EZ</a>:
+<a name="l00277"></a>00277                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a9da210fbab14243c9de78d375dea74d4">RD_EW</a>:
+<a name="l00278"></a>00278                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a> = 1500;
+<a name="l00279"></a>00279                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a> = 1400;
 <a name="l00280"></a>00280                                         <span class="keywordflow">break</span>;
 <a name="l00281"></a>00281                                 <span class="keywordflow">default</span>:
-<a name="l00282"></a>00282                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a> = 900;
-<a name="l00283"></a>00283                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a> = 900;
+<a name="l00282"></a>00282                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a> = 900;
+<a name="l00283"></a>00283                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a> = 900;
 <a name="l00284"></a>00284                         }
 <a name="l00285"></a>00285                         
 <a name="l00286"></a>00286                         <span class="comment">// allocate sufficient block for the actual data</span>
 <a name="l00287"></a>00287                         <span class="comment">// the actual number of vertices is payload size / 2 (data is 16bit word, 4 flag, 12 data = 2 bytes)</span>
-<a name="l00288"></a>00288                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a> = (RDDataType*)calloc(scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>*scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(RDDataType));
-<a name="l00289"></a>00289                         <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>==NULL) {
+<a name="l00288"></a>00288                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a> = (<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>*)calloc(scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>*scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>));
+<a name="l00289"></a>00289                         <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>==NULL) {
 <a name="l00290"></a>00290                                 fprintf(stderr,<span class="stringliteral">&quot;RDReadScan : ERROR : could not allocate data buffer : out of memory\n&quot;</span>);
 <a name="l00291"></a>00291                                 <span class="keywordflow">return</span> -1;
 <a name="l00292"></a>00292                         }
 <a name="l00293"></a>00293                         
-<a name="l00294"></a>00294                         <span class="keywordflow">switch</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType) {
+<a name="l00294"></a>00294                         <span class="keywordflow">switch</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>) {
 <a name="l00295"></a>00295                                         
-<a name="l00296"></a>00296                                 <span class="keywordflow">case</span> RD_RX:
-<a name="l00297"></a>00297                                 <span class="keywordflow">case</span> RD_EX:
+<a name="l00296"></a>00296                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a5780edd55c0b8ab39ddce00386033ab0">RD_RX</a>:
+<a name="l00297"></a>00297                                 <span class="keywordflow">case</span> <a class="code" href="types_8h.html#a9d20228dadee78b166b852e35f1d6d57a0978ec3914bb8f8c2d88812632937375">RD_EX</a>:
 <a name="l00298"></a>00298                                 {
 <a name="l00299"></a>00299                                         <span class="comment">// 8 Byte encoding</span>
-<a name="l00300"></a>00300                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a> = RDMaxValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType); <span class="comment">//dbZ</span>
-<a name="l00301"></a>00301                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a> = RDMinValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType); <span class="comment">//dbZ</span>
+<a name="l00300"></a>00300                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a> = <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>); <span class="comment">//dbZ</span>
+<a name="l00301"></a>00301                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a> = <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>); <span class="comment">//dbZ</span>
 <a name="l00302"></a>00302                                         
 <a name="l00303"></a>00303                                         <span class="comment">// allocate a large enough buffer for the 8bit binary data chunks from radolan</span>
-<a name="l00304"></a>00304                                         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buffer = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)calloc(scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>*scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>));
+<a name="l00304"></a>00304                                         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buffer = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)calloc(scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>*scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>));
 <a name="l00305"></a>00305                                         <span class="keywordflow">if</span> (buffer==NULL) {
 <a name="l00306"></a>00306                                                 fprintf(stderr,<span class="stringliteral">&quot;RDReadScan : ERROR : could not allocate data buffer : out of memory\n&quot;</span>);
 <a name="l00307"></a>00307                                                 <span class="keywordflow">return</span> -1;
@@ -397,7 +399,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00312"></a>00312                                         <span class="keywordtype">size_t</span> pos = gztell(f);
 <a name="l00313"></a>00313                                         gzrewind(f);
 <a name="l00314"></a>00314                                         <span class="keywordtype">size_t</span> fileSize = gzread(f, buffer, -1);
-<a name="l00315"></a>00315                                         <span class="keywordtype">size_t</span> nominalSize = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a> + scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="100000 for composite (see Section 1, Radolan spec v2.1">headerSize</a>;
+<a name="l00315"></a>00315                                         <span class="keywordtype">size_t</span> nominalSize = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a> + scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="Number of bytes actually read from the header.">headerSize</a>;
 <a name="l00316"></a>00316                                         <span class="keywordflow">if</span> (fileSize &lt; nominalSize ) 
 <a name="l00317"></a>00317                                         {
 <a name="l00318"></a>00318                                                 fprintf(stdout,<span class="stringliteral">&quot;RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n&quot;</span>, nominalSize-fileSize);
@@ -408,8 +410,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00323"></a>00323                                         <span class="comment">// END WORKAROUND</span>
 <a name="l00324"></a>00324                                         
 <a name="l00325"></a>00325                                         <span class="comment">// read data into buffer</span>
-<a name="l00326"></a>00326                                         <span class="keywordtype">size_t</span> bytesRead = gzread(f, buffer, scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a>);
-<a name="l00327"></a>00327                                         <span class="keywordflow">if</span> (bytesRead!=scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a>) {
+<a name="l00326"></a>00326                                         <span class="keywordtype">size_t</span> bytesRead = gzread(f, buffer, scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a>);
+<a name="l00327"></a>00327                                         <span class="keywordflow">if</span> (bytesRead!=scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a>) {
 <a name="l00328"></a>00328                                                 fprintf(stderr,<span class="stringliteral">&quot;RDReadScan : ERROR : payload too small. File corrupt?\n&quot;</span>);
 <a name="l00329"></a>00329                                                 <span class="keywordflow">return</span> -1;
 <a name="l00330"></a>00330                                         }
@@ -419,7 +421,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00334"></a>00334                                         
 <a name="l00335"></a>00335                                         <span class="comment">// massage the data. Discard information on clutter, errors and secondary values</span>
 <a name="l00336"></a>00336                                         <span class="keywordtype">int</span> bufferIndex=0;
-<a name="l00337"></a>00337                                         <span class="keywordflow">for</span> (bufferIndex=0; bufferIndex&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a>; bufferIndex++) {
+<a name="l00337"></a>00337                                         <span class="keywordflow">for</span> (bufferIndex=0; bufferIndex&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a>; bufferIndex++) {
 <a name="l00338"></a>00338                                                 
 <a name="l00339"></a>00339                                                 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> rvp6Value = buffer[bufferIndex];
 <a name="l00340"></a>00340                                                 
@@ -429,31 +431,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00344"></a>00344                                                         <span class="keywordflow">case</span> 250:   <span class="comment">// Fehlkennung</span>
 <a name="l00345"></a>00345                                                         {
 <a name="l00346"></a>00346                                                                 <span class="keywordflow">if</span> (ommitOutside) {
-<a name="l00347"></a>00347                                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]= RDMinValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType);
+<a name="l00347"></a>00347                                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]= <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>);
 <a name="l00348"></a>00348                                                                 } <span class="keywordflow">else</span> {
-<a name="l00349"></a>00349                                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = RDMinValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType)
+<a name="l00349"></a>00349                                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>)
 <a name="l00350"></a>00350                                                                         + (rvp6Value/2.);
 <a name="l00351"></a>00351                                                                 }
 <a name="l00352"></a>00352                                                         } <span class="keywordflow">break</span>;
 <a name="l00353"></a>00353                                                         <span class="keywordflow">default</span>:
-<a name="l00354"></a>00354                                                                 scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = RDMinValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType)
+<a name="l00354"></a>00354                                                                 scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>)
 <a name="l00355"></a>00355                                                                 + (rvp6Value/2.);
 <a name="l00356"></a>00356                                                 }
 <a name="l00357"></a>00357                                                 
 <a name="l00358"></a>00358                                                 <span class="comment">// update min/max</span>
-<a name="l00359"></a>00359                                                 <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]&gt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex];
-<a name="l00360"></a>00360                                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex];
+<a name="l00359"></a>00359                                                 <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]&gt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex];
+<a name="l00360"></a>00360                                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex];
 <a name="l00361"></a>00361                                         }
 <a name="l00362"></a>00362                                         
 <a name="l00363"></a>00363                                 } <span class="keywordflow">break</span>;
 <a name="l00364"></a>00364                                         
 <a name="l00365"></a>00365                                 <span class="keywordflow">default</span>:
 <a name="l00366"></a>00366                                 {
-<a name="l00367"></a>00367                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a> = RDMaxValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType); <span class="comment">//dbZ</span>
-<a name="l00368"></a>00368                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a> = RDMinValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType); <span class="comment">//dbZ</span>
+<a name="l00367"></a>00367                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a> = <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>); <span class="comment">//dbZ</span>
+<a name="l00368"></a>00368                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a> = <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>); <span class="comment">//dbZ</span>
 <a name="l00369"></a>00369                                         
 <a name="l00370"></a>00370                                         <span class="comment">// allocate a large enough buffer for the 16bit binary data chunks from radolan</span>
-<a name="l00371"></a>00371                                         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *buffer = (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>*)calloc(scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>*scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>));
+<a name="l00371"></a>00371                                         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *buffer = (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>*)calloc(scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>*scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>));
 <a name="l00372"></a>00372                                         <span class="keywordflow">if</span> (buffer==NULL) {
 <a name="l00373"></a>00373                                                 fprintf(stderr,<span class="stringliteral">&quot;RDReadScan : ERROR : could not allocate data buffer : out of memory\n&quot;</span>);
 <a name="l00374"></a>00374                                                 <span class="keywordflow">return</span> -1;
@@ -464,7 +466,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00379"></a>00379                                         <span class="keywordtype">size_t</span> pos = gztell(f);
 <a name="l00380"></a>00380                                         gzrewind(f);
 <a name="l00381"></a>00381                                         <span class="keywordtype">size_t</span> fileSize = gzread(f, buffer, -1);
-<a name="l00382"></a>00382                                         <span class="keywordtype">size_t</span> nominalSize = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a> + scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="100000 for composite (see Section 1, Radolan spec v2.1">headerSize</a>;
+<a name="l00382"></a>00382                                         <span class="keywordtype">size_t</span> nominalSize = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a> + scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#ab911d27eecf2280759d385d009da0d11" title="Number of bytes actually read from the header.">headerSize</a>;
 <a name="l00383"></a>00383                                         <span class="keywordflow">if</span> (fileSize &lt; nominalSize ) 
 <a name="l00384"></a>00384                                         {
 <a name="l00385"></a>00385                                                 fprintf(stdout,<span class="stringliteral">&quot;RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n&quot;</span>, nominalSize-fileSize);
@@ -475,8 +477,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00390"></a>00390                                         <span class="comment">// END WORKAROUND</span>
 <a name="l00391"></a>00391                                         
 <a name="l00392"></a>00392                                         <span class="comment">// read data into buffer</span>
-<a name="l00393"></a>00393                                         <span class="keywordtype">size_t</span> bytesRead = gzread(f, buffer, scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a>);
-<a name="l00394"></a>00394                                         <span class="keywordflow">if</span> (bytesRead!=scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Number of bytes actually read from the header.">payloadSize</a>) {
+<a name="l00393"></a>00393                                         <span class="keywordtype">size_t</span> bytesRead = gzread(f, buffer, scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a>);
+<a name="l00394"></a>00394                                         <span class="keywordflow">if</span> (bytesRead!=scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a17997be20e52535512eae347ccb29dc3" title="Tag BY. Limited to 4Gb. Corrected by subtracting the header size.">payloadSize</a>) {
 <a name="l00395"></a>00395                                                 fprintf(stderr,<span class="stringliteral">&quot;RDReadScan : ERROR : payload too small. File corrupt?\n&quot;</span>);
 <a name="l00396"></a>00396                                                 <span class="keywordflow">return</span> -1;
 <a name="l00397"></a>00397                                         }
@@ -489,7 +491,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00404"></a>00404                                         
 <a name="l00405"></a>00405                                         <span class="comment">// massage the data. Discard information on clutter, errors and replace secondary values</span>
 <a name="l00406"></a>00406                                         <span class="keywordtype">int</span> bufferIndex=0;
-<a name="l00407"></a>00407                                         <span class="keywordflow">for</span> (bufferIndex=0; bufferIndex &lt; scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a> * scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>; bufferIndex++) {
+<a name="l00407"></a>00407                                         <span class="keywordflow">for</span> (bufferIndex=0; bufferIndex &lt; scan-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a> * scan-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>; bufferIndex++) {
 <a name="l00408"></a>00408                                                 
 <a name="l00409"></a>00409                                                 <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> rawBufferValue = buffer[bufferIndex];
 <a name="l00410"></a>00410                                                 
@@ -506,12 +508,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00421"></a>00421                                                 beef = beef &gt;&gt; 4;
 <a name="l00422"></a>00422                                                 
 <a name="l00423"></a>00423                                                 <span class="comment">// calculate rain rate from header-&gt;precision</span>
-<a name="l00424"></a>00424                                                 <span class="keywordtype">float</span> rainValue = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag SW">precision</a> * (float)beef;
+<a name="l00424"></a>00424                                                 <span class="keywordtype">float</span> rainValue = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#abcaac4d26f9f7ce4b0d0ca234d0ac0bd" title="Tag PR 1, 0.1, 0.01.">precision</a> * (float)beef;
 <a name="l00425"></a>00425                                                 
-<a name="l00426"></a>00426                                                 _Bool errorBitSet = (flagValue &amp; RD_ERROR_BIT) == RD_ERROR_BIT;
-<a name="l00427"></a>00427                                                 _Bool clutterBitSet = (flagValue &amp; RD_CLUTTER_BIT) == RD_CLUTTER_BIT;
-<a name="l00428"></a>00428                                                 _Bool secondaryValueBitSet = (flagValue &amp; RD_SECONDARY_VALUE_BIT) == RD_SECONDARY_VALUE_BIT;
-<a name="l00429"></a>00429                                                 _Bool negativeSignBitSet = (flagValue &amp; RD_NEGATIVE_SIGN_BIT) == RD_NEGATIVE_SIGN_BIT;
+<a name="l00426"></a>00426                                                 _Bool errorBitSet = (flagValue &amp; <a class="code" href="types_8h.html#aaba030f1ccf19f5e048a5f40dbb98ae6">RD_ERROR_BIT</a>) == <a class="code" href="types_8h.html#aaba030f1ccf19f5e048a5f40dbb98ae6">RD_ERROR_BIT</a>;
+<a name="l00427"></a>00427                                                 _Bool clutterBitSet = (flagValue &amp; <a class="code" href="types_8h.html#a103bb9eb5b9a3a732f0efa19b3d26cbf">RD_CLUTTER_BIT</a>) == <a class="code" href="types_8h.html#a103bb9eb5b9a3a732f0efa19b3d26cbf">RD_CLUTTER_BIT</a>;
+<a name="l00428"></a>00428                                                 _Bool secondaryValueBitSet = (flagValue &amp; <a class="code" href="types_8h.html#ace4a89c4f2705b57425fe91e9011023d">RD_SECONDARY_VALUE_BIT</a>) == <a class="code" href="types_8h.html#ace4a89c4f2705b57425fe91e9011023d">RD_SECONDARY_VALUE_BIT</a>;
+<a name="l00429"></a>00429                                                 _Bool negativeSignBitSet = (flagValue &amp; <a class="code" href="types_8h.html#ad146ffb7af25296c12b4255725efc3d3">RD_NEGATIVE_SIGN_BIT</a>) == <a class="code" href="types_8h.html#ad146ffb7af25296c12b4255725efc3d3">RD_NEGATIVE_SIGN_BIT</a>;
 <a name="l00430"></a>00430                                                 
 <a name="l00431"></a>00431                                                 <span class="keywordflow">if</span> (clutterBitSet)
 <a name="l00432"></a>00432                                                 {
@@ -522,48 +524,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00437"></a>00437                                                   <span class="comment">// Perhaps we need to check in the value given matches the value</span>
 <a name="l00438"></a>00438                                                   <span class="comment">// for clutter. If so, we use the RD_ERROR_VALUE, if not we use the rain value?</span>
 <a name="l00439"></a>00439                                                   
-<a name="l00440"></a>00440                                                   <span class="keywordflow">if</span> (beef!=RD_CLUTTER_VALUE) 
+<a name="l00440"></a>00440                                                   <span class="keywordflow">if</span> (beef!=<a class="code" href="types_8h.html#adf20616c8f35e0f3c61dcb07336ad9ea">RD_CLUTTER_VALUE</a>) 
 <a name="l00441"></a>00441                                                   {
 <a name="l00442"></a>00442                                                     <span class="keywordflow">if</span> (ommitOutside) {
-<a name="l00443"></a>00443                                                       scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = RDMinValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType);
+<a name="l00443"></a>00443                                                       scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = <a class="code" href="radolan__utils_8h.html#a378ca9b48e08fcd3882fb0badb870dec">RDMinValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>);
 <a name="l00444"></a>00444                                                     } <span class="keywordflow">else</span> {
-<a name="l00445"></a>00445                                                       scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = RD_ERROR_VALUE;
+<a name="l00445"></a>00445                                                       scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = <a class="code" href="types_8h.html#a1f3b33354a7e877c49fa8a123a56914c">RD_ERROR_VALUE</a>;
 <a name="l00446"></a>00446                                                     }
 <a name="l00447"></a>00447                                                   } 
 <a name="l00448"></a>00448                                                   <span class="keywordflow">else</span> 
 <a name="l00449"></a>00449                                                   {
-<a name="l00450"></a>00450                                                     scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = RDMaxValue(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.scanType);
+<a name="l00450"></a>00450                                                     scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = <a class="code" href="radolan__utils_8h.html#a8385bdc477e02d00dfc71fc3f28c6ed7">RDMaxValue</a>(scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#a787cd9d4919e84a271f4b9a4fb2f397e" title="Product ID (see Section 1, Radolan spec v2.1.">scanType</a>);
 <a name="l00451"></a>00451                                                   }
 <a name="l00452"></a>00452                                                 }  
 <a name="l00453"></a>00453                                                 
 <a name="l00454"></a>00454                                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (errorBitSet) 
 <a name="l00455"></a>00455                                                 {
-<a name="l00456"></a>00456                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = rainValue;
+<a name="l00456"></a>00456                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = rainValue;
 <a name="l00457"></a>00457                                                 }
 <a name="l00458"></a>00458                                                 
 <a name="l00459"></a>00459                                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (secondaryValueBitSet) 
 <a name="l00460"></a>00460                                                 {
 <a name="l00461"></a>00461                                                         <span class="comment">// replaced by secondary value. At this point, we don&#39;t </span>
 <a name="l00462"></a>00462                                                         <span class="comment">// really care about where the value comes from</span>
-<a name="l00463"></a>00463                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = rainValue;
+<a name="l00463"></a>00463                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = rainValue;
 <a name="l00464"></a>00464                                                 }
 <a name="l00465"></a>00465                                                 
 <a name="l00466"></a>00466                                                 <span class="keywordflow">else</span> <span class="keywordflow">if</span> (negativeSignBitSet)
 <a name="l00467"></a>00467                                                 {
 <a name="l00468"></a>00468                                                         <span class="comment">// this is only important with RD product</span>
-<a name="l00469"></a>00469                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex] = -rainValue;
+<a name="l00469"></a>00469                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex] = -rainValue;
 <a name="l00470"></a>00470                                                         
 <a name="l00471"></a>00471                                                         <span class="comment">// update min/max</span>
-<a name="l00472"></a>00472                                                         <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]&gt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex];
-<a name="l00473"></a>00473                                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex];
+<a name="l00472"></a>00472                                                         <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]&gt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex];
+<a name="l00473"></a>00473                                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex];
 <a name="l00474"></a>00474                                                 }
 <a name="l00475"></a>00475                                                 
 <a name="l00476"></a>00476                                                 <span class="keywordflow">else</span> {
-<a name="l00477"></a>00477                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]=rainValue;
+<a name="l00477"></a>00477                                                         scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]=rainValue;
 <a name="l00478"></a>00478                                                         
 <a name="l00479"></a>00479                                                         <span class="comment">// update min/max</span>
-<a name="l00480"></a>00480                                                         <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]&gt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex];
-<a name="l00481"></a>00481                                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex]&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>[bufferIndex];
+<a name="l00480"></a>00480                                                         <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]&gt;scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex];
+<a name="l00481"></a>00481                                                         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex]&lt;scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>) scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>=scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>[bufferIndex];
 <a name="l00482"></a>00482                                                         
 <a name="l00483"></a>00483                                                         <span class="keywordflow">if</span> (beef&lt;rawMin) rawMin=beef;
 <a name="l00484"></a>00484                                                         <span class="keywordflow">if</span> (beef&gt;rawMax) rawMax=beef;
@@ -580,26 +582,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00495"></a>00495                 <span class="keywordflow">return</span> 0;
 <a name="l00496"></a>00496         }
 <a name="l00497"></a>00497         
-<a name="l00498"></a>00498         <a class="code" href="struct_r_d_scan.html">RDScan</a>* RDAllocateScan() {
+<a name="l00498"></a><a class="code" href="read_8c.html#a0ea9deade955bf6d56e05c48a2cc7a5e">00498</a>         <a class="code" href="struct_r_d_scan.html">RDScan</a>* <a class="code" href="read_8h.html#a0ea9deade955bf6d56e05c48a2cc7a5e">RDAllocateScan</a>() {
 <a name="l00499"></a>00499                 <a class="code" href="struct_r_d_scan.html">RDScan</a>* scan = (<a class="code" href="struct_r_d_scan.html">RDScan</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_r_d_scan.html">RDScan</a>));
 <a name="l00500"></a>00500                 <span class="keywordflow">if</span> (scan==NULL) {
 <a name="l00501"></a>00501                         fprintf(stderr,<span class="stringliteral">&quot;RDAllocateScan : ERROR : out of memory\n&quot;</span>);
 <a name="l00502"></a>00502                         <span class="keywordflow">return</span> NULL;
 <a name="l00503"></a>00503                 }
-<a name="l00504"></a>00504                 scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. Number of radar stations.">radarStations</a>=NULL;
-<a name="l00505"></a>00505                 scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Number of latitudinal vertices.">min_value</a>=4095;
-<a name="l00506"></a>00506                 scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Minimum value found in the actual data.">max_value</a>=0;
+<a name="l00504"></a>00504                 scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. List of radar station id&#39;s (c-strings)">radarStations</a>=NULL;
+<a name="l00505"></a>00505                 scan-&gt;<a class="code" href="struct_r_d_scan.html#ab1ae9916502cc8bad25935a67b877b4f" title="Minimum value found in the actual data.">min_value</a>=4095;
+<a name="l00506"></a>00506                 scan-&gt;<a class="code" href="struct_r_d_scan.html#a76e6c44aa0e9be91927023864f4e9545" title="Maximum value found in the actual data.">max_value</a>=0;
 <a name="l00507"></a>00507                 <span class="keywordflow">return</span> scan;
 <a name="l00508"></a>00508         }
 <a name="l00509"></a>00509         
 <a name="l00510"></a>00510         
-<a name="l00511"></a>00511         <span class="keywordtype">void</span> RDFreeScan(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan) {
+<a name="l00511"></a><a class="code" href="read_8c.html#aedb7437116e2a99abc80fe1a49c5972e">00511</a>         <span class="keywordtype">void</span> <a class="code" href="read_8h.html#aedb7437116e2a99abc80fe1a49c5972e">RDFreeScan</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* scan) {
 <a name="l00512"></a>00512                 <span class="keywordflow">if</span> (scan!=NULL) {
-<a name="l00513"></a>00513                         <span class="keywordtype">char</span>* ds = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Name of file containing data when read.">header</a>.<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. Number of radar stations.">radarStations</a>;
+<a name="l00513"></a>00513                         <span class="keywordtype">char</span>* ds = scan-&gt;<a class="code" href="struct_r_d_scan.html#a70cb9eb16151606ab55df2b03470a1b8" title="Header info (when read from radolan binary format)">header</a>.<a class="code" href="struct_r_d_radolan_header.html#aa43e08eb137012d93efd54db121cf0a6" title="Tag MS. List of radar station id&#39;s (c-strings)">radarStations</a>;
 <a name="l00514"></a>00514                         <span class="keywordflow">if</span> (ds!=NULL) {
 <a name="l00515"></a>00515                                 free(ds);
 <a name="l00516"></a>00516                         }
-<a name="l00517"></a>00517                         RDDataType* dataPtr = scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>;
+<a name="l00517"></a>00517                         <a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>* dataPtr = scan-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>;
 <a name="l00518"></a>00518                         <span class="keywordflow">if</span> (dataPtr!=NULL) {
 <a name="l00519"></a>00519                                 free(dataPtr);
 <a name="l00520"></a>00520                         }
@@ -607,7 +609,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00522"></a>00522                 }
 <a name="l00523"></a>00523         }
 <a name="l00524"></a>00524         
-<a name="l00525"></a>00525         <a class="code" href="struct_r_d_scan.html">RDScan</a>* RDCloneScan(<a class="code" href="struct_r_d_scan.html">RDScan</a>* original) {
+<a name="l00525"></a><a class="code" href="read_8c.html#a569910a5c182553554b3c4782bf35b5f">00525</a>         <a class="code" href="struct_r_d_scan.html">RDScan</a>* <a class="code" href="read_8h.html#a569910a5c182553554b3c4782bf35b5f">RDCloneScan</a>(<a class="code" href="struct_r_d_scan.html">RDScan</a>* original) {
 <a name="l00526"></a>00526                 <a class="code" href="struct_r_d_scan.html">RDScan</a>* clone = NULL;
 <a name="l00527"></a>00527                 <span class="keywordflow">if</span> (original!=NULL) {
 <a name="l00528"></a>00528                         clone = (<a class="code" href="struct_r_d_scan.html">RDScan</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_r_d_scan.html">RDScan</a>));
@@ -616,14 +618,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00531"></a>00531                                 <span class="keywordflow">return</span> NULL;
 <a name="l00532"></a>00532                         }
 <a name="l00533"></a>00533                         memcpy(clone,original,<span class="keyword">sizeof</span>(<a class="code" href="struct_r_d_scan.html">RDScan</a>));
-<a name="l00534"></a>00534                         clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a> = NULL;
-<a name="l00535"></a>00535                         clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a> = (RDDataType*)calloc(original-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>*original-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(RDDataType));
-<a name="l00536"></a>00536                         <span class="keywordflow">if</span> (clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>==NULL) {
+<a name="l00534"></a>00534                         clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a> = NULL;
+<a name="l00535"></a>00535                         clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a> = (<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>*)calloc(original-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>*original-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>,<span class="keyword">sizeof</span>(<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>));
+<a name="l00536"></a>00536                         <span class="keywordflow">if</span> (clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>==NULL) {
 <a name="l00537"></a>00537                                 fprintf(stderr,<span class="stringliteral">&quot;RDCloneScan : ERROR : could not allocate data buffer : out of memory\n&quot;</span>);
-<a name="l00538"></a>00538                                 RDFreeScan(clone);
+<a name="l00538"></a>00538                                 <a class="code" href="read_8h.html#aedb7437116e2a99abc80fe1a49c5972e">RDFreeScan</a>(clone);
 <a name="l00539"></a>00539                                 <span class="keywordflow">return</span> NULL;
 <a name="l00540"></a>00540                         }
-<a name="l00541"></a>00541                         memcpy(clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>,original-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Header info (when read from radolan binary format)">data</a>,original-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Array of rd_data[header.payloadSize].">dimLon</a>*original-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of longitudinal vertices.">dimLat</a>*<span class="keyword">sizeof</span>(RDDataType));
+<a name="l00541"></a>00541                         memcpy(clone-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>,original-&gt;<a class="code" href="struct_r_d_scan.html#a9349ba0b1d1fc40152afb256755a344c" title="Array of rd_data[header.payloadSize].">data</a>,original-&gt;<a class="code" href="struct_r_d_scan.html#a73ef1a84844c119395a72a1066204393" title="Number of longitudinal vertices.">dimLon</a>*original-&gt;<a class="code" href="struct_r_d_scan.html#a431bfacba82f744f947b997c353858f2" title="Number of latitudinal vertices.">dimLat</a>*<span class="keyword">sizeof</span>(<a class="code" href="types_8h.html#ab5e108694fb6529ec6ca0b845897e2c8">RDDataType</a>));
 <a name="l00542"></a>00542                 }
 <a name="l00543"></a>00543                 <span class="keywordflow">return</span> clone;
 <a name="l00544"></a>00544         }
@@ -636,13 +638,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>read.c</b>      </li>
+      <li class="navelem"><a class="el" href="read_8c.html">read.c</a>      </li>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -652,7 +654,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 
 
-    <li class="footer">Generated on Tue Nov 29 2011 12:51:02 for libradolan by
+    <li class="footer">Generated on Tue Nov 29 2011 13:05:38 for libradolan by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.5.1 </li>
    </ul>
