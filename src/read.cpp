@@ -297,8 +297,8 @@ namespace Radolan
 				case RD_EX:
 				{
 					// 8 Byte encoding
-					scan->min_value = RDMaxValue(scan->header.scanType); //dbZ
-					scan->max_value = RDMinValue(scan->header.scanType); //dbZ
+					scan->min_value = RDMinValue(scan->header.scanType); //dbZ
+					scan->max_value = RDMaxValue(scan->header.scanType); //dbZ
 					
 					// allocate a large enough buffer for the 8bit binary data chunks from radolan
 					unsigned char *buffer = (unsigned char*)calloc(scan->dimLon*scan->dimLat,sizeof(unsigned char));
@@ -364,8 +364,8 @@ namespace Radolan
 					
 				default:
 				{
-					scan->min_value = RDMaxValue(scan->header.scanType); //dbZ
-					scan->max_value = RDMinValue(scan->header.scanType); //dbZ
+					scan->min_value = RDMinValue(scan->header.scanType); //dbZ
+					scan->max_value = RDMaxValue(scan->header.scanType); //dbZ
 					
 					// allocate a large enough buffer for the 16bit binary data chunks from radolan
 					unsigned short int *buffer = (unsigned short int*)calloc(scan->dimLon*scan->dimLat,sizeof(unsigned short int));
