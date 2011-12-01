@@ -293,6 +293,8 @@ namespace Radolan {
 			type = RD_RS;
 		} else if (strcmp(str,"RQ")==0) {
 			type = RD_RQ;
+		} else if (strcmp(str,"RE")==0) {
+			type = RD_RQ;
 		} else if (strcmp(str,"TZ")==0) {
 			type = RD_TZ;
 		} else if (strcmp(str,"TH")==0) {
@@ -343,6 +345,7 @@ namespace Radolan {
 			case RD_RV:
 			case RD_RS:
 			case RD_RQ:
+			case RD_RE:                
 			case RD_TZ:
 			case RD_TH:
 				
@@ -383,7 +386,6 @@ namespace Radolan {
 		printf("Min value : %f Max value : %f\n",scan->min_value,scan->max_value);
 		printf("Header size %li , payload size %li\n",h.headerSize,h.payloadSize);
 		printf("Stations %s\n",h.radarStations);
-		
 	}
 	
 	void RDPrintScan(RDScan* scan, int latCount, int lonCount) 

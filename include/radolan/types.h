@@ -69,6 +69,7 @@ extern "C"
         RD_RV,
         RD_RS,
         RD_RQ,
+        RD_RE,
         RD_TZ,
         RD_TH,
         RD_EX,
