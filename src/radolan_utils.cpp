@@ -108,29 +108,45 @@ namespace Radolan {
 	
 	void RDScanTime(RDScan* scan, struct tm * t)
 	{
-	  // find out if Daylight Saving Time is on
-	  // by obtaining local time
-
-	  time_t now;
-	  
-	  time( &now );
-
-//	  struct tm nowPtr = * localtime( (const time_t*) &now );
-
-	  // initialize the scan time
-	  gmtime_r( (const time_t * ) &now, t );
-
-	  // construct the server timestamp @ GMT with DST set up correctly
-	  t->tm_sec = 0;
-	  t->tm_min = scan->header.minute;
-	  t->tm_hour = scan->header.hour;
-	  t->tm_mday = scan->header.day;
-	  t->tm_mon = scan->header.month;
-	  
-	  //printf("SCAN HEADER MONTH = %d\n",scan->header.month );
-
-	  t->tm_year = scan->header.year + 100; // man mktime
+        // find out if Daylight Saving Time is on
+        // by obtaining local time
+        
+        time_t now;
+        
+        time( &now );
+        
+        // initialize the scan time
+        
+        // gmtime_r does not make timezone adjustment. Since the
+        // Radolan timestamps are supposed to be UTC, so will the
+        // result of gmtime_r
+        gmtime_r( (const time_t * ) &now, t );
+        
+        // construct the server timestamp @ GMT with DST set up correctly
+        t->tm_sec = 0;
+        t->tm_min = scan->header.minute;
+        t->tm_hour = scan->header.hour;
+        t->tm_mday = scan->header.day;
+        t->tm_mon = scan->header.month;
+        
+        //printf("SCAN HEADER MONTH = %d\n",scan->header.month );
+        
+        t->tm_year = scan->header.year + 100; // man mktime
 	}
+    
+    /** Returns the scan time in seconds since the epoch (1.1.1970) 
+     * in UTC timezone.
+     */
+    time_t RDScanTimeInSecondsSinceEpoch( RDScan *scan )
+    {
+        struct tm t;
+        
+        RDScanTime( scan, &t );
+        
+        time_t time = timegm( &t );
+        
+        return time;
+    }
 	
 	size_t RDBytesPerPixel(RDScanType type)
 	{
