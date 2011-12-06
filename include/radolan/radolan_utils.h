@@ -55,6 +55,12 @@ extern "C"
 		
 		/** Returns the value marking a clutter measurement for the given scan type */
         RDDataType RDClutterValue(RDScanType t);
+        
+        /** Returns a unit qualifier 
+         * @param scan type
+         * @return unit qualifier (dBZ, mm/h etc.)
+         */
+        const char *RDUnits( RDScanType type );
 		
 		/** Converts RVP6 units (reflectivity) to byte values. */
 		unsigned char RDRVP6ToByteValue( float rvp6 );
@@ -87,6 +93,13 @@ extern "C"
 		 * @param time struct pointer
 		 */
 		void RDScanTime(RDScan* scan, struct tm *);
+        
+        /** Returns the scan time in seconds since the epoch (1.1.1970) 
+         * in UTC timezone.
+         * @param scan
+         * @return time_t seconds since epoch (1970 00:00:00,0 +0:00)
+         */
+        time_t RDScanTimeInSecondsSinceEpoch( RDScan *scan );
 		
 		/** Some scan types deliver values in 1/100 mm / 5 mins and so on. 
 		 * This method allows calculation in values of mm/hour, as is usual.

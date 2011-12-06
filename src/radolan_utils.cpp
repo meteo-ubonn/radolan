@@ -160,6 +160,51 @@ namespace Radolan {
 				return 2;
 		}
 	}
+    
+    const char *RDUnits( RDScanType t )
+    {
+        const char *result = NULL;
+        
+		switch (t) {
+			case RD_RX:
+			case RD_EX:
+				result = "dBZ";
+				break;
+			case RD_RZ:
+			case RD_RY:
+			case RD_RV:	
+			case RD_EZ:
+				// 1/100 mm / 5 min
+				result = "0.01 mm /5 min";
+				break;
+			case RD_RH:
+			case RD_RB:
+			case RD_RW:
+			case RD_RL:
+			case RD_RU:
+			case RD_RS:
+			case RD_RQ:
+				// 1/10 mm / h
+                result = "0.1 mm / h";
+				break;
+			case RD_SQ:
+				// 1/10 mm / 6h
+                result = "0.1 mm / 6 h";
+				break;
+			case RD_SH:
+				// 1/10 mm / 12h
+                result = "0.1 mm / 12 h";
+				break;
+			case RD_SF:
+				// 1/10 mm / 24h
+                result = "0.1 mm / 24 h";
+				break;
+			default:
+				result = "unknown";
+				break;
+		}
+		return result;
+    }
 	
 	float RDMMPerHour(RDScanType t, RDDataType value)
 	{
