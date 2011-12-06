@@ -282,7 +282,8 @@
 			
 			// allocate sufficient block for the actual data
 			// the actual number of vertices is payload size / 2 (data is 16bit word, 4 flag, 12 data = 2 bytes)
-			scan->data = (RDDataType*)calloc(scan->dimLon*scan->dimLat,sizeof(RDDataType));
+			scan->data = (RDDataType *) calloc( scan->dimLat * scan->dimLon, sizeof(RDDataType) );
+            
 			if (scan->data==NULL) {
 				fprintf(stderr,"RDReadScan : ERROR : could not allocate data buffer : out of memory\n");
 				return -1;
