@@ -6,5 +6,6 @@
 #include <radolan/coordinatesystem.h>
 #include <radolan/radolan_utils.h>
 #include <radolan/observationfile.h>
+#include <radolan/shapefile.h>
 
 #endif /* Header Guard */

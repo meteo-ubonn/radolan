@@ -59,11 +59,19 @@ IF (NOT HDF5_FOUND)
    MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
 ENDIF()
 
+# Shapefile
+FIND_PACKAGE(SHP)
+IF (NOT SHP_FOUND)
+   MESSAGE(FATAL_ERROR "Shapefile not found INCLUDE_DIR=${SHP_INCLUDE_DIR} LIBRARIES=${SHP_LIBRARIES}")
+ENDIF()
+
 #add include directories
 INCLUDE_DIRECTORIES(
 	${PROJECT_SOURCE_DIR}/include
 	${LIBZ_INCLUDEDIR}
-	${HDF5_INCLUDEDIR})
+	${HDF5_INCLUDEDIR}
+	${SHP_INCLUDEDIR}
+)
 
 #######################
 #create configure file#
@@ -74,6 +82,7 @@ CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/config_h.in
 
 #set default cmake build type to Debug
 #(None Debug Release RelWithDebInfo MinSizeRel)
+
 IF(NOT CMAKE_BUILD_TYPE)
 SET(CMAKE_BUILD_TYPE "Release")
 ENDIF()
@@ -84,15 +93,23 @@ ADD_LIBRARY(radolan SHARED
     src/coordinatesystem.cpp
     src/radolan_utils.cpp
     src/observationfile.cpp
+	src/shapefile.cpp
 )
 
 TARGET_LINK_LIBRARIES(radolan
    ${LIBZ_LIBRARIES}
    ${HDF5_LIBRARIES}
+   ${SHP_LIBRARIES}
 )
 
-# test code
-#the executable
+# Shapefile tool
+
+ADD_EXECUTABLE(radolan2shapefile
+    src/radolan2shapefile.cpp
+)
+
+# test executable
+
 ADD_EXECUTABLE(radolan_test
     src/radolan_test.cpp
 )
@@ -101,11 +118,20 @@ TARGET_LINK_LIBRARIES(radolan_test
     radolan
     ${LIBZ_LIBRARIES}
     ${HDF5_LIBRARIES}
+   	${SHP_LIBRARIES}
+)
+
+TARGET_LINK_LIBRARIES(radolan2shapefile
+    radolan
+    ${LIBZ_LIBRARIES}
+    ${HDF5_LIBRARIES}
+   	${SHP_LIBRARIES}
 )
 
 ######################
 #documentation target#
 ######################
+
 INCLUDE(FindDoxygen)
 IF(DOXYGEN_EXECUTABLE)
     IF(DOXYGEN_DOT_EXECUTABLE)
@@ -132,10 +158,13 @@ ENDIF(DOXYGEN_EXECUTABLE)
 ################
 #install target#
 ################
+
 INSTALL(DIRECTORY ${PROJECT_BINARY_DIR}/${PROJECT_NAME} DESTINATION "/usr/local/include")
 INSTALL(DIRECTORY include/${PROJECT_NAME}
         DESTINATION "/usr/local/include"
         PATTERN ".svn" EXCLUDE
         PATTERN ".git" EXCLUDE
         PATTERN "*.swp" EXCLUDE)
+
 INSTALL(TARGETS radolan LIBRARY DESTINATION "/usr/local/lib")
+INSTALL(TARGETS radolan2shapefile RUNTIME DESTINATION "/usr/local/bin")
