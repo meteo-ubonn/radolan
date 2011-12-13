@@ -224,6 +224,9 @@ namespace Radolan
 		 */
 		RDGridQuadrant RDQuadrant(RDGridPoint p);
 		
+	    /** Scaling Factor for the polar stereographic projection */
+		double polarStereographicScalingFactor(double phi0,double phi);
+
 	private:
 
 		// these parameters depend on the radolan product
@@ -257,9 +260,6 @@ namespace Radolan
 	    
 	    /** rad -> deg */
 	    double rad(double deg);
-	    
-	    /** Scaling Factor for the polar stereographic projection */
-		double polarStereographicScalingFactor(double phi0,double phi);
 
 		// Called after changing scan type to update internals
 		void updateGridInfo();

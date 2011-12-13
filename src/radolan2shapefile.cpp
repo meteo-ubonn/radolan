@@ -10,7 +10,9 @@ void usage()
 {
     cout << "radolan2shapefile [-g -p] -f <radolan scan path> -o <shapefile path>" << endl;
     cout << "-p write out points instead of polygons" << endl;
+    cout << "-b ignores the input file and writes out the bounding box" << endl;
     cout << "-g write out geographical coordinates instead of cartesian" << endl;
+    cout << "-n write out simple shapes without values (POINTM/POLYGONM)" << endl;
     
     exit(0);
 }
@@ -33,8 +35,10 @@ int main(int argc, char** argv)
         
         bool writePoints = false;
         
-        std::cout << argv[0];
+        bool writeBoundingBox = false;
         
+        bool withValues = true;
+
         for ( int i = 1; i < argc; i++ ) 
         { 
             if ( i + 1 != argc ) 
@@ -53,31 +57,56 @@ int main(int argc, char** argv)
                 {
                     inverse = true;
                 } 
+                else if (argvee == "-b")
+                {
+                    writeBoundingBox = true;
+                }
+                else if (argvee == "-n")
+                {
+                    withValues = false;
+                }
             }
-            std::cout << argv[i] << " ";
         }
         
         if ( shapefilePath == NULL || radolanPath == NULL )
         {
             usage();
         }
-    
+        
         RDScan* scan = RDAllocateScan();
-	
+        
         if ( RDReadScan( radolanPath, scan, true ) == 0 )
         {
-            RDFreeScan( scan );
+            if ( writeBoundingBox )
+            {
+                cout << endl << "Writing bounding box for scan type " << RDScanTypeToString(scan->header.scanType) << " ... ";
+                
+                RDWriteRadolanBoundingBoxToShapefile( scan, shapefilePath, inverse ); 
+
+                cout << "done." << endl;
+                
+                return 0;
+            }
+            
+            cout << "Converting file " << radolanPath << " to "
+            << (writePoints ? "points" : "polygon") << " shapefile " 
+            << (withValues ? "with" : "without" ) << " values " 
+            << (inverse ? "in geographical" : "in polar stereographic") << " coordinates" 
+            << " to file " << shapefilePath << endl;
             
             if ( writePoints )
             {
-                RDRadolan2PointShapefile( scan, shapefilePath );
+                
+                RDRadolan2PointShapefile( scan, shapefilePath, inverse, withValues );
             }
             else
             {
-                RDRadolan2PolygonShapefile( scan, shapefilePath );
+                RDRadolan2PolygonShapefile( scan, shapefilePath, inverse, withValues );
             }
+            
+            RDFreeScan( scan );
         }
     }
-   
+    
     return 0;
 }
