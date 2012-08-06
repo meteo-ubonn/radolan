@@ -206,11 +206,13 @@ namespace Radolan
 		switch (quadrant) 
 		{
 			case RDLowerLeft:
+                
 				poly[0] = geographicalCoordinate(pc);
 				poly[1] = geographicalCoordinate(rdCartesianPoint(pc.x, pc.y+1.0f));
 				poly[2] = geographicalCoordinate(rdCartesianPoint(pc.x+1.0f, pc.y+1.0f));
 				poly[3] = geographicalCoordinate(rdCartesianPoint(pc.x+1.0f, pc.y));
 				break;
+                
 			case RDUpperLeft:
 				
 				poly[0] = geographicalCoordinate(rdCartesianPoint(pc.x, pc.y-1.0f));

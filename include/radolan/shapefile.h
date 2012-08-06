@@ -17,7 +17,7 @@ extern "C"
          *        transformation back from polar stereographic into lat/lon. Defaults to false
          * @return 0 if all ok, error code else.
          */
-        int RDRadolan2PointShapefile( RDScan* scan, const char* filename, bool inverse=false );
+        int RDRadolan2PointShapefile( RDScan* scan, const char* filename, bool inverse=false, bool withValues=true );
         
         /** Writes out a shapefile with the individual radar pixels as polygons
          * @param scan
@@ -26,7 +26,7 @@ extern "C"
          *        transformation back from polar stereographic into lat/lon. Defaults to false
          * @return 0 if all ok, error code else.
          */
-        int RDRadolan2PolygonShapefile( RDScan *scan, const char* filename, bool inverse=false );
+        int RDRadolan2PolygonShapefile( RDScan *scan, const char* filename, bool inverse=false, bool withValues=true );
         
         /** Writes out the bounding box of the coordinate system as shapefile
          * @param scan

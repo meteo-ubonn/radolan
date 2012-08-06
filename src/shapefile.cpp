@@ -7,9 +7,9 @@ namespace Radolan
 {
 #endif
 
-    int RDRadolan2PointShapefile( RDScan* scan, const char* filename, bool inverse )
+    int RDRadolan2PointShapefile( RDScan* scan, const char* filename, bool inverse, bool withValues )
     {
-        SHPHandle shapefile = SHPCreate(filename, SHPT_MULTIPOINTM);
+        SHPHandle shapefile = withValues ? SHPCreate(filename, SHPT_MULTIPOINTM) : SHPCreate(filename, SHPT_MULTIPOINT);
         
         if (shapefile) 
         {
@@ -46,9 +46,9 @@ namespace Radolan
                     {
                         RDCartesianPoint cart = rcs.cartesianCoordinate( rdGridPoint(ix, iy) );
                         
-                        float lat; 
+                        double lat; 
                         
-                        float lon;
+                        double lon;
                         
                         if (inverse==true) 
                         {
@@ -65,9 +65,9 @@ namespace Radolan
                             lat = cart.y;
                         }
                         
-                        px[index] = (double)lon;
+                        px[index] = lon;
                         
-                        py[index] = (double)lat;
+                        py[index] = lat;
                         
                         m[index] = value;
                         
@@ -78,7 +78,9 @@ namespace Radolan
             
             printf("Multipoint contains %d values of interest\n",index);
             
-            SHPObject *multipoint = SHPCreateObject( SHPT_MULTIPOINTM, 0, 1, parts, NULL, index, px, py, NULL, m );
+            SHPObject *multipoint = withValues 
+            ? SHPCreateObject( SHPT_MULTIPOINTM, 0, 1, parts, NULL, index, px, py, NULL, m ) 
+            : SHPCreateSimpleObject(SHPT_POINT, 1, px, py, NULL);
             
             SHPWriteObject(shapefile,-1,multipoint);
             
@@ -102,9 +104,11 @@ namespace Radolan
         return 0;
     }
 
-    int RDRadolan2PolygonShapefile( RDScan *scan, const char* filename, bool inverse )
+    int RDRadolan2PolygonShapefile( RDScan *scan, const char* filename, bool inverse, bool withValues )
     {
-        SHPHandle shapefile = SHPCreate(filename, SHPT_POLYGONM);
+        SHPHandle shapefile = withValues 
+        ? SHPCreate(filename, SHPT_POLYGONM) 
+        : SHPCreate(filename, SHPT_POLYGON);
         
         if (shapefile) 
         {
@@ -126,7 +130,7 @@ namespace Radolan
                     {
                         double px[5], py[5], m[5];
 
-                        float lat_min, lat_max, lon_min, lon_max;
+                        double lat_min, lat_max, lon_min, lon_max;
                         
                         RDCartesianPoint cart_min = rcs.cartesianCoordinate( rdGridPoint(ix, iy) );
                         RDCartesianPoint cart_max = rcs.cartesianCoordinate( rdGridPoint(ix+1, iy+1) );
@@ -157,8 +161,8 @@ namespace Radolan
                         }
                         
                         // bottom left
-                        px[0] = (double)lon_min;
-                        py[0] = (double)lat_min;
+                        px[0] = lon_min;
+                        py[0] = lat_min;
                         
                         // top left
                         px[1] = lon_min;
@@ -173,12 +177,14 @@ namespace Radolan
                         py[3] = lat_min;
                         
                         // and back
-                        px[4] = (double)lon_min;
-                        py[4] = (double)lat_min;
+                        px[4] = lon_min;
+                        py[4] = lat_min;
                         
                         m[0] = m[1] = m[2] = m[3] = m[4] = value;
                         
-                        SHPObject *polygon = SHPCreateObject( SHPT_POLYGONM, iy*scan->dimLat+ix, 4, parts, NULL, 5, px, py, NULL, m);
+                        SHPObject *polygon = withValues 
+                        ? SHPCreateObject( SHPT_POLYGONM, iy*scan->dimLat+ix, 4, parts, NULL, 5, px, py, NULL, m)
+                        : SHPCreateSimpleObject( SHPT_POLYGON, 5, px, py, NULL );
                         
                         SHPWriteObject(shapefile, -1, polygon);
                         
