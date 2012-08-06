@@ -1,6 +1,6 @@
-FIND_PATH(SHP_INCLUDE_DIR shapefil.h PATHS /usr/include /usr/local/include /opt/local/include)
+FIND_PATH(SHP_INCLUDE_DIR shapefil.h PATHS /usr/include /usr/local/include /opt/local/include ./shapelib-1.3.0)
 
-FIND_LIBRARY(SHP NAMES shp PATHS /usr/lib /usr/local/lib /opt/local/lib)
+FIND_LIBRARY(SHP NAMES shp PATHS /usr/lib /usr/local/lib /opt/local/lib ~/radolan ./shapelib-1.3.0)
 
 MESSAGE("SHP=${SHP}")
 

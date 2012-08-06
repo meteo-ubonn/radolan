@@ -49,9 +49,10 @@ SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 #dependencies on other libraries#
 #################################
 
-#libz
-SET(LIBZ_INCLUDEDIR "/usr/include")
-SET(LIBZ_LIBRARIES  "/usr/lib/libz.dylib")
+find_package( ZLIB REQUIRED )
+IF ( NOT ZLIB_FOUND )
+   MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
+ENDIF( ZLIB_FOUND )
 
 # HDF5
 FIND_PACKAGE(HDF5)
@@ -68,9 +69,9 @@ ENDIF()
 #add include directories
 INCLUDE_DIRECTORIES(
 	${PROJECT_SOURCE_DIR}/include
-	${LIBZ_INCLUDEDIR}
+	${ZLIB_INCLUDE_DIRS}
 	${HDF5_INCLUDEDIR}
-	${SHP_INCLUDEDIR}
+	${SHP_INCLUDE_DIR}
 )
 
 #######################
@@ -97,7 +98,7 @@ ADD_LIBRARY(radolan SHARED
 )
 
 TARGET_LINK_LIBRARIES(radolan
-   ${LIBZ_LIBRARIES}
+   ${ZLIB_LIBRARIES}
    ${HDF5_LIBRARIES}
    ${SHP_LIBRARIES}
 )
@@ -116,16 +117,16 @@ ADD_EXECUTABLE(radolan_test
 
 TARGET_LINK_LIBRARIES(radolan_test
     radolan
-    ${LIBZ_LIBRARIES}
+    ${ZLIB_LIBRARIES}
     ${HDF5_LIBRARIES}
-   	${SHP_LIBRARIES}
+    ${SHP_LIBRARIES}
 )
 
 TARGET_LINK_LIBRARIES(radolan2shapefile
     radolan
-    ${LIBZ_LIBRARIES}
+    ${ZLIB_LIBRARIES}
     ${HDF5_LIBRARIES}
-   	${SHP_LIBRARIES}
+    ${SHP_LIBRARIES}
 )
 
 ######################
