@@ -1,19 +1,21 @@
-#CMake compatibility issues: don't modify this, please!
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6.2)
+#cmake compatibility issues: don't modify this, please!
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6.0)
 MARK_AS_ADVANCED(CMAKE_BACKWARDS_COMPATIBILITY)
+
 #allow more human readable "if then else" constructs
 SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE)
-#set c
-ENABLE_LANGUAGE(C)
+
 #verbose makefile on
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 
-#tha project
+####################
+# project settings #
+####################
+
 PROJECT(radolan)
 
-#################
-#project version#
-#################
+#set c++
+ENABLE_LANGUAGE(CXX)
 
 SET(${PROJECT_NAME}_MAJOR_VERSION 1)
 SET(${PROJECT_NAME}_MINOR_VERSION 0)
@@ -36,13 +38,6 @@ ELSE()
   ENDIF()
 ENDIF()
 
-#setup compiler commandline
-IF(CMAKE_COMPILER_IS_GNUC OR CMAKE_COMPILER_IS_GNUCXX)
-  ADD_DEFINITIONS("-Wall -Wno-long-long")
-ELSE()
-  MESSAGE(FATAL_ERROR "unknown compiler")
-ENDIF()
-
 SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 
 #################################
@@ -50,9 +45,9 @@ SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 #################################
 
 find_package( ZLIB REQUIRED )
-IF ( NOT ZLIB_FOUND )
+IF (NOT ZLIB_FOUND)
    MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
-ENDIF( ZLIB_FOUND )
+ENDIF()
 
 # HDF5
 FIND_PACKAGE(HDF5)
@@ -94,7 +89,7 @@ ADD_LIBRARY(radolan SHARED
     src/coordinatesystem.cpp
     src/radolan_utils.cpp
     src/observationfile.cpp
-	src/shapefile.cpp
+    src/shapefile.cpp
 )
 
 TARGET_LINK_LIBRARIES(radolan
