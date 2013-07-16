@@ -387,21 +387,21 @@
 					
 					// since August 11 2009 some problem with radolan header. It's missing 2 bytes!
 					// START WORKAROUND
-					size_t pos = gztell(f);
-					gzrewind(f);
-					size_t fileSize = gzread(f, buffer, -1);
-					size_t nominalSize = scan->header.payloadSize + scan->header.headerSize;
-					if (fileSize < nominalSize ) 
-					{
-						fprintf(stdout,"RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n", nominalSize-fileSize);
-						pos = pos - (nominalSize - fileSize);
-					}
-					gzseek(f, pos, 0);
+//					size_t pos = gztell(f);
+//					gzrewind(f);
+//					size_t fileSize = gzread(f, buffer, -1);
+//					size_t nominalSize = scan->header.payloadSize + scan->header.headerSize;
+//					if (fileSize < nominalSize ) 
+//					{
+//						fprintf(stdout,"RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n", nominalSize-fileSize);
+//						pos = pos - (nominalSize - fileSize);
+//					}
+//					gzseek(f, pos, 0);
 					// since August 11 2009 some problem with radolan header. It's missing 2 bytes!
 					// END WORKAROUND
 					
 					// read data into buffer
-					size_t bytesRead = gzread(f, buffer, scan->header.payloadSize);
+					int bytesRead = gzread(f, buffer, scan->header.payloadSize);
 					if (bytesRead!=scan->header.payloadSize) {
 						fprintf(stderr,"RDReadScan : ERROR : payload too small. File corrupt?\n");
 						return -1;
