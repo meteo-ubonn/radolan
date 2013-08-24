@@ -360,5 +360,5 @@ namespace Radolan
         }
     }
 #ifdef __cplusplus
-  };
+  }
 #endif

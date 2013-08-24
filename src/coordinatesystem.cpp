@@ -262,15 +262,24 @@ namespace Radolan
 		double dy = g.y - m_originCartesian.y;
 		
 		// quadrant?
-		RDGridQuadrant quadrant;
+		RDGridQuadrant quadrant = RDUpperRight;
+        
 		if (dx<0.0 && dy<0.0)
+        {
 			quadrant = RDLowerLeft;
-		else if (dx<0.0 && dy>=0.0) 
+        }
+		else if (dx<0.0 && dy>=0.0)
+        {
 			quadrant = RDUpperLeft;
-		else if (dx>=0.0 && dy>=0.0) 
+        }
+		else if (dx>=0.0 && dy>=0.0)
+        {
 			quadrant = RDUpperRight;
-		else if (dx>=0.0 && dy<0.0) 
+        }
+		else if (dx>=0.0 && dy<0.0)
+        {
 			quadrant = RDLowerRight;
+        }
 		
 		// count
 		RDGridPoint p;

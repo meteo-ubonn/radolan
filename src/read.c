@@ -329,7 +329,7 @@
                     
                     if ( bytesRead == -1 )
                     {
-                        fprintf( stderr, "RDReadScan : ERROR : could not read %lu bytes from position %d.", scan->header.payloadSize, pos ); 
+                        fprintf( stderr, "RDReadScan : ERROR : could not read %lu bytes from position %zuld.", scan->header.payloadSize, pos ); 
                         
                         return -3;
                     }
