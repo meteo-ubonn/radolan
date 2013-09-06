@@ -33,7 +33,7 @@ int main(int argc, char** argv)
         
         bool inverse = false;
         
-        bool writePoints = false;
+        bool writePoints = true;
         
         bool writeBoundingBox = false;
         

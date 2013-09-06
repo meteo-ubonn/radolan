@@ -65,9 +65,9 @@ namespace Radolan
                             lat = cart.y;
                         }
                         
-                        px[index] = lon;
+                        px[index] = lat;
                         
-                        py[index] = lat;
+                        py[index] = lon;
                         
                         m[index] = value;
                         
