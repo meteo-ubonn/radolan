@@ -55,6 +55,12 @@ IF (NOT HDF5_FOUND)
    MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
 ENDIF()
 
+# netcdf
+FIND_PACKAGE(NETCDF)
+IF (NOT NETCDF_FOUND)
+   MESSAGE(FATAL_ERROR "netcdf(cxx) not found (http://www.unidata.ucar.edu/software/netcdf/docs/netcdf-cxx/)")
+ENDIF()
+
 # Shapefile
 FIND_PACKAGE(SHP)
 IF (NOT SHP_FOUND)
@@ -96,6 +102,7 @@ TARGET_LINK_LIBRARIES(radolan
    ${ZLIB_LIBRARIES}
    ${HDF5_LIBRARIES}
    ${SHP_LIBRARIES}
+   ${NETCDF_LIBRARIES}
 )
 
 # Shapefile tool
