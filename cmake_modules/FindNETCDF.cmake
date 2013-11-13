@@ -1,16 +1,12 @@
 IF(CMAKE_SYSTEM_NAME MATCHES Linux)
-    MESSAGE(INFO ":Linux system. Looking for netcdf_c++")
     FIND_PATH(NETCDF_INCLUDE_DIR netcdf.h PATHS /usr/include /usr/local/include /opt/local/include)
     FIND_LIBRARY(NETCDF_CPP NAMES netcdf_c++ PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64)
     FIND_LIBRARY(NETCDF NAMES netcdf PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64)
 ELSE(CMAKE_SYSTEM_NAME MATCHES Linux)
-    MESSAGE(INFO ":Not a linux system. Looking for netcdf_c++4")
     FIND_PATH(NETCDF_INCLUDE_DIR netcdf PATHS /usr/include /usr/local/include /opt/local/include)
     FIND_LIBRARY(NETCDF_CPP NAMES netcdf_c++4 PATHS /usr/lib /usr/local/lib /opt/local/lib)
     FIND_LIBRARY(NETCDF NAMES netcdf PATHS /usr/lib /usr/local/lib /opt/local/lib)
 ENDIF(CMAKE_SYSTEM_NAME MATCHES Linux)	    
-
-MESSAGE(INFO ":NETCDF=${NETCDF} NETCDF_CPP=${NETCDF_CPP} NETCDF_INCLUDE_DIR=${NETCDF_INCLUDE_DIR}")
 
 IF (NETCDF AND NETCDF_CPP)
    SET(NETCDF_LIBRARIES ${NETCDF_CPP} ${NETCDF} )
