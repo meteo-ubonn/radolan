@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <strstream>
+#include <string.h>
 
 // TODO: make this configurable
 
