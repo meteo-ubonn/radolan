@@ -5,6 +5,7 @@
 #include <sstream>
 //3rd-party headers
 //own headers
+#include <stdio.h>
 #include <radolan/coordinatesystem.h>
 
 #ifdef __cplusplus
