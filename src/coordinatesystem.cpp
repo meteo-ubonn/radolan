@@ -6,6 +6,7 @@
 //3rd-party headers
 //own headers
 #include <radolan/coordinatesystem.h>
+#include <stdio.h>
 
 #ifdef __cplusplus
 namespace Radolan
