@@ -14,6 +14,11 @@
 #include <string.h>
 #include <zlib.h>
 
+        // Macros for figuring out endianness
+
+        #define IS_LITTLE_ENDIAN (*(uint16_t*)"\0\1">>8)
+        #define IS_BIG_ENDIAN (*(uint16_t*)"\1\0">>8)
+
 	// Define the static variables
 	
 	/** Reads a numerical value stored as ASCII in the given file at it's current position,
@@ -412,15 +417,25 @@
 					
 					int rawMin=4095;
 					int rawMax=0;
+
+fprintf("is big endian:%s\n",(IS_BIG_ENDIAN?"yes":"no"));
+fprintf("is little endian:%s\n",(IS_LITTLE_ENDIAN?"yes":"no"));
+
 					
 					// massage the data. Discard information on clutter, errors and replace secondary values
 					int bufferIndex=0;
-					for (bufferIndex=0; bufferIndex < scan->dimLon * scan->dimLat; bufferIndex++) {
+					for (bufferIndex=0; bufferIndex < scan->dimLon * scan->dimLat; bufferIndex++) 
+					  {
 						
 						unsigned short int rawBufferValue = buffer[bufferIndex];
 						
-						// change from little endian to big endian
-						unsigned short int bufferValue = ((rawBufferValue>>8)&0xff)+((rawBufferValue << 8)&0xff00);
+                                                unsigned short int bufferValue = rawBufferValue;
+
+                                                if (IS_BIG_ENDIAN)
+						{
+						    // change from little endian to big endian
+						    unsigned short int bufferValue = ((rawBufferValue>>8)&0xff)+((rawBufferValue << 8)&0xff00);
+						}
 						
 						// in order to get to the 4 highest bits, shift the 16 bit value 12 bits to the right.
 						// the flags are then 0001 0010 etc.
