@@ -7,5 +7,6 @@
 #include <radolan/radolan_utils.h>
 #include <radolan/observationfile.h>
 #include <radolan/shapefile.h>
+#include <radolan/endianess.h>
 
 #endif /* Header Guard */

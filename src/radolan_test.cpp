@@ -1,13 +1,10 @@
 
 
 #include <radolan/radolan.h>
-
 #include <radolan/radolan_utils.h>
 
 #include <stdlib.h>
-
 #include <ctime>
-
 #include <stdio.h>
 
 using namespace Radolan;
@@ -105,6 +102,8 @@ bool testCoordinateSystem(RDScanType type)
 
 int main(int argc, char** argv) 
 {
+    printf("\nendianess = %s\n", isLittleEndian() ? "LITTLE":"BIG" );
+    
     bool coordTest = testCoordinateSystem( RD_RX );
     
     printf( "RDCoordinateSystem test: %s\n", coordTest ? "OK" : "FAILED" );

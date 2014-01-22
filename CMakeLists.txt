@@ -96,6 +96,14 @@ ADD_LIBRARY(radolan SHARED
     src/radolan_utils.cpp
     src/observationfile.cpp
     src/shapefile.cpp
+    include/radolan/coordinatesystem.h
+    include/radolan/endianess.h
+    include/radolan/observationfile.h
+    include/radolan/radolan.h
+    include/radolan/radolan_utils.h
+    include/radolan/read.h
+    include/radolan/shapefile.h
+    include/radolan/types.h
 )
 
 TARGET_LINK_LIBRARIES(radolan
