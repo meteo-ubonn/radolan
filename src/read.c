@@ -426,7 +426,7 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
                     
                     unsigned short int bufferValue = rawBufferValue;
                     
-                    if (is_little_endian)
+                    if (!is_little_endian)
                     {
                         // change from little endian to big endian
                         bufferValue = ((rawBufferValue>>8)&0xff)+((rawBufferValue << 8)&0xff00);
