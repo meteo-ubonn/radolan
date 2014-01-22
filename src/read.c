@@ -16,8 +16,15 @@
 
         // Macros for figuring out endianness
 
-        #define IS_LITTLE_ENDIAN (*(uint16_t*)"\0\1">>8)
-        #define IS_BIG_ENDIAN (*(uint16_t*)"\1\0">>8)
+//        #define IS_LITTLE_ENDIAN (*(uint16_t*)"\0\1">>8)
+//        #define IS_BIG_ENDIAN (*(uint16_t*)"\1\0">>8)
+
+        static uint32_t endianness = 0xdeadbeef; 
+        enum endianness { BIG, LITTLE };
+
+        #define ENDIANNESS ( *(const char *)&endianness == 0xef ? LITTLE	\
+			       : *(const char *)&endianness == 0xde ? BIG \
+			       : assert(0))
 
 	// Define the static variables
 	
@@ -418,9 +425,7 @@
 					int rawMin=4095;
 					int rawMax=0;
 
-fprintf("is big endian:%s\n",(IS_BIG_ENDIAN?"yes":"no"));
-fprintf("is little endian:%s\n",(IS_LITTLE_ENDIAN?"yes":"no"));
-
+                                        fprintf("\nendianess = %s\n",(ENDIANESS==BIG?"BIG":"LITTLE"))
 					
 					// massage the data. Discard information on clutter, errors and replace secondary values
 					int bufferIndex=0;

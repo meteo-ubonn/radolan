@@ -1,6 +1,6 @@
 IF(CMAKE_SYSTEM_NAME MATCHES Linux)
-    FIND_PATH(NETCDF_INCLUDE_DIR netcdf.h PATHS /usr/include /usr/local/include /opt/local/include)
-    FIND_LIBRARY(NETCDF_CPP NAMES netcdf_c++ PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64)
+    FIND_PATH(NETCDF_INCLUDE_DIR netcdf.h PATHS /usr/include /usr/local/include /opt/local/include) 
+    FIND_LIBRARY(NETCDF_CPP NAMES netcdf_c++4 PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64)
     FIND_LIBRARY(NETCDF NAMES netcdf PATHS /usr/lib /usr/lib64 /usr/local/lib /usr/local/lib64)
 ELSE(CMAKE_SYSTEM_NAME MATCHES Linux)
     FIND_PATH(NETCDF_INCLUDE_DIR netcdf PATHS /usr/include /usr/local/include /opt/local/include)
