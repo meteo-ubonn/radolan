@@ -1,10 +1,6 @@
 FIND_PATH(HDF5_INCLUDE_DIR H5FDcore.h PATHS /usr/include /usr/local/include /opt/local/include)
-
 FIND_LIBRARY(HDF5 NAMES hdf5 PATHS /usr/lib /usr/local/lib /opt/local/lib)
-
 FIND_LIBRARY(HDF5_H1 NAMES hdf5_hl PATHS /usr/lib /usr/local/lib /opt/local/lib)
-
-MESSAGE("HDF5=${HDF5} HDF5_H1=${HDF5_H1}")
 
 IF (HDF5 AND HDF5_H1)
    SET(HDF5_LIBRARIES ${HDF5} ${HDF5_H1})
