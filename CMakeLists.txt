@@ -14,6 +14,9 @@ SET(CMAKE_VERBOSE_MAKEFILE ON)
 
 PROJECT(radolan)
 
+# add project include directories first
+INCLUDE_DIRECTORIES(BEFORE ${PROJECT_SOURCE_DIR}/include)
+
 #set c++
 ENABLE_LANGUAGE(CXX)
 
@@ -36,6 +39,21 @@ ELSE()
   ELSE()
     MESSAGE(FATAL_ERROR "unknown target OS")
   ENDIF()
+ENDIF()
+
+# this is a speciality on my mac where
+# clang was compiled and it has a bug
+# http://bisqwit.iki.fi/story/howto/openmp/
+
+IF (CMAKE_CXX_COMPILER MATCHES ".*clang")
+    MESSAGE(STATUS "Adding include dirs for LLVM/OpenMP on OSX 10.9")
+#    INCLUDE_DIRECTORIES(/usr/include/c++/4.2.1)
+#    INCLUDE_DIRECTORIES(/usr/include/c++/4.2.1/backward/)
+#   MESSAGE(STATUS "Setting -stdlib=libc++" linkflags="-stdlib=libc++")
+#   SET(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -std=c++0x -stdlib=libc++ -g")
+#   SET(CMAKE_EXE_LINKER_FLAGS "-stdlib=libc++")
+#   SET(CMAKE_SHARED_LINKER_FLAGS "-stdlib=libc++")
+    ADD_DEFINITIONS(-DBOOST_HAS_INT128=1)
 ENDIF()
 
 SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
