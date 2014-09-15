@@ -79,7 +79,7 @@ namespace Radolan
 			
 			// create dataset
 			
-			m_dataset = H5Dcreate( m_file, OBSERVATION_GROUPNAME, datatype, dataspace, NULL, plist, NULL );
+			m_dataset = H5Dcreate( m_file, OBSERVATION_GROUPNAME, datatype, dataspace, 0, plist, 0 );
 			
 			H5Fflush(m_file, H5F_SCOPE_GLOBAL);
 			
