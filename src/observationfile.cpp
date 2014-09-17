@@ -92,7 +92,7 @@ namespace Radolan
 		
 			m_file = H5Fopen( filename.c_str(), H5F_ACC_RDWR, H5P_DEFAULT );
 			
-			m_dataset = H5Dopen( m_file, OBSERVATION_GROUPNAME, NULL );
+			m_dataset = H5Dopen( m_file, OBSERVATION_GROUPNAME, 0 );
 			
 		}
 		
