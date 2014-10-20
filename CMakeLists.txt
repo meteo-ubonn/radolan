@@ -46,13 +46,6 @@ ENDIF()
 # http://bisqwit.iki.fi/story/howto/openmp/
 
 IF (CMAKE_CXX_COMPILER MATCHES ".*clang")
-    MESSAGE(STATUS "Adding include dirs for LLVM/OpenMP on OSX 10.9")
-#    INCLUDE_DIRECTORIES(/usr/include/c++/4.2.1)
-#    INCLUDE_DIRECTORIES(/usr/include/c++/4.2.1/backward/)
-#   MESSAGE(STATUS "Setting -stdlib=libc++" linkflags="-stdlib=libc++")
-#   SET(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -std=c++0x -stdlib=libc++ -g")
-#   SET(CMAKE_EXE_LINKER_FLAGS "-stdlib=libc++")
-#   SET(CMAKE_SHARED_LINKER_FLAGS "-stdlib=libc++")
     ADD_DEFINITIONS(-DBOOST_HAS_INT128=1)
 ENDIF()
 
@@ -64,13 +57,13 @@ SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 
 find_package( ZLIB REQUIRED )
 IF (NOT ZLIB_FOUND)
-   MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
+   MESSAGE(FATAL_ERROR "ZLIB not found (http://www.zlib.net)")
 ENDIF()
 
 # HDF5
 FIND_PACKAGE(HDF5)
 IF (NOT HDF5_FOUND)
-   MESSAGE(FATAL_ERROR "HDF5 not found INCLUDE_DIR=${HDF5_INCLUDE_DIR} LIBRARIES=${HDF5_LIBRARIES}")
+   MESSAGE(FATAL_ERROR "HDF5 not found (http://www.hdfgroup.org/HDF5/)")
 ENDIF()
 
 # netcdf
@@ -82,7 +75,7 @@ ENDIF()
 # Shapefile
 FIND_PACKAGE(SHP)
 IF (NOT SHP_FOUND)
-   MESSAGE(FATAL_ERROR "Shapefile not found INCLUDE_DIR=${SHP_INCLUDE_DIR} LIBRARIES=${SHP_LIBRARIES}")
+    MESSAGE(FATAL_ERROR "shapelib not found (http://shapelib.maptools.org/)")
 ENDIF()
 
 #add include directories
