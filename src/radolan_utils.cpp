@@ -98,7 +98,7 @@ namespace Radolan {
 	
 	unsigned char RDRVP6ToByteValue( float rvp6 )
 	{
-		return (unsigned char) 2u * (rvp6 - RVP6_BASE_VALUE);
+            return (unsigned char) 2u * (rvp6 - RVP6_BASE_VALUE);
 	}
 	
 	float RDByteToRVP6Value( const unsigned char byteValue )

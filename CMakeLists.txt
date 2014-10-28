@@ -6,6 +6,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.6.0)
 MARK_AS_ADVANCED(CMAKE_BACKWARDS_COMPATIBILITY)
 SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS TRUE)
 SET(CMAKE_VERBOSE_MAKEFILE ON)
+SET(CMAKE_MACOSX_RPATH OFF)
 
 # -------------------------------------
 # project settings 
@@ -47,15 +48,32 @@ ENDIF()
 # Compiler flags
 # -------------------------------------
 
-IF (CMAKE_CXX_COMPILER MATCHES ".*clang")
-    ADD_DEFINITIONS(-DBOOST_HAS_INT128=1)
+IF (APPLE)
+
+    IF (CMAKE_CXX_COMPILER MATCHES ".*clang")
+
+        FIND_PATH(APPLE_CXX_INCLUDE cmath PATHS /usr/include/c++/*) 
+        IF (APPLE_CXX_INCLUDE)
+            MESSAGE(STATUS "found standard c++ headers in ${APPLE_CXX_INCLUDE} ${APPLE_CXX_BACKWARD_INCLUDE}")
+            INCLUDE_DIRECTORIES(${APPLE_CXX_INCLUDE} ${APPLE_CXX_BACKWARD_INCLUDE})
+        ELSE()
+            MESSAGE(FATAL_ERROR "Could not find standard c++ headers!")
+        ENDIF()
+
+        # Boost storage type problem
+        ADD_DEFINITIONS(-DBOOST_HAS_INT128=1)
+
+        # stdlibc++ w
+        SET(APPLE_STDLIBCXX "/usr/lib/libstdc++.dylib")
+
+    ENDIF()
 ENDIF()
 
 # -------------------------------------
 # dependencies on other libraries
 # -------------------------------------
 
-find_package( ZLIB REQUIRED )
+FIND_PACKAGE( ZLIB REQUIRED )
 IF (NOT ZLIB_FOUND)
    MESSAGE(FATAL_ERROR "ZLIB not found (http://www.zlib.net)")
 ELSE()
@@ -133,6 +151,7 @@ TARGET_LINK_LIBRARIES(radolan
    ${HDF5_LIBRARIES}
    ${SHP_LIBRARIES}
    ${NETCDF_LIBRARIES}
+   ${APPLE_STDLIBCXX}
 )
 
 # Shapefile tool
@@ -142,10 +161,11 @@ ADD_EXECUTABLE(radolan2shapefile
 )
 
 TARGET_LINK_LIBRARIES(radolan2shapefile
-    radolan
-    ${ZLIB_LIBRARIES}
-    ${HDF5_LIBRARIES}
-    ${SHP_LIBRARIES}
+   radolan
+   ${ZLIB_LIBRARIES}
+   ${HDF5_LIBRARIES}
+   ${SHP_LIBRARIES}
+   ${APPLE_STDLIBCXX}
 )
 
 # -------------------------------------
@@ -161,7 +181,9 @@ IF (TESTS_ENABLED)
         radolan
         ${ZLIB_LIBRARIES}
         ${HDF5_LIBRARIES}
-        ${SHP_LIBRARIES})
+        ${SHP_LIBRARIES}
+        ${APPLE_STDLIBCXX}
+    )
 ENDIF()
 
 # -------------------------------------
