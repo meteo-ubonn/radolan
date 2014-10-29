@@ -145,6 +145,10 @@ extern "C"
      the reader code must reflect this change */
     typedef float RDDataType;
 
+    /** Data type for RVP6 encoded data.
+     */
+    typedef unsigned char RDByteType;
+    
     /** Data type for reading and handling radolan products. When read from the
      * radolan file directly, the header contains information. When read from GeoTIFF, 
      * the header will be empty. Use RDAllocate and RDFree to create and dispose of instances.

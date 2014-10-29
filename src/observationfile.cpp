@@ -6,8 +6,6 @@
 #include <fstream>
 #include <sstream>
 #include <string.h>
-#include <c++/4.2.1/iosfwd>
-#include <c++/4.2.1/bits/basic_string.h>
 
 // TODO: make this configurable
 
