@@ -49,23 +49,9 @@ ENDIF()
 # -------------------------------------
 
 IF (APPLE)
-
     IF (CMAKE_CXX_COMPILER MATCHES ".*clang")
-
-        FIND_PATH(APPLE_CXX_INCLUDE cmath PATHS /usr/include/c++/*) 
-        IF (APPLE_CXX_INCLUDE)
-            MESSAGE(STATUS "found standard c++ headers in ${APPLE_CXX_INCLUDE} ${APPLE_CXX_BACKWARD_INCLUDE}")
-            INCLUDE_DIRECTORIES(${APPLE_CXX_INCLUDE} ${APPLE_CXX_BACKWARD_INCLUDE})
-        ELSE()
-            MESSAGE(FATAL_ERROR "Could not find standard c++ headers!")
-        ENDIF()
-
         # Boost storage type problem
         ADD_DEFINITIONS(-DBOOST_HAS_INT128=1)
-
-        # stdlibc++ w
-        SET(APPLE_STDLIBCXX "/usr/lib/libstdc++.dylib")
-
     ENDIF()
 ENDIF()
 
