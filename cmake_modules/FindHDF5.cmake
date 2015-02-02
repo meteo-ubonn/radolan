@@ -1,6 +1,24 @@
-FIND_PATH(HDF5_INCLUDE_DIR H5FDcore.h PATHS /usr/include /usr/local/include /opt/local/include)
-FIND_LIBRARY(HDF5 NAMES hdf5 PATHS /usr/lib /usr/local/lib /opt/local/lib)
-FIND_LIBRARY(HDF5_H1 NAMES hdf5_hl PATHS /usr/lib /usr/local/lib /opt/local/lib)
+# CMAKE module for locating HDF5. 
+# Options: -DWITH_HDF5=<path to include root>
+# Example: -DWITH_HDF5=/usr/local 
+
+MESSAGE(STATUS "WITH_HDF5=${WITH_HDF5}")
+
+SET(HDF5_ROOT ${WITH_HDF5})
+IF (HDF5_ROOT)
+    MESSAGE(STATUS "Looking for HDF5 in specified location: ${HDF5_ROOT}")
+    SET(HDF5_INC_ROOT "${HDF5_ROOT}/include")
+    SET(HDF5_LIB_ROOT "${HDF5_ROOT}/lib")
+    FIND_PATH(HDF5_INCLUDE_DIR H5FDcore.h PATHS ${HDF5_INC_ROOT} NO_DEFAULT_PATH)
+    FIND_LIBRARY(HDF5 NAMES hdf5 PATHS ${HDF5_LIB_ROOT} NO_DEFAULT_PATH)
+    FIND_LIBRARY(HDF5_H1 NAMES hdf5_hl PATHS ${HDF5_LIB_ROOT} NO_DEFAULT_PATH)
+ELSE()
+    SET(HDF5_INC_ROOT "/usr/local/include /opt/local/include /usr/include")
+    SET(HDF5_LIB_ROOT "/usr/local/lib /opt/local/lib /usr/lib")
+    FIND_PATH(HDF5_INCLUDE_DIR H5FDcore.h PATHS ${HDF5_INC_ROOT})
+    FIND_LIBRARY(HDF5 NAMES hdf5 PATHS ${HDF5_LIB_ROOT})
+    FIND_LIBRARY(HDF5_H1 NAMES hdf5_hl PATHS ${HDF5_LIB_ROOT})
+ENDIF()
 
 IF (HDF5 AND HDF5_H1)
    SET(HDF5_LIBRARIES ${HDF5} ${HDF5_H1})
