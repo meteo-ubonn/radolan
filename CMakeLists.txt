@@ -134,16 +134,22 @@ ADD_LIBRARY(radolan SHARED
     include/radolan/types.h
 )
 
-TARGET_LINK_LIBRARIES(radolan
-   ${ZLIB_LIBRARIES}
-   ${HDF5_LIBRARIES}
-   ${SHP_LIBRARIES}
-   ${NETCDF_LIBRARIES}
-   ${APPLE_STDLIBCXX}
-)
+IF (SHP_FOUND)
+    TARGET_LINK_LIBRARIES(radolan
+       ${ZLIB_LIBRARIES}
+       ${HDF5_LIBRARIES}
+       ${SHP_LIBRARIES}
+       ${NETCDF_LIBRARIES}
+       ${APPLE_STDLIBCXX})
+ELSE()
+    TARGET_LINK_LIBRARIES(radolan
+            ${ZLIB_LIBRARIES}
+            ${HDF5_LIBRARIES}
+            ${NETCDF_LIBRARIES}
+            ${APPLE_STDLIBCXX})
+ENDIF()
 
 # Shapefile tool
-
 IF (SHP_FOUND)
     ADD_EXECUTABLE(radolan2shapefile
         src/radolan2shapefile.cpp
