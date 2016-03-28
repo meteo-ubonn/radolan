@@ -1,3 +1,4 @@
+#if WITH_SHAPEFILE
 #include <radolan/shapefile.h>
 #include <radolan/coordinatesystem.h>
 #include <shapefil.h>
@@ -361,4 +362,5 @@ namespace Radolan
     }
 #ifdef __cplusplus
   }
+#endif
 #endif
