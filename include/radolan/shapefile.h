@@ -1,6 +1,8 @@
 #ifndef __RADOLAN_SHAPEFILE
 #define __RADOLAN_SHAPEFILE
 
+#if WITH_SHAPELIB
+
 #include <radolan/types.h>
 
 #ifdef __cplusplus
@@ -54,6 +56,6 @@ extern "C"
 #ifdef __cplusplus
     }
 }
-#endif
-
+#endif // __cplusplus
+#endif // WITH_SHAPELIB
 #endif
