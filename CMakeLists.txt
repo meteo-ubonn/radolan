@@ -88,10 +88,12 @@ ENDIF()
 # Shapefile
 FIND_PACKAGE(SHP)
 IF (NOT SHP_FOUND)
-    MESSAGE(FATAL_ERROR "shapelib not found (http://shapelib.maptools.org/)")
+    MESSAGE(WARNING "shapelib not found (http://shapelib.maptools.org/). Disabling shapelib code.")
+    SET(WITH_SHAPELIB FALSE)
 ELSE()
     MESSAGE(STATUS "Shapefile found")
     INCLUDE_DIRECTORIES(${SHP_INCLUDE_DIR})
+    SET(WITH_SHAPELIB TRUE)
 ENDIF()
 
 # -------------------------------------
@@ -116,7 +118,7 @@ ENDIF()
 # Library and executables
 # -------------------------------------
 
-ADD_LIBRARY(radolan SHARED 
+ADD_LIBRARY(radolan SHARED
     src/read.c
     src/coordinatesystem.cpp
     src/radolan_utils.cpp
@@ -142,38 +144,44 @@ TARGET_LINK_LIBRARIES(radolan
 
 # Shapefile tool
 
-ADD_EXECUTABLE(radolan2shapefile
-    src/radolan2shapefile.cpp
-)
-
-TARGET_LINK_LIBRARIES(radolan2shapefile
-   radolan
-   ${ZLIB_LIBRARIES}
-   ${HDF5_LIBRARIES}
-   ${SHP_LIBRARIES}
-   ${APPLE_STDLIBCXX}
-)
+IF (SHP_FOUND)
+    ADD_EXECUTABLE(radolan2shapefile
+        src/radolan2shapefile.cpp
+    )
+    TARGET_LINK_LIBRARIES(radolan2shapefile
+       radolan
+       ${ZLIB_LIBRARIES}
+       ${HDF5_LIBRARIES}
+       ${SHP_LIBRARIES}
+       ${APPLE_STDLIBCXX}
+    )
+ENDIF()
 
 # -------------------------------------
 # Tests
 # -------------------------------------
 
 IF (TESTS_ENABLED)
-
     ADD_EXECUTABLE(radolan_test
         src/radolan_test.cpp)
-
-    TARGET_LINK_LIBRARIES(radolan_test
-        radolan
-        ${ZLIB_LIBRARIES}
-        ${HDF5_LIBRARIES}
-        ${SHP_LIBRARIES}
-        ${APPLE_STDLIBCXX}
-    )
+    IF (SHP_FOUND)
+        TARGET_LINK_LIBRARIES(radolan_test
+            radolan
+            ${ZLIB_LIBRARIES}
+            ${HDF5_LIBRARIES}
+            ${SHP_LIBRARIES}
+            ${APPLE_STDLIBCXX})
+    ELSE()
+        TARGET_LINK_LIBRARIES(radolan_test
+            radolan
+            ${ZLIB_LIBRARIES}
+            ${HDF5_LIBRARIES}
+            ${APPLE_STDLIBCXX})
+    ENDIF()
 ENDIF()
 
 # -------------------------------------
-# documentation 
+# documentation
 # -------------------------------------
 
 SET(FULL_VERSION_FOR_DOXYGEN 0.1.0)
@@ -197,12 +205,12 @@ IF(DOXYGEN_EXECUTABLE)
     CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/doc/logo.png
                    ${PROJECT_BINARY_DIR}/doc/html
                    COPYONLY)
-    ADD_CUSTOM_TARGET(doc 
+    ADD_CUSTOM_TARGET(doc
         COMMAND ${DOXYGEN_EXECUTABLE} ${PROJECT_BINARY_DIR}/doxyfile)
 ENDIF(DOXYGEN_EXECUTABLE)
 
 # -------------------------------------
-# install 
+# install
 # -------------------------------------
 
 INSTALL(DIRECTORY ${PROJECT_BINARY_DIR}/${PROJECT_NAME} DESTINATION "/usr/local/include")
@@ -213,4 +221,6 @@ INSTALL(DIRECTORY include/${PROJECT_NAME}
         PATTERN "*.swp" EXCLUDE)
 
 INSTALL(TARGETS radolan LIBRARY DESTINATION "/usr/local/lib")
-INSTALL(TARGETS radolan2shapefile RUNTIME DESTINATION "/usr/local/bin")
+IF (SHP_FOUND)
+    INSTALL(TARGETS radolan2shapefile RUNTIME DESTINATION "/usr/local/bin")
+ENDIF()
