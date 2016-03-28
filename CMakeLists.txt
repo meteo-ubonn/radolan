@@ -194,7 +194,7 @@ IF(DOXYGEN_EXECUTABLE)
         SET(UBIQ_DOXYGEN_HAVE_DOT "NO")
     ENDIF(DOXYGEN_DOT_EXECUTABLE)
     CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/doxy.in
-                   ${PROJECT_BINARY_DIR}/doxyfile)
+                   ${PROJECT_BINARY_DIR}/Doxyfile)
     FILE(MAKE_DIRECTORY ${PROJECT_BINARY_DIR}/doc/html)
     CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/doc/footer_file
                    ${PROJECT_BINARY_DIR}/doc/html
@@ -206,7 +206,7 @@ IF(DOXYGEN_EXECUTABLE)
                    ${PROJECT_BINARY_DIR}/doc/html
                    COPYONLY)
     ADD_CUSTOM_TARGET(doc
-        COMMAND ${DOXYGEN_EXECUTABLE} ${PROJECT_BINARY_DIR}/doxyfile)
+        COMMAND ${DOXYGEN_EXECUTABLE} ${PROJECT_BINARY_DIR}/Doxyfile)
 ENDIF(DOXYGEN_EXECUTABLE)
 
 # -------------------------------------
