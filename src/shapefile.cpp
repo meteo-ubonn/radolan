@@ -1,4 +1,4 @@
-#if WITH_SHAPEFILE
+#if WITH_SHAPELIB
 #include <radolan/shapefile.h>
 #include <radolan/coordinatesystem.h>
 #include <shapefil.h>
