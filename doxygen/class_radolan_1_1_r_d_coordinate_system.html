@@ -18,7 +18,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">radolan
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
   </td>
  </tr>
@@ -50,9 +50,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_radolan_1_1_r_d_coordinate_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Radolan::RDCoordinateSystem Class Reference</div>  </div>
@@ -66,133 +63,94 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30dbf93fd30bacdaf6c5c53c8e5b8a14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30dbf93fd30bacdaf6c5c53c8e5b8a14"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RDCoordinateSystem</b> (RDScanType type)</td></tr>
-<tr class="separator:a30dbf93fd30bacdaf6c5c53c8e5b8a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6888ca9ecca072d05c4bdd8878ace735"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6888ca9ecca072d05c4bdd8878ace735"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a6888ca9ecca072d05c4bdd8878ace735">setScanType</a> (RDScanType type)</td></tr>
-<tr class="memdesc:a6888ca9ecca072d05c4bdd8878ace735"><td class="mdescLeft">&#160;</td><td class="mdescRight">change scan type <br /></td></tr>
-<tr class="separator:a6888ca9ecca072d05c4bdd8878ace735"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeac29d8909b1bd0fcdaf47c23fd374d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>)</td></tr>
-<tr class="memdesc:adeac29d8909b1bd0fcdaf47c23fd374d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the polar stereographic coordinate from the given geographical coordinate.  <a href="#adeac29d8909b1bd0fcdaf47c23fd374d">More...</a><br /></td></tr>
-<tr class="separator:adeac29d8909b1bd0fcdaf47c23fd374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add29785e754b62063e64eff83a93b48e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#add29785e754b62063e64eff83a93b48e">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>)</td></tr>
-<tr class="memdesc:add29785e754b62063e64eff83a93b48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the polar stereographic coordinate from the given geographical coordinate.  <a href="#add29785e754b62063e64eff83a93b48e">More...</a><br /></td></tr>
-<tr class="separator:add29785e754b62063e64eff83a93b48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a032f8ee68a3d27fe098404d6b2fdf3a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a032f8ee68a3d27fe098404d6b2fdf3a6">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>)</td></tr>
-<tr class="memdesc:a032f8ee68a3d27fe098404d6b2fdf3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the polar stereographic coordinate from the given grid point.  <a href="#a032f8ee68a3d27fe098404d6b2fdf3a6">More...</a><br /></td></tr>
-<tr class="separator:a032f8ee68a3d27fe098404d6b2fdf3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4338a66e322789a6fbee9f06478707bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>)</td></tr>
-<tr class="memdesc:a4338a66e322789a6fbee9f06478707bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#a4338a66e322789a6fbee9f06478707bd">More...</a><br /></td></tr>
-<tr class="separator:a4338a66e322789a6fbee9f06478707bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1afffb4a3f75b5de486efed5d306b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ae1afffb4a3f75b5de486efed5d306b17">geographicalCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>)</td></tr>
-<tr class="memdesc:ae1afffb4a3f75b5de486efed5d306b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#ae1afffb4a3f75b5de486efed5d306b17">More...</a><br /></td></tr>
-<tr class="separator:ae1afffb4a3f75b5de486efed5d306b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec17210ef17b239b9fe7471b1940cf0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#aec17210ef17b239b9fe7471b1940cf0b">geographicalCoordinateRad</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> p)</td></tr>
-<tr class="memdesc:aec17210ef17b239b9fe7471b1940cf0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#aec17210ef17b239b9fe7471b1940cf0b">More...</a><br /></td></tr>
-<tr class="separator:aec17210ef17b239b9fe7471b1940cf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7622abb4366e0bedbc114a7cfe0913da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a7622abb4366e0bedbc114a7cfe0913da">geographicalCoordinateRad</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
-<tr class="memdesc:a7622abb4366e0bedbc114a7cfe0913da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#a7622abb4366e0bedbc114a7cfe0913da">More...</a><br /></td></tr>
-<tr class="separator:a7622abb4366e0bedbc114a7cfe0913da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21803d9ee3e4666feb41353ca653bfe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a21803d9ee3e4666feb41353ca653bfe6">toRad</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>)</td></tr>
-<tr class="memdesc:a21803d9ee3e4666feb41353ca653bfe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert deg to radians.  <a href="#a21803d9ee3e4666feb41353ca653bfe6">More...</a><br /></td></tr>
-<tr class="separator:a21803d9ee3e4666feb41353ca653bfe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab669b32237899460caf4a124bd05299a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ab669b32237899460caf4a124bd05299a">toDeg</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>)</td></tr>
-<tr class="memdesc:ab669b32237899460caf4a124bd05299a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert radians to deg.  <a href="#ab669b32237899460caf4a124bd05299a">More...</a><br /></td></tr>
-<tr class="separator:ab669b32237899460caf4a124bd05299a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94b103e4a5f2584da6b5685a6f9a218d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a94b103e4a5f2584da6b5685a6f9a218d">geographicalPolygonForGridpoint</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>, int &amp;)</td></tr>
-<tr class="memdesc:a94b103e4a5f2584da6b5685a6f9a218d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the geographical coordinates for the bounding box of the given grid point.  <a href="#a94b103e4a5f2584da6b5685a6f9a218d">More...</a><br /></td></tr>
-<tr class="separator:a94b103e4a5f2584da6b5685a6f9a218d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a007de99f6659b8d6c74096d4f0056892"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a007de99f6659b8d6c74096d4f0056892">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>, bool &amp;)</td></tr>
-<tr class="memdesc:a007de99f6659b8d6c74096d4f0056892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nearest grid point for the given cartesian coordinate.  <a href="#a007de99f6659b8d6c74096d4f0056892">More...</a><br /></td></tr>
-<tr class="separator:a007de99f6659b8d6c74096d4f0056892"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84a0e9b98443638367967334e4b76b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a84a0e9b98443638367967334e4b76b17">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>, bool &amp;)</td></tr>
-<tr class="memdesc:a84a0e9b98443638367967334e4b76b17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nearest grid point for the given geographical coordinate.  <a href="#a84a0e9b98443638367967334e4b76b17">More...</a><br /></td></tr>
-<tr class="separator:a84a0e9b98443638367967334e4b76b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71bc5d759f63e9b14b88ca5f4237df45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a71bc5d759f63e9b14b88ca5f4237df45">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> g, bool &amp;isInside)</td></tr>
-<tr class="memdesc:a71bc5d759f63e9b14b88ca5f4237df45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nearest grid point for the given geographical coordinate.  <a href="#a71bc5d759f63e9b14b88ca5f4237df45">More...</a><br /></td></tr>
-<tr class="separator:a71bc5d759f63e9b14b88ca5f4237df45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46122548ecca99cc0658547e0d63c98e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46122548ecca99cc0658547e0d63c98e"></a>
-RDGridQuadrant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a46122548ecca99cc0658547e0d63c98e">RDQuadrant</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
-<tr class="memdesc:a46122548ecca99cc0658547e0d63c98e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find out what quadrant of the grid with respect to the grid's cartesian origin coordinates the given grid point resides in. <br /></td></tr>
-<tr class="separator:a46122548ecca99cc0658547e0d63c98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee09d420fa71de4c05639257a7b2b69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee09d420fa71de4c05639257a7b2b69"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4ee09d420fa71de4c05639257a7b2b69">polarStereographicScalingFactor</a> (double phi0, double phi)</td></tr>
-<tr class="memdesc:a4ee09d420fa71de4c05639257a7b2b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling Factor for the polar stereographic projection. <br /></td></tr>
-<tr class="separator:a4ee09d420fa71de4c05639257a7b2b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a3f638104b7ef0b2a6bfac0397d5bfe7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f638104b7ef0b2a6bfac0397d5bfe7e"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a3f638104b7ef0b2a6bfac0397d5bfe7e">deg</a> (double <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ad8bd79c9396988b8c4d222f8a39e808f">rad</a>)</td></tr>
-<tr class="memdesc:a3f638104b7ef0b2a6bfac0397d5bfe7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">deg -&gt; rad <br /></td></tr>
-<tr class="separator:a3f638104b7ef0b2a6bfac0397d5bfe7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8bd79c9396988b8c4d222f8a39e808f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8bd79c9396988b8c4d222f8a39e808f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ad8bd79c9396988b8c4d222f8a39e808f">rad</a> (double <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a3f638104b7ef0b2a6bfac0397d5bfe7e">deg</a>)</td></tr>
-<tr class="memdesc:ad8bd79c9396988b8c4d222f8a39e808f"><td class="mdescLeft">&#160;</td><td class="mdescRight">rad -&gt; deg <br /></td></tr>
-<tr class="separator:ad8bd79c9396988b8c4d222f8a39e808f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf5298962db49265fcac3a76b83c6c09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf5298962db49265fcac3a76b83c6c09"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateGridInfo</b> ()</td></tr>
-<tr class="separator:adf5298962db49265fcac3a76b83c6c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a6b99ea09501485b8b0bffee4857e2984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b99ea09501485b8b0bffee4857e2984"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_radolanGridCountHorizontal</b></td></tr>
-<tr class="separator:a6b99ea09501485b8b0bffee4857e2984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16fec92ac56850c97ff675090f5a9ad9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16fec92ac56850c97ff675090f5a9ad9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_radolanGridCountVertical</b></td></tr>
-<tr class="separator:a16fec92ac56850c97ff675090f5a9ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ab875c551c876e0274c6f3f61f93a67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ab875c551c876e0274c6f3f61f93a67"></a>
-<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_originGeographical</b></td></tr>
-<tr class="separator:a4ab875c551c876e0274c6f3f61f93a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e540bc0998b1b5b5201e811d6a52f2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e540bc0998b1b5b5201e811d6a52f2e"></a>
-<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_originCartesian</b></td></tr>
-<tr class="separator:a8e540bc0998b1b5b5201e811d6a52f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084fe534260569417361e2d7f7827c47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a084fe534260569417361e2d7f7827c47"></a>
-<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_offset</b></td></tr>
-<tr class="separator:a084fe534260569417361e2d7f7827c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2111febac6c209b3b01bb32247349526"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2111febac6c209b3b01bb32247349526"></a>
-RDScanType&#160;</td><td class="memItemRight" valign="bottom"><b>m_scanType</b></td></tr>
-<tr class="separator:a2111febac6c209b3b01bb32247349526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:abff2a92468727ca2fbf21ceb3d7d36ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abff2a92468727ca2fbf21ceb3d7d36ce"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>LAMBDA_0</b></td></tr>
-<tr class="separator:abff2a92468727ca2fbf21ceb3d7d36ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ab65f90089f683b74f8a31b22e093a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12ab65f90089f683b74f8a31b22e093a"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_0</b></td></tr>
-<tr class="separator:a12ab65f90089f683b74f8a31b22e093a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87d392971dbc874034cfad1bc8918e6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87d392971dbc874034cfad1bc8918e6f"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>R_EARTH</b></td></tr>
-<tr class="separator:a87d392971dbc874034cfad1bc8918e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a525cfea4201e83cc70ce8a2eb15c399d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a525cfea4201e83cc70ce8a2eb15c399d"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>MESH_WIDTH</b></td></tr>
-<tr class="separator:a525cfea4201e83cc70ce8a2eb15c399d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad17c93543dbbee91fd856a51538ebfde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad17c93543dbbee91fd856a51538ebfde"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>RADOLAN_GRID_COUNT</b></td></tr>
-<tr class="separator:ad17c93543dbbee91fd856a51538ebfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac89dfbe363e55258645239650a96299e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac89dfbe363e55258645239650a96299e"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>LAMBDA_MIN_BOTTOM</b></td></tr>
-<tr class="separator:ac89dfbe363e55258645239650a96299e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ef2982c9f340cf39ee468197343412"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62ef2982c9f340cf39ee468197343412"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MIN_BOTTOM</b></td></tr>
-<tr class="separator:a62ef2982c9f340cf39ee468197343412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd5e54c2e712ce2a8aff9c7f3b67294"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bd5e54c2e712ce2a8aff9c7f3b67294"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>LAMBDA_MAX_TOP</b></td></tr>
-<tr class="separator:a3bd5e54c2e712ce2a8aff9c7f3b67294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642c1e063a604b19fccb9f9723de5e9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a642c1e063a604b19fccb9f9723de5e9c"></a>
-static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MAX_TOP</b></td></tr>
-<tr class="separator:a642c1e063a604b19fccb9f9723de5e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b4d6b43f0272d220b3bdfbc1ae2c04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a74b4d6b43f0272d220b3bdfbc1ae2c04">RDCoordinateSystem</a> (RDScanType type)</td></tr>
+<tr class="memdesc:a74b4d6b43f0272d220b3bdfbc1ae2c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a coordinate system for a specific RDScanType.  <a href="#a74b4d6b43f0272d220b3bdfbc1ae2c04">More...</a><br /></td></tr>
+<tr class="separator:a74b4d6b43f0272d220b3bdfbc1ae2c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7261f6dc63668c6fd3732b9e083ef62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7261f6dc63668c6fd3732b9e083ef62"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#aa7261f6dc63668c6fd3732b9e083ef62">~RDCoordinateSystem</a> ()</td></tr>
+<tr class="memdesc:aa7261f6dc63668c6fd3732b9e083ef62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:aa7261f6dc63668c6fd3732b9e083ef62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1d88aa680c912fc45d44f267217df8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a9f1d88aa680c912fc45d44f267217df8">setScanType</a> (RDScanType type)</td></tr>
+<tr class="memdesc:a9f1d88aa680c912fc45d44f267217df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the scan type.  <a href="#a9f1d88aa680c912fc45d44f267217df8">More...</a><br /></td></tr>
+<tr class="separator:a9f1d88aa680c912fc45d44f267217df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac166a9ecb5c1b0c22a4992a48dafac01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ac166a9ecb5c1b0c22a4992a48dafac01">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> coord)</td></tr>
+<tr class="memdesc:ac166a9ecb5c1b0c22a4992a48dafac01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the polar stereographic coordinate from the given geographical coordinate.  <a href="#ac166a9ecb5c1b0c22a4992a48dafac01">More...</a><br /></td></tr>
+<tr class="separator:ac166a9ecb5c1b0c22a4992a48dafac01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5aff632e24eba2fccc3084af3d3d1c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ab5aff632e24eba2fccc3084af3d3d1c3">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> coord)</td></tr>
+<tr class="memdesc:ab5aff632e24eba2fccc3084af3d3d1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the polar stereographic coordinate from the given geographical coordinate.  <a href="#ab5aff632e24eba2fccc3084af3d3d1c3">More...</a><br /></td></tr>
+<tr class="separator:ab5aff632e24eba2fccc3084af3d3d1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dd2da4c1da45aa76b6395d5e71fda2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a61dd2da4c1da45aa76b6395d5e71fda2">cartesianCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> gridpoint)</td></tr>
+<tr class="memdesc:a61dd2da4c1da45aa76b6395d5e71fda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the polar stereographic coordinate from the given grid point.  <a href="#a61dd2da4c1da45aa76b6395d5e71fda2">More...</a><br /></td></tr>
+<tr class="separator:a61dd2da4c1da45aa76b6395d5e71fda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5808d6c9a9a002bf571ef8335b63585"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ab5808d6c9a9a002bf571ef8335b63585">geographicalCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> p)</td></tr>
+<tr class="memdesc:ab5808d6c9a9a002bf571ef8335b63585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#ab5808d6c9a9a002bf571ef8335b63585">More...</a><br /></td></tr>
+<tr class="separator:ab5808d6c9a9a002bf571ef8335b63585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdd2f4e6ff726f2e5af6ebcaf8b00cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#abfdd2f4e6ff726f2e5af6ebcaf8b00cc">geographicalCoordinate</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
+<tr class="memdesc:abfdd2f4e6ff726f2e5af6ebcaf8b00cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#abfdd2f4e6ff726f2e5af6ebcaf8b00cc">More...</a><br /></td></tr>
+<tr class="separator:abfdd2f4e6ff726f2e5af6ebcaf8b00cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3c7f9c9d8b810361769995d1216438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#aaa3c7f9c9d8b810361769995d1216438">geographicalCoordinateRad</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> p)</td></tr>
+<tr class="memdesc:aaa3c7f9c9d8b810361769995d1216438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#aaa3c7f9c9d8b810361769995d1216438">More...</a><br /></td></tr>
+<tr class="separator:aaa3c7f9c9d8b810361769995d1216438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02cd3e340e79347a2e9a5317ceb7688"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ae02cd3e340e79347a2e9a5317ceb7688">geographicalCoordinateRad</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
+<tr class="memdesc:ae02cd3e340e79347a2e9a5317ceb7688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate geographical coordinate from the given polar stereographic coordinate.  <a href="#ae02cd3e340e79347a2e9a5317ceb7688">More...</a><br /></td></tr>
+<tr class="separator:ae02cd3e340e79347a2e9a5317ceb7688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c32bd452e5207c6851ad775b263826d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4c32bd452e5207c6851ad775b263826d">toRad</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> p)</td></tr>
+<tr class="memdesc:a4c32bd452e5207c6851ad775b263826d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert deg to radians.  <a href="#a4c32bd452e5207c6851ad775b263826d">More...</a><br /></td></tr>
+<tr class="separator:a4c32bd452e5207c6851ad775b263826d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c941d6fc2cbc97dc4019d1aa37e0e7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a3c941d6fc2cbc97dc4019d1aa37e0e7f">toDeg</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> p)</td></tr>
+<tr class="memdesc:a3c941d6fc2cbc97dc4019d1aa37e0e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert radians to deg.  <a href="#a3c941d6fc2cbc97dc4019d1aa37e0e7f">More...</a><br /></td></tr>
+<tr class="separator:a3c941d6fc2cbc97dc4019d1aa37e0e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070b152414e9a44e67fa9355c378843e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a070b152414e9a44e67fa9355c378843e">geographicalPolygonForGridpoint</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p, int &amp;num)</td></tr>
+<tr class="memdesc:a070b152414e9a44e67fa9355c378843e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the geographical coordinates for the bounding box of the given grid point.  <a href="#a070b152414e9a44e67fa9355c378843e">More...</a><br /></td></tr>
+<tr class="separator:a070b152414e9a44e67fa9355c378843e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31eac08c394807f186663cc25b63f867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a31eac08c394807f186663cc25b63f867">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> p, bool &amp;isInside)</td></tr>
+<tr class="memdesc:a31eac08c394807f186663cc25b63f867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nearest grid point for the given cartesian coordinate.  <a href="#a31eac08c394807f186663cc25b63f867">More...</a><br /></td></tr>
+<tr class="separator:a31eac08c394807f186663cc25b63f867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34000320a26f169cc4234cd7b3e9d895"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a34000320a26f169cc4234cd7b3e9d895">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> p, bool &amp;isInside)</td></tr>
+<tr class="memdesc:a34000320a26f169cc4234cd7b3e9d895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nearest grid point for the given geographical coordinate.  <a href="#a34000320a26f169cc4234cd7b3e9d895">More...</a><br /></td></tr>
+<tr class="separator:a34000320a26f169cc4234cd7b3e9d895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a997705ace742bd8dcf74a579f396dd92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a997705ace742bd8dcf74a579f396dd92">gridPoint</a> (<a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> p, bool &amp;isInside)</td></tr>
+<tr class="memdesc:a997705ace742bd8dcf74a579f396dd92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the nearest grid point for the given geographical coordinate.  <a href="#a997705ace742bd8dcf74a579f396dd92">More...</a><br /></td></tr>
+<tr class="separator:a997705ace742bd8dcf74a579f396dd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e95184baf0cd5c6e515d3c202b195ce"><td class="memItemLeft" align="right" valign="top">RDGridQuadrant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4e95184baf0cd5c6e515d3c202b195ce">RDQuadrant</a> (<a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> p)</td></tr>
+<tr class="memdesc:a4e95184baf0cd5c6e515d3c202b195ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find out what quadrant of the grid with respect to the grid's cartesian origin coordinates the given grid point resides in.  <a href="#a4e95184baf0cd5c6e515d3c202b195ce">More...</a><br /></td></tr>
+<tr class="separator:a4e95184baf0cd5c6e515d3c202b195ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23505a34e399c496407b57ef44d2697"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#ab23505a34e399c496407b57ef44d2697">polarStereographicScalingFactor</a> (double phi0, double phi)</td></tr>
+<tr class="memdesc:ab23505a34e399c496407b57ef44d2697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scaling Factor for the polar stereographic projection.  <a href="#ab23505a34e399c496407b57ef44d2697">More...</a><br /></td></tr>
+<tr class="separator:ab23505a34e399c496407b57ef44d2697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class wraps a number of routines to deal with the radolan specific coordinate systems. </p>
 <p>It provides methods for converting geographical coordinates into cartesian coordinates (within the radolan grid) as well as conversion from and to grid points - aka index pairs. </p>
 
-<p>Definition at line <a class="el" href="coordinate__system_8h_source.html#l00149">149</a> of file <a class="el" href="coordinate__system_8h_source.html">coordinate_system.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="adeac29d8909b1bd0fcdaf47c23fd374d"></a>
+<p>Definition at line <a class="el" href="coordinate__system_8h_source.html#l00153">153</a> of file <a class="el" href="coordinate__system_8h_source.html">coordinate_system.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a74b4d6b43f0272d220b3bdfbc1ae2c04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Radolan::RDCoordinateSystem::RDCoordinateSystem </td>
+          <td>(</td>
+          <td class="paramtype">RDScanType&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a coordinate system for a specific RDScanType. </p>
+<p>Constructor. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac166a9ecb5c1b0c22a4992a48dafac01"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -200,7 +158,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
           <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> Radolan::RDCoordinateSystem::cartesianCoordinate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>coord</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -209,17 +167,15 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate the polar stereographic coordinate from the given geographical coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">geographical</td><td>coordinate in radians </td></tr>
+    <tr><td class="paramname">coord</td><td>geographical coordinate in radians </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>cartesian coordinate in the polar stereographic coordinate system </dd></dl>
 
-<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00199">geographicalCoordinateRad()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00211">geographicalPolygonForGridpoint()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00263">gridPoint()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00099">polarStereographicScalingFactor()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00120">RDQuadrant()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00054">setScanType()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="add29785e754b62063e64eff83a93b48e"></a>
+<a class="anchor" id="ab5aff632e24eba2fccc3084af3d3d1c3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -227,7 +183,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
           <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> Radolan::RDCoordinateSystem::cartesianCoordinate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>coord</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -236,7 +192,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate the polar stereographic coordinate from the given geographical coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">geographical</td><td>coordinate in deg </td></tr>
+    <tr><td class="paramname">coord</td><td>geographical coordinate in deg </td></tr>
   </table>
   </dd>
 </dl>
@@ -244,7 +200,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 
 </div>
 </div>
-<a class="anchor" id="a032f8ee68a3d27fe098404d6b2fdf3a6"></a>
+<a class="anchor" id="a61dd2da4c1da45aa76b6395d5e71fda2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -252,7 +208,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
           <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a> Radolan::RDCoordinateSystem::cartesianCoordinate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>gridpoint</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -261,7 +217,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate the polar stereographic coordinate from the given grid point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">grid</td><td>point </td></tr>
+    <tr><td class="paramname">gridpoint</td><td>grid point </td></tr>
   </table>
   </dd>
 </dl>
@@ -269,64 +225,12 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 
 </div>
 </div>
-<a class="anchor" id="a4338a66e322789a6fbee9f06478707bd"></a>
+<a class="anchor" id="ab5808d6c9a9a002bf571ef8335b63585"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> Radolan::RDCoordinateSystem::geographicalCoordinate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculate geographical coordinate from the given polar stereographic coordinate. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cartesian</td><td>coordinate in the polar stereographic coordinate system </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
-
-<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00181">geographicalCoordinateRad()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00211">geographicalPolygonForGridpoint()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae1afffb4a3f75b5de486efed5d306b17"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> Radolan::RDCoordinateSystem::geographicalCoordinate </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculate geographical coordinate from the given polar stereographic coordinate. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grid</td><td>point </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="aec17210ef17b239b9fe7471b1940cf0b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> RDCoordinateSystem::geographicalCoordinateRad </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -338,26 +242,20 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate geographical coordinate from the given polar stereographic coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cartesian</td><td>coordinate in the polar stereographic coordinate system </td></tr>
+    <tr><td class="paramname">p</td><td>cartesian coordinate in the polar stereographic coordinate system </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
-
-<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00181">181</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
-
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00089">rad()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00339">toDeg()</a>.</p>
-
-<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00199">geographicalCoordinateRad()</a>.</p>
+<dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a7622abb4366e0bedbc114a7cfe0913da"></a>
+<a class="anchor" id="abfdd2f4e6ff726f2e5af6ebcaf8b00cc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> RDCoordinateSystem::geographicalCoordinateRad </td>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> Radolan::RDCoordinateSystem::geographicalCoordinate </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -369,24 +267,70 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate geographical coordinate from the given polar stereographic coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">grid</td><td>point </td></tr>
+    <tr><td class="paramname">p</td><td>grid point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aaa3c7f9c9d8b810361769995d1216438"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> Radolan::RDCoordinateSystem::geographicalCoordinateRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate geographical coordinate from the given polar stereographic coordinate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>cartesian coordinate in the polar stereographic coordinate system </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00199">199</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
-
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00181">geographicalCoordinateRad()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a94b103e4a5f2584da6b5685a6f9a218d"></a>
+<a class="anchor" id="ae02cd3e340e79347a2e9a5317ceb7688"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> * RDCoordinateSystem::geographicalPolygonForGridpoint </td>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> Radolan::RDCoordinateSystem::geographicalCoordinateRad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate geographical coordinate from the given polar stereographic coordinate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>grid point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a070b152414e9a44e67fa9355c378843e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>* Radolan::RDCoordinateSystem::geographicalPolygonForGridpoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
           <td class="paramname"><em>p</em>, </td>
@@ -395,7 +339,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int &amp;&#160;</td>
-          <td class="paramname"><em>count</em>&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -408,20 +352,16 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate the geographical coordinates for the bounding box of the given grid point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">grid</td><td>point </td></tr>
-    <tr><td class="paramname">contains</td><td>the number of points in the polygon after the call </td></tr>
+    <tr><td class="paramname">p</td><td>grid point </td></tr>
+    <tr><td class="paramname">num</td><td>contains the number of points in the polygon after the call </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array of geographical coordinates (the polygon's points) </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00211">211</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
-
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00120">RDQuadrant()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a007de99f6659b8d6c74096d4f0056892"></a>
+<a class="anchor" id="a31eac08c394807f186663cc25b63f867"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -429,13 +369,13 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
           <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> Radolan::RDCoordinateSystem::gridPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_cartesian_point.html">RDCartesianPoint</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>isInside</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -448,18 +388,16 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate the nearest grid point for the given cartesian coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cartesian</td><td>coordinate </td></tr>
-    <tr><td class="paramname">contains</td><td>the result of the bounds check. If given coordinate is outside the grid, this value will be false, otherwise true. </td></tr>
+    <tr><td class="paramname">p</td><td>cartesian coordinate </td></tr>
+    <tr><td class="paramname">isInside</td><td>contains the result of the bounds check. If given coordinate is outside the grid, this value will be false, otherwise true. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>grid point </dd></dl>
 
-<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00263">gridPoint()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a84a0e9b98443638367967334e4b76b17"></a>
+<a class="anchor" id="a34000320a26f169cc4234cd7b3e9d895"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -467,43 +405,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
           <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> Radolan::RDCoordinateSystem::gridPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculate the nearest grid point for the given geographical coordinate. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">geographical</td><td>coordinate in deg </td></tr>
-    <tr><td class="paramname">contains</td><td>the result of the bounds check. If given coordinate is outside the grid, this value will be false, otherwise true. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>grid point </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a71bc5d759f63e9b14b88ca5f4237df45"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> RDCoordinateSystem::gridPoint </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
+          <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -522,25 +424,142 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Calculate the nearest grid point for the given geographical coordinate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">geographical</td><td>coordinate in radians </td></tr>
-    <tr><td class="paramname">contains</td><td>the result of the bounds check. If given coordinate is outside the grid, this value will be false, otherwise true. </td></tr>
+    <tr><td class="paramname">p</td><td>geographical coordinate in deg </td></tr>
+    <tr><td class="paramname">isInside</td><td>contains the result of the bounds check. If given coordinate is outside the grid, this value will be false, otherwise true. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>grid point </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00263">263</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
-
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, and <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a007de99f6659b8d6c74096d4f0056892">gridPoint()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="ab669b32237899460caf4a124bd05299a"></a>
+<a class="anchor" id="a997705ace742bd8dcf74a579f396dd92"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> RDCoordinateSystem::toDeg </td>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a> Radolan::RDCoordinateSystem::gridPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>isInside</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the nearest grid point for the given geographical coordinate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>geographical coordinate in radians </td></tr>
+    <tr><td class="paramname">isInside</td><td>contains the result of the bounds check. If given coordinate is outside the grid, this value will be false, otherwise true. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>grid point </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab23505a34e399c496407b57ef44d2697"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Radolan::RDCoordinateSystem::polarStereographicScalingFactor </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>phi0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>phi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scaling Factor for the polar stereographic projection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phi0</td><td></td></tr>
+    <tr><td class="paramname">phi</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>scaling factor. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4e95184baf0cd5c6e515d3c202b195ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RDGridQuadrant Radolan::RDCoordinateSystem::RDQuadrant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_grid_point.html">RDGridPoint</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find out what quadrant of the grid with respect to the grid's cartesian origin coordinates the given grid point resides in. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>grid point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>quadrant </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9f1d88aa680c912fc45d44f267217df8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Radolan::RDCoordinateSystem::setScanType </td>
+          <td>(</td>
+          <td class="paramtype">RDScanType&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the scan type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>scan type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c941d6fc2cbc97dc4019d1aa37e0e7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a> Radolan::RDCoordinateSystem::toDeg </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -552,26 +571,20 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Convert radians to deg. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">geographical</td><td>coordinate in radians </td></tr>
+    <tr><td class="paramname">p</td><td>geographical coordinate in radians </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00339">339</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
-
-<p>References <a class="el" href="coordinate__system_8cpp_source.html#l00094">deg()</a>.</p>
-
-<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00181">geographicalCoordinateRad()</a>.</p>
-
 </div>
 </div>
-<a class="anchor" id="a21803d9ee3e4666feb41353ca653bfe6"></a>
+<a class="anchor" id="a4c32bd452e5207c6851ad775b263826d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> RDCoordinateSystem::toRad </td>
+          <td class="memname"><a class="el" href="struct_radolan_1_1_r_d_geographical_point_rad.html">RDGeographicalPointRad</a> Radolan::RDCoordinateSystem::toRad </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radolan_1_1_r_d_geographical_point.html">RDGeographicalPoint</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -583,23 +596,16 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <p>Convert deg to radians. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">geographical</td><td>coordinate in deg </td></tr>
+    <tr><td class="paramname">p</td><td>geographical coordinate in deg </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00334">334</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
-
-<p>References <a class="el" href="coordinate__system_8cpp_source.html#l00089">rad()</a>.</p>
-
-<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00099">polarStereographicScalingFactor()</a>.</p>
-
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="coordinate__system_8h_source.html">coordinate_system.h</a></li>
-<li><a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
