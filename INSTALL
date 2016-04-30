@@ -1,22 +1,24 @@
-
 -------------------------
-	libRadolan
+radolan
 -------------------------
 
-libRadolan is a little C++ library for reading radar data in Radolan format.
-The radolan format has been created by the German weather forecast service
-(DWD) for it's radar composite data. For further information check:
-http://www.dwd.de/RADOLAN
+Project 'radolan' is a little C++ library for reading radar data in Radolan format.
+The radolan format has been created by the German weather forecast service (DWD)
+for it's radar composite data. For further information check: http://www.dwd.de/RADOLAN
 
-1. Building libradolan
+1. Building radolan
 
-Libradolan's build process is governed by CMake (http://www.cmake.org/) in
-order to make it easy to run on any computer. You will need a number of 
-libraries installed before running cmake though:
+radolan's build process is governed by CMake (http://www.cmake.org/) in order to make
+it easy to run on any computer. You will need to have these libraries installed before
+running cmake:
 
+      - boost
 	  - libz
 	  - hdf5
 	  - netcdf
+
+Optionally, shapelib is detected. If shapelib is not found, the conversion
+utility radolan2shapelib will not be built.
 
 Use your platform specific package managers to install those dependencies. 
 CMake will look for the dependencies in the usual locations (/usr or /usr/local).

@@ -1,10 +1,31 @@
+/* The MIT License (MIT)
+ *
+ * (c) Jürgen Simon 2014 (juergen.simon@uni-bonn.de)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 #include <radolan/radolan_utils.h>
 
 #include <cmath>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <zlib.h>
 #include <ctype.h>
 
 #ifdef __cplusplus
@@ -61,25 +82,17 @@ namespace Radolan {
 
     int RDIsCleanMeasurement(RDScanType t, RDDataType value) {
         bool notMin = value >= RDMinValue(t);
-
         bool notMax = value <= RDMaxValue(t);
-
         bool notMissing = value != RDMissingValue(t);
-
         bool notClutter = value != RDClutterValue(t);
-
         return ( notMin && notMax && notMissing && notClutter);
     }
 
     int RDIsCleanMeasurementAndNotMin(RDScanType t, RDDataType value) {
         bool notMin = value > RDMinValue(t);
-
         bool notMax = value <= RDMaxValue(t);
-
         bool notMissing = value != RDMissingValue(t);
-
         bool notClutter = value != RDClutterValue(t);
-
         return ( notMin && notMax && notMissing && notClutter);
     }
 
@@ -127,11 +140,8 @@ namespace Radolan {
      */
     time_t RDScanTimeInSecondsSinceEpoch(RDScan *scan) {
         struct tm t;
-
         RDScanTime(scan, &t);
-
         time_t time = timegm(&t);
-
         return time;
     }
 
@@ -422,11 +432,8 @@ namespace Radolan {
             case RD_RE:
             case RD_TZ:
             case RD_TH:
-
                 *width = 900;
-
                 *height = 900;
-
                 break;
 
             case RD_EX:
@@ -434,17 +441,12 @@ namespace Radolan {
             case RD_EH:
             case RD_EB:
             case RD_EW:
-
                 *width = 1500;
-
                 *height = 1400;
-
                 break;
 
             case RD_UNKNOWN:
-
                 *width = -1;
-
                 *height = -1;
         }
     }
@@ -479,39 +481,28 @@ namespace Radolan {
 
     void convertToLowercase(char* s) {
         size_t len = strlen(s);
-
         for (size_t i = 0; i < len; i++) {
             char c = s[i];
-
             s[i] = tolower(c);
         }
     }
 
     char* RDGuessFilename(RDScanType type, time_t timestamp) {
         // raa01-rx_10000-0909030000-dwd---bin
-
         char fn[1024];
-
         fn[0] = '\0';
 
         // get string for scan type and convert to lower case
-
         char* typeString = strdup(RDScanTypeToString(type));
-
         convertToLowercase(typeString);
 
         // now for the time pokery
-
         struct tm timeComponents;
-
         gmtime_r(&timestamp, &timeComponents);
-
         char timeString[32];
-
         timeString[0] = '\0';
 
         // create our guess
-
         sprintf(fn,
                 "raa01-%s_10000-%02d%02d%02d%02d%02d-dwd---bin",
                 typeString,
@@ -522,11 +513,8 @@ namespace Radolan {
                 timeComponents.tm_min);
 
         free(typeString);
-
         return strdup(fn);
     }
-
-
 
 #ifdef __cplusplus
 }

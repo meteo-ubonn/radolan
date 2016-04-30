@@ -1,9 +1,24 @@
-/*
- *  read.c
+/* The MIT License (MIT)
  *
- *  Created by simon on 26.10.07.
- *  Copyright 2007 webtecc. All rights reserved.
+ * (c) Jürgen Simon 2014 (juergen.simon@uni-bonn.de)
  *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 #include <radolan/read.h>
@@ -256,7 +271,7 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
             scan = (RDScan*)calloc(sizeof(RDScan),1);
             if (scan==NULL) {
                 fprintf(stderr,"RDReadScan: ERROR : out of memory\n");
-                return -1;
+                return 0;
             }
         }
         
@@ -287,7 +302,7 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
         
         if (scan->data==NULL) {
             fprintf(stderr,"RDReadScan : ERROR : could not allocate data buffer : out of memory\n");
-            return -1;
+            return 0;
         }
         
         switch (scan->header.scanType) {
@@ -305,7 +320,7 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
                 if (buffer==NULL)
                 {
                     fprintf(stderr,"RDReadScan : ERROR : could not allocate data buffer : out of memory\n");
-                    return -1;
+                    return 0;
                 }
                 
                 // since August 11 2009 some problem with radolan header. It's missing 2 bytes!
@@ -383,7 +398,7 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
                 unsigned short int *buffer = (unsigned short int*)calloc(scan->dimLon*scan->dimLat,sizeof(unsigned short int));
                 if (buffer==NULL) {
                     fprintf(stderr,"RDReadScan : ERROR : could not allocate data buffer : out of memory\n");
-                    return -1;
+                    return 0;
                 }
                 
                 // since August 11 2009 some problem with radolan header. It's missing 2 bytes!
@@ -405,7 +420,7 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
                 int bytesRead = gzread(f, buffer, scan->header.payloadSize);
                 if (bytesRead!=scan->header.payloadSize) {
                     fprintf(stderr,"RDReadScan : ERROR : payload too small. File corrupt?\n");
-                    return -1;
+                    return 0;
                 }
                 
                 // All data read. Close file.
@@ -510,10 +525,10 @@ int RDReadScan(const char* filename, RDScan* scan, _Bool ommitOutside ) {
         
     } else {
         fprintf(stderr,"RDReadScan : ERROR : could not open file %s",filename);
-        return -2;
+        return 0;
     }
     
-    return 0;
+    return 1;
 }
 
 RDScan* RDAllocateScan() {

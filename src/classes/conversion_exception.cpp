@@ -21,17 +21,26 @@
  * SOFTWARE.
  */
 
-#ifndef RADOLAN
-#define RADOLAN
-
 #include <radolan/conversion_exeption.h>
-#include <radolan/coordinate_system.h>
-#include <radolan/endianess.h>
-#include <radolan/netcdf_converter.h>
-#include <radolan/radolan_utils.h>
-#include <radolan/read.h>
-#include <radolan/shapefile_converter.h>
-#include <radolan/types.h>
-#include <radolan/version.h>
 
-#endif /* Header Guard */
+#ifdef __cplusplus
+namespace Radolan
+{
+#endif
+
+    RDConversionException::RDConversionException(const char *message) {
+        m_message = std::string(message);
+    }
+
+    RDConversionException::~RDConversionException() throw() { }
+
+    /** @override
+     */
+    const char *
+    RDConversionException::what() const throw() {
+        return m_message.c_str();
+    }
+
+#ifdef __cplusplus
+}
+#endif

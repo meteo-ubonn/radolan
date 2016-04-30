@@ -7,3 +7,4 @@ Makefile
 radolan2shapefile
 Doxyfile
 doxyfile.idea/
+include/radolan/version.h
