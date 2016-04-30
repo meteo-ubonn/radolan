@@ -38,6 +38,7 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -61,7 +62,7 @@
 <p>This class wraps a number of routines to deal with the radolan specific coordinate systems.  
  <a href="class_radolan_1_1_r_d_coordinate_system.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="coordinatesystem_8h_source.html">coordinatesystem.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="coordinate__system_8h_source.html">coordinate_system.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -189,7 +190,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 <div class="textblock"><p>This class wraps a number of routines to deal with the radolan specific coordinate systems. </p>
 <p>It provides methods for converting geographical coordinates into cartesian coordinates (within the radolan grid) as well as conversion from and to grid points - aka index pairs. </p>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8h_source.html#l00126">126</a> of file <a class="el" href="coordinatesystem_8h_source.html">coordinatesystem.h</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8h_source.html#l00149">149</a> of file <a class="el" href="coordinate__system_8h_source.html">coordinate_system.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="adeac29d8909b1bd0fcdaf47c23fd374d"></a>
 <div class="memitem">
@@ -214,7 +215,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>cartesian coordinate in the polar stereographic coordinate system </dd></dl>
 
-<p>Referenced by <a class="el" href="coordinatesystem_8cpp_source.html#l00182">geographicalCoordinateRad()</a>, <a class="el" href="coordinatesystem_8cpp_source.html#l00194">geographicalPolygonForGridpoint()</a>, <a class="el" href="coordinatesystem_8cpp_source.html#l00246">gridPoint()</a>, <a class="el" href="coordinatesystem_8cpp_source.html#l00082">polarStereographicScalingFactor()</a>, <a class="el" href="coordinatesystem_8cpp_source.html#l00103">RDQuadrant()</a>, and <a class="el" href="coordinatesystem_8cpp_source.html#l00037">setScanType()</a>.</p>
+<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00199">geographicalCoordinateRad()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00211">geographicalPolygonForGridpoint()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00263">gridPoint()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00099">polarStereographicScalingFactor()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00120">RDQuadrant()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00054">setScanType()</a>.</p>
 
 </div>
 </div>
@@ -291,7 +292,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
 
-<p>Referenced by <a class="el" href="coordinatesystem_8cpp_source.html#l00164">geographicalCoordinateRad()</a>, and <a class="el" href="coordinatesystem_8cpp_source.html#l00194">geographicalPolygonForGridpoint()</a>.</p>
+<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00181">geographicalCoordinateRad()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00211">geographicalPolygonForGridpoint()</a>.</p>
 
 </div>
 </div>
@@ -343,11 +344,11 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00164">164</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00181">181</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
 
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, <a class="el" href="coordinatesystem_8cpp_source.html#l00072">rad()</a>, and <a class="el" href="coordinatesystem_8cpp_source.html#l00322">toDeg()</a>.</p>
+<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, <a class="el" href="coordinate__system_8cpp_source.html#l00089">rad()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00339">toDeg()</a>.</p>
 
-<p>Referenced by <a class="el" href="coordinatesystem_8cpp_source.html#l00182">geographicalCoordinateRad()</a>.</p>
+<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00199">geographicalCoordinateRad()</a>.</p>
 
 </div>
 </div>
@@ -374,9 +375,9 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00182">182</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00199">199</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
 
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, and <a class="el" href="coordinatesystem_8cpp_source.html#l00164">geographicalCoordinateRad()</a>.</p>
+<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00181">geographicalCoordinateRad()</a>.</p>
 
 </div>
 </div>
@@ -414,9 +415,9 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>array of geographical coordinates (the polygon's points) </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00194">194</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00211">211</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
 
-<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, and <a class="el" href="coordinatesystem_8cpp_source.html#l00103">RDQuadrant()</a>.</p>
+<p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a4338a66e322789a6fbee9f06478707bd">geographicalCoordinate()</a>, and <a class="el" href="coordinate__system_8cpp_source.html#l00120">RDQuadrant()</a>.</p>
 
 </div>
 </div>
@@ -454,7 +455,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>grid point </dd></dl>
 
-<p>Referenced by <a class="el" href="coordinatesystem_8cpp_source.html#l00246">gridPoint()</a>.</p>
+<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00263">gridPoint()</a>.</p>
 
 </div>
 </div>
@@ -528,7 +529,7 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>grid point </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00246">246</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00263">263</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
 
 <p>References <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#adeac29d8909b1bd0fcdaf47c23fd374d">cartesianCoordinate()</a>, and <a class="el" href="class_radolan_1_1_r_d_coordinate_system.html#a007de99f6659b8d6c74096d4f0056892">gridPoint()</a>.</p>
 
@@ -557,11 +558,11 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in deg </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00322">322</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00339">339</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
 
-<p>References <a class="el" href="coordinatesystem_8cpp_source.html#l00077">deg()</a>.</p>
+<p>References <a class="el" href="coordinate__system_8cpp_source.html#l00094">deg()</a>.</p>
 
-<p>Referenced by <a class="el" href="coordinatesystem_8cpp_source.html#l00164">geographicalCoordinateRad()</a>.</p>
+<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00181">geographicalCoordinateRad()</a>.</p>
 
 </div>
 </div>
@@ -588,17 +589,17 @@ static const double&#160;</td><td class="memItemRight" valign="bottom"><b>PHI_MA
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>geographical coordinate in radians </dd></dl>
 
-<p>Definition at line <a class="el" href="coordinatesystem_8cpp_source.html#l00317">317</a> of file <a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a>.</p>
+<p>Definition at line <a class="el" href="coordinate__system_8cpp_source.html#l00334">334</a> of file <a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a>.</p>
 
-<p>References <a class="el" href="coordinatesystem_8cpp_source.html#l00072">rad()</a>.</p>
+<p>References <a class="el" href="coordinate__system_8cpp_source.html#l00089">rad()</a>.</p>
 
-<p>Referenced by <a class="el" href="coordinatesystem_8cpp_source.html#l00082">polarStereographicScalingFactor()</a>.</p>
+<p>Referenced by <a class="el" href="coordinate__system_8cpp_source.html#l00099">polarStereographicScalingFactor()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="coordinatesystem_8h_source.html">coordinatesystem.h</a></li>
-<li><a class="el" href="coordinatesystem_8cpp_source.html">coordinatesystem.cpp</a></li>
+<li><a class="el" href="coordinate__system_8h_source.html">coordinate_system.h</a></li>
+<li><a class="el" href="coordinate__system_8cpp_source.html">coordinate_system.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
