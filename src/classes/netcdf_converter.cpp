@@ -23,10 +23,13 @@
 
 #include <netcdf>
 #include <iostream>
-#include <radolan/radolan.h>
+
+#include <radolan/types.h>
+#include <radolan/netcdf_converter.h>
 
 #ifdef __cplusplus
-namespace Radolan {
+namespace Radolan
+{
 #endif
 
 #define ADD_DIMENSION_Z 0
@@ -219,8 +222,7 @@ namespace Radolan {
                                             ? true
                                             : (val >= (*threshold));
 
-                        buffer[index] = should_write
-                                        ? byteValue : 0x00;
+                        buffer[index] = should_write ? byteValue : 0x00;
                     }
                 }
             }
@@ -403,7 +405,4 @@ namespace Radolan {
         }
         #endif
     }
-
-#ifdef __cplusplus
-};
-#endif
+}

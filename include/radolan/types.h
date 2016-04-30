@@ -21,8 +21,8 @@
  * SOFTWARE.
  */
 
-#ifndef LIBRADOLAN_TYPES_H
-#define LIBRADOLAN_TYPES_H
+#ifndef RADOLAN_TYPES_H
+#define RADOLAN_TYPES_H
 
 #include <stdlib.h>
 

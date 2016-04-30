@@ -21,12 +21,12 @@
  * SOFTWARE.
  */
 
-#include <radolan/radolan_utils.h>
-
 #include <cmath>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
+#include <radolan/radolan_utils.h>
 
 #ifdef __cplusplus
 namespace Radolan {
@@ -85,7 +85,7 @@ namespace Radolan {
         bool notMax = value <= RDMaxValue(t);
         bool notMissing = value != RDMissingValue(t);
         bool notClutter = value != RDClutterValue(t);
-        return ( notMin && notMax && notMissing && notClutter);
+        return (notMin && notMax && notMissing && notClutter);
     }
 
     int RDIsCleanMeasurementAndNotMin(RDScanType t, RDDataType value) {
@@ -93,7 +93,7 @@ namespace Radolan {
         bool notMax = value <= RDMaxValue(t);
         bool notMissing = value != RDMissingValue(t);
         bool notClutter = value != RDClutterValue(t);
-        return ( notMin && notMax && notMissing && notClutter);
+        return (notMin && notMax && notMissing && notClutter);
     }
 
     float RDRainrateFromDezibels(RDDataType dezibels) {
@@ -108,7 +108,7 @@ namespace Radolan {
         return RVP6_BASE_VALUE + ((float) byteValue) / 2.0f;
     }
 
-    void RDScanTime(RDScan* scan, struct tm * t) {
+    void RDScanTime(RDScan *scan, struct tm *t) {
         // find out if Daylight Saving Time is on
         // by obtaining local time
 
@@ -242,84 +242,119 @@ namespace Radolan {
         return result;
     }
 
-    const char* RDScanTypeToString(RDScanType type) {
+    const char *RDScanTypeToString(RDScanType type) {
         switch (type) {
-            case RD_RX: return "RX";
+            case RD_RX:
+                return "RX";
                 break;
-            case RD_RO: return "RO";
+            case RD_RO:
+                return "RO";
                 break;
-            case RD_RK: return "RK";
+            case RD_RK:
+                return "RK";
                 break;
-            case RD_RZ: return "RZ";
+            case RD_RZ:
+                return "RZ";
                 break;
-            case RD_RY: return "RY";
+            case RD_RY:
+                return "RY";
                 break;
-            case RD_RH: return "RH";
+            case RD_RH:
+                return "RH";
                 break;
-            case RD_RJ: return "RJ";
+            case RD_RJ:
+                return "RJ";
                 break;
-            case RD_RP: return "RP";
+            case RD_RP:
+                return "RP";
                 break;
-            case RD_RT: return "RT";
+            case RD_RT:
+                return "RT";
                 break;
-            case RD_RC: return "RC";
+            case RD_RC:
+                return "RC";
                 break;
-            case RD_RI: return "RI";
+            case RD_RI:
+                return "RI";
                 break;
-            case RD_RG: return "RG";
+            case RD_RG:
+                return "RG";
                 break;
-            case RD_RB: return "RB";
+            case RD_RB:
+                return "RB";
                 break;
-            case RD_RA: return "RA";
+            case RD_RA:
+                return "RA";
                 break;
-            case RD_RM: return "RM";
+            case RD_RM:
+                return "RM";
                 break;
-            case RD_RL: return "RL";
+            case RD_RL:
+                return "RL";
                 break;
-            case RD_RN: return "RN";
+            case RD_RN:
+                return "RN";
                 break;
-            case RD_RD: return "RD";
+            case RD_RD:
+                return "RD";
                 break;
-            case RD_RF: return "RF";
+            case RD_RF:
+                return "RF";
                 break;
-            case RD_RW: return "RW";
+            case RD_RW:
+                return "RW";
                 break;
-            case RD_RU: return "RU";
+            case RD_RU:
+                return "RU";
                 break;
-            case RD_RR: return "RR";
+            case RD_RR:
+                return "RR";
                 break;
-            case RD_SQ: return "SQ";
+            case RD_SQ:
+                return "SQ";
                 break;
-            case RD_SH: return "SH";
+            case RD_SH:
+                return "SH";
                 break;
-            case RD_SF: return "SF";
+            case RD_SF:
+                return "SF";
                 break;
-            case RD_RV: return "RV";
+            case RD_RV:
+                return "RV";
                 break;
-            case RD_RS: return "RS";
+            case RD_RS:
+                return "RS";
                 break;
-            case RD_RQ: return "RQ";
+            case RD_RQ:
+                return "RQ";
                 break;
-            case RD_TZ: return "TZ";
+            case RD_TZ:
+                return "TZ";
                 break;
-            case RD_TH: return "TH";
+            case RD_TH:
+                return "TH";
                 break;
-            case RD_EX: return "EX";
+            case RD_EX:
+                return "EX";
                 break;
-            case RD_EZ: return "EZ";
+            case RD_EZ:
+                return "EZ";
                 break;
-            case RD_EH: return "EH";
+            case RD_EH:
+                return "EH";
                 break;
-            case RD_EB: return "EB";
+            case RD_EB:
+                return "EB";
                 break;
-            case RD_EW: return "EW";
+            case RD_EW:
+                return "EW";
                 break;
             default:
                 return "UNKNOWN";
         }
     }
 
-    RDScanType RDScanTypeFromString(const char* str) {
+    RDScanType RDScanTypeFromString(const char *str) {
         RDScanType type = RD_UNKNOWN;
         if (strcmp(str, "RX") == 0) {
             type = RD_RX;
@@ -399,7 +434,7 @@ namespace Radolan {
         return type;
     }
 
-    void RDGridSize(RDScanType t, size_t* width, size_t* height) {
+    void RDGridSize(RDScanType t, size_t *width, size_t *height) {
         switch (t) {
             case RD_RX:
             case RD_RO:
@@ -451,7 +486,7 @@ namespace Radolan {
         }
     }
 
-    void RDPrintHeaderInformation(RDScan* scan) {
+    void RDPrintHeaderInformation(RDScan *scan) {
         // TODO: Extend
         printf("\nHeader of file %s\n", scan->filename);
         RDRadolanHeader h = scan->header;
@@ -463,7 +498,7 @@ namespace Radolan {
         printf("Stations %s\n", h.radarStations);
     }
 
-    void RDPrintScan(RDScan* scan, int latCount, int lonCount) {
+    void RDPrintScan(RDScan *scan, int latCount, int lonCount) {
         int lat, lon;
 
         for (lat = 0; lat < scan->dimLat; lat++) {
@@ -479,7 +514,7 @@ namespace Radolan {
         }
     }
 
-    void convertToLowercase(char* s) {
+    void convertToLowercase(char *s) {
         size_t len = strlen(s);
         for (size_t i = 0; i < len; i++) {
             char c = s[i];
@@ -487,13 +522,13 @@ namespace Radolan {
         }
     }
 
-    char* RDGuessFilename(RDScanType type, time_t timestamp) {
+    char *RDGuessFilename(RDScanType type, time_t timestamp) {
         // raa01-rx_10000-0909030000-dwd---bin
         char fn[1024];
         fn[0] = '\0';
 
         // get string for scan type and convert to lower case
-        char* typeString = strdup(RDScanTypeToString(type));
+        char *typeString = strdup(RDScanTypeToString(type));
         convertToLowercase(typeString);
 
         // now for the time pokery

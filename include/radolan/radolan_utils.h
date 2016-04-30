@@ -21,8 +21,8 @@
  * SOFTWARE.
  */
 
-#ifndef __RADOLAN_UTILS__
-#define __RADOLAN_UTILS__
+#ifndef RADOLAN_UTILS_H
+#define RADOLAN_UTILS_H
 
 #include <radolan/types.h>
 

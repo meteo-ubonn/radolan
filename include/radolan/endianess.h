@@ -21,8 +21,8 @@
  * SOFTWARE.
  */
 
-#ifndef __RADOLAN_ENDIANESS__
-#define __RADOLAN_ENDIANESS__
+#ifndef RADOLAN_ENDIANESS_H
+#define RADOLAN_ENDIANESS_H
 
 bool isLittleEndian()
 {
