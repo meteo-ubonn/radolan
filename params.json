@@ -1,0 +1,6 @@
+{
+  "name": "Radolan",
+  "tagline": "",
+  "body": "# radolan\r\n\r\nThis is a C++ library for reading and working with the RADOLAN data format of the German Weather Forecast Service (DWD). \r\nAlso contains methods for converting to and from the RADOLAN coordinate system or grid, as well as conversion routines \r\ninto HDF5. \r\n\r\nThe current RADOLAN file format can be found here:\r\nhttps://git.meteo.uni-bonn.de/attachments/download/2/RADOLAN_RADVOR_OP_Komposit_format_pdf.pdf\r\n\r\n# How to use this\r\n\r\nThe following, simple example will read a radolan file, print out header information and a simple\r\nASCII representation of the file to console. \r\n\r\n\t#include <radolan/radolan.h>\r\n\t#include <radolan/radolan_utils.h>\r\n\r\n\tusing namespace Radolan;\r\n\r\n\tint main(int argc, char** argv)  {\r\n\t    RDScan* scan = RDAllocateScan();\r\n\t\tif (RDReadScan(argv[1], scan, true)) {\r\n\t        RDPrintHeaderInformation(scan);\r\n\t        RDPrintScan(scan,20,20);\r\n\t        RDFreeScan(scan);\r\n\t    }\r\n\t}\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
