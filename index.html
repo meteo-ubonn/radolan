@@ -20,20 +20,70 @@
 
     <section class="main-content">
       <h1>
-<a id="radolan" class="anchor" href="#radolan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>radolan</h1>
+<a id="radolan---------------------------------------------------------------------------------------mainpage" class="anchor" href="#radolan---------------------------------------------------------------------------------------mainpage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>radolan                                                                                       {#mainpage}</h1>
 
-<p>This is a C++ library for reading and working with the RADOLAN data format of the German Weather Forecast Service (DWD). 
-Also contains methods for converting to and from the RADOLAN coordinate system or grid, as well as conversion routines 
-into HDF5. </p>
+<p>This is a C++ library for reading and working with the RADOLAN data format of 
+the German Weather Forecast Service (DWD). Also contains methods for converting 
+to and from the RADOLAN coordinate system or grid, as well as conversion routines 
+into NetCDF and Shapefile.</p>
 
-<p>The current RADOLAN file format can be found here:
+<p>Information 
 <a href="https://git.meteo.uni-bonn.de/attachments/download/2/RADOLAN_RADVOR_OP_Komposit_format_pdf.pdf">https://git.meteo.uni-bonn.de/attachments/download/2/RADOLAN_RADVOR_OP_Komposit_format_pdf.pdf</a></p>
 
-<h1>
-<a id="how-to-use-this" class="anchor" href="#how-to-use-this" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use this</h1>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>The following, simple example will read a radolan file, print out header information and a simple
-ASCII representation of the file to console. </p>
+<h3>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<ul>
+<li>boost</li>
+<li>libz</li>
+<li>hdf5</li>
+<li>netcdf4 (C++ bindings included)</li>
+<li>Shapelib (optional)</li>
+</ul>
+
+<p>Use your platform specific package managers to install those dependencies. 
+CMake will look for the dependencies in the usual locations (/usr or /usr/local).
+If you install dependencies in different locations, please consider the CMAKE
+documentation and adjust the file CMakeLists.txt accordingly.</p>
+
+<h3>
+<a id="installation-1" class="anchor" href="#installation-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<pre><code>git clone https://github.com/meteo-ubonn/radolan.git
+cd radolan
+cmake .
+make install
+</code></pre>
+
+<h2>
+<a id="library-and-ececutables" class="anchor" href="#library-and-ececutables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Library and ececutables</h2>
+
+<p>The project produces a libradolan, which is installed to /usr/local/lib
+together with it's headers at /usr/local/include. In addition, the following
+executables are produced:</p>
+
+<h3>
+<a id="radolan2netcdf" class="anchor" href="#radolan2netcdf" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>radolan2netcdf</h3>
+
+<p>This command converts a RADOLAN file into a NetCDF file following the 
+CF-Metadata convention (v1.6). See here: <a href="http://cfconventions.org/">http://cfconventions.org/</a></p>
+
+<h3>
+<a id="radolan2shapefile" class="anchor" href="#radolan2shapefile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>radolan2shapefile</h3>
+
+<p>If shapelib was detected during the cmake step, this executable is installed 
+as well. It converts RADOLAN files into .shp files. You can choose between
+polygons (radar 'pixels' are actually polygons) or points (center of the radar
+pixel) and with- or without the scan value.</p>
+
+<h2>
+<a id="how-to-use-this" class="anchor" href="#how-to-use-this" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use this</h2>
+
+<p>The following, simple example will read a radolan file, print out header information 
+and a simple ASCII representation of the file to console:</p>
 
 <pre><code>#include &lt;radolan/radolan.h&gt;
 #include &lt;radolan/radolan_utils.h&gt;
@@ -50,10 +100,13 @@ int main(int argc, char** argv)  {
 }
 </code></pre>
 
-For documentation on all the classes and utilities available, <a href="doxygen/index.html">Check the doxygen documentation here</a>
+<h2>
+<a id="source-code-documentation" class="anchor" href="#source-code-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source-code documentation</h2>
+
+<p>A doxygen - generated documentation of all classes can be found here: <a href="doxygen/index.html">Source documentation</a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/meteo-ubonn/radolan">Radolan</a> is maintained by <a href="http://meteo-ubonn.github.io/radolan/doxygen/annotated.html">meteo-ubonn</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/meteo-ubonn/radolan">Radolan</a> is maintained by <a href="https://github.com/meteo-ubonn">meteo-ubonn</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
