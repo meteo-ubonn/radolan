@@ -22,6 +22,7 @@
  */
 
 #include <cmath>
+#include <iostream>
 #include <limits>
 #include <sstream>
 
@@ -195,7 +196,7 @@ namespace Radolan
 
         RDGeographicalPoint *poly = (RDGeographicalPoint *) calloc(sizeof(RDGeographicalPoint), count);
         if (poly == NULL) {
-            fprintf(stderr, "ERROR:geographicalPolygonForGridpoint:could not allocate memory");
+            std::cerr << "ERROR:geographicalPolygonForGridpoint:could not allocate memory" << std::endl;
             count = 0;
             return NULL;
         }
