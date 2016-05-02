@@ -1,4 +1,4 @@
-# radolan                                                                                       {#mainpage}
+# radolan                                                                          {#mainpage}
 
 This is a C++ library for reading and working with the RADOLAN data format of 
 the German Weather Forecast Service (DWD). Also contains methods for converting 
