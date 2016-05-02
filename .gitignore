@@ -2,9 +2,7 @@ doc
 CMakeFiles
 radolan
 cmake_install.cmake
-libradolan.dylib
 Makefile
-radolan2shapefile
 Doxyfile
-doxyfile.idea/
-include/radolan/version.h
+doxyfile.idea
+CMakeCache.txt
