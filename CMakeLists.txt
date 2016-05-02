@@ -156,10 +156,12 @@ ADD_LIBRARY(radolan SHARED
 TARGET_LINK_LIBRARIES(radolan ${LIBRARIES})
 SET_TARGET_PROPERTIES(radolan PROPERTIES LINKER_LANGUAGE CXX)
 
-# Shapefile tool
-ADD_EXECUTABLE(radolan2shapefile src/executables/radolan2shapefile.cpp)
-TARGET_LINK_LIBRARIES(radolan2shapefile radolan ${LIBRARIES})
-SET_TARGET_PROPERTIES(radolan2shapefile PROPERTIES LINKER_LANGUAGE CXX)
+IF (SHP_FOUND)
+    # Shapefile tool
+    ADD_EXECUTABLE(radolan2shapefile src/executables/radolan2shapefile.cpp)
+    TARGET_LINK_LIBRARIES(radolan2shapefile radolan ${LIBRARIES})
+    SET_TARGET_PROPERTIES(radolan2shapefile PROPERTIES LINKER_LANGUAGE CXX)
+ENDIF()
 
 ADD_EXECUTABLE(radolan2netcdf src/executables/radolan2netcdf.cpp)
 TARGET_LINK_LIBRARIES(radolan2netcdf radolan ${LIBRARIES})
