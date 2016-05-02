@@ -162,6 +162,7 @@ TARGET_LINK_LIBRARIES(radolan2shapefile radolan ${LIBRARIES})
 SET_TARGET_PROPERTIES(radolan2shapefile PROPERTIES LINKER_LANGUAGE CXX)
 
 ADD_EXECUTABLE(radolan2netcdf src/executables/radolan2netcdf.cpp)
+TARGET_LINK_LIBRARIES(radolan2netcdf radolan ${LIBRARIES})
 SET_TARGET_PROPERTIES(radolan2netcdf PROPERTIES LINKER_LANGUAGE CXX)
 
 # -------------------------------------
