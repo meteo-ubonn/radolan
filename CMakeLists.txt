@@ -198,14 +198,15 @@ ENDIF (DOXYGEN_EXECUTABLE)
 # install
 # -------------------------------------
 
-INSTALL(DIRECTORY ${PROJECT_BINARY_DIR}/${PROJECT_NAME} DESTINATION "/usr/local/include")
+INSTALL(DIRECTORY ${PROJECT_BINARY_DIR}/${PROJECT_NAME} DESTINATION include)
 INSTALL(DIRECTORY include/${PROJECT_NAME}
-        DESTINATION "/usr/local/include"
+        DESTINATION include
         PATTERN ".svn" EXCLUDE
         PATTERN ".git" EXCLUDE
         PATTERN "*.swp" EXCLUDE)
 
-INSTALL(TARGETS radolan LIBRARY DESTINATION "/usr/local/lib")
+INSTALL(TARGETS radolan LIBRARY DESTINATION lib)
+INSTALL(TARGETS radolan2netcdf RUNTIME DESTINATION bin)
 IF (SHP_FOUND)
-    INSTALL(TARGETS radolan2shapefile RUNTIME DESTINATION "/usr/local/bin")
+    INSTALL(TARGETS radolan2shapefile RUNTIME DESTINATION bin)
 ENDIF ()
