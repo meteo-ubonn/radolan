@@ -61,7 +61,7 @@ extern "C"
  *                     the RD_DBZ_OUTSIDEVALUE constant.
  */
 
-int RDReadScan(const char *filename, RDScan *scan, _Bool ommitOutside);
+int RDReadScan(const char *filename, RDScan *scan, bool ommitOutside);
 
 /** Reads only the header data from the given FILE*
  * @param FILE*

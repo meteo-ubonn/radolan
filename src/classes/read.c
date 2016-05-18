@@ -226,7 +226,7 @@ void RDReadRadolanHeader(gzFile *f, RDRadolanHeader *header) {
     gzseek(f, header->headerSize, 0);
 }
 
-int RDReadScan(const char *filename, RDScan *scan, _Bool ommitOutside) {
+int RDReadScan(const char *filename, RDScan *scan, bool ommitOutside) {
     gzFile *f = gzopen(filename, "r");
     if (f != NULL) {
         if (scan == NULL) {
