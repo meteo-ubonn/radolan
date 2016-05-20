@@ -1,0 +1,22 @@
+language: cpp
+
+sudo: required
+
+dist: trusty
+
+compiler:
+  - gcc  # [not osx]
+  - clang  # [not linux]
+
+os:
+  - linux
+  - osx
+
+install:
+    - source travis_install.sh
+
+script:
+  - mkdir ../build
+  - cd ../build
+  - cmake --debug-output ../radolan
+  - make VERBOSE=1
