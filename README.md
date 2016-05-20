@@ -30,6 +30,18 @@ documentation and adjust the file CMakeLists.txt accordingly.
     cmake .
     make install
 
+### Conda Environment
+
+libradolan is also available within the [conda-forge](https://anaconda.org/conda-forge/libradolan).
+Download the latest [Miniconda](http://conda.pydata.org/miniconda.html) for your OS (currently linux and MacOSX) and create a fresh environment:
+
+```bash
+$ conda config --add channels conda-forge
+$ conda create -n radolan libradolan boost --yes
+$ source activate radolan
+```
+Note, shapelib is not available at the moment within the conda environment.
+
 ## Library and ececutables
 
 The project produces a libradolan, which is installed to /usr/local/lib
