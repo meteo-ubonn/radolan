@@ -28,8 +28,7 @@
 #include <radolan/netcdf_converter.h>
 
 #ifdef __cplusplus
-namespace Radolan
-{
+namespace Radolan {
 #endif
 
 #define ADD_DIMENSION_Z 0
@@ -183,20 +182,20 @@ namespace Radolan
         // start point and counters for writing
         // the buffer to netcdf
 
-        #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
         // z,y,x
         vector<size_t> startp(3, 0);
         vector<size_t> countp(3, 0);
         countp[0] = 1;
         countp[1] = scan->dimLat;
         countp[2] = scan->dimLon;
-        #else
+#else
         // y,x
         vector<size_t> startp(2, 0);
         vector<size_t> countp(2, 0);
         countp[0] = scan->dimLat;
         countp[1] = scan->dimLon;
-        #endif
+#endif
 
         // Re-package data: x and y are switched around in the data (following
         // the cf-metadata convention)
@@ -297,7 +296,7 @@ namespace Radolan
         y.putAtt("valid_max", ncFloat, yData[scan->dimLon - 1]);
         free(yData);
 
-        #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
         // write z-Axis information
         float *zData = (float *) malloc(sizeof (float) * 1);
         zData[0] = 0.0;
@@ -305,7 +304,7 @@ namespace Radolan
         z.putAtt("valid_min", ncFloat, zData[0]);
         z.putAtt("valid_max", ncFloat, zData[0]);
         free(zData);
-        #endif
+#endif
         return file;
     }
 
@@ -313,48 +312,32 @@ namespace Radolan
     Radolan2NetCDF::getStandardName(RDScanType scanType) {
         const char *result = NULL;
         switch (scanType) {
-            case
-                RD_RX:
-            case
-                RD_EX:
+            case RD_RX:
+            case RD_EX:
+            case RD_FZ:
                 result = "reflectivity";
                 break;
-            case
-                RD_RZ:
-            case
-                RD_RY:
-            case
-                RD_RV:
-            case
-                RD_EZ:
-            case
-                RD_RH:
-            case
-                RD_RB:
-            case
-                RD_RW:
-            case
-                RD_RL:
-            case
-                RD_RU:
-            case
-                RD_RS:
-            case
-                RD_RQ:
-            case
-                RD_SQ:
-            case
-                RD_SH:
-            case
-                RD_SF:
+            case RD_RZ:
+            case RD_RY:
+            case RD_RV:
+            case RD_EZ:
+            case RD_RH:
+            case RD_RB:
+            case RD_RW:
+            case RD_RL:
+            case RD_RU:
+            case RD_RS:
+            case RD_RQ:
+            case RD_SQ:
+            case RD_SH:
+            case RD_SF:
                 result = "rainrate";
                 break;
             default:
                 result = "unknown";
                 break;
         }
-        return
-                result;
+        return result;
     }
 
     void
@@ -363,9 +346,9 @@ namespace Radolan
         int dimLon = file->getDim("x").getSize();
         int dimLat = file->getDim("y").getSize();
 
-        #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
         int dimZ = file->getDim("z").getSize();
-        #endif
+#endif
 
         // int dimT = file->get_dim(NcToken("time"))->size();
         NcVar data = file->getVar("reflectivity");
@@ -374,35 +357,35 @@ namespace Radolan
         product.getValues(typeIdentifier);
         RDScanType scanType = RDScanTypeFromString(typeIdentifier.c_str());
 
-        #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
         float values[dimZ][dimLat][dimLon];
-        #else
+#else
         float values[dimLat][dimLon];
-        #endif
+#endif
         data.getVar(values);
 
-        #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
         for (int iz = 0; iz < dimZ; iz++)
         {
-        #endif
+#endif
         for (int iy = 0; iy < dimLat; iy++) {
             if (iy % latVertices == 0) {
                 for (int ix = 0; ix < dimLon; ix++) {
                     if (ix % lonVertices == 0) {
-                    #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
                         float value = values[iz][iy][ix];
-                    #else
+#else
                         float value = values[iy][ix];
-                    #endif
+#endif
                         std::cout << (RDIsCleanMeasurementAndNotMin(scanType, value) ? "*" : " ");
                     }
                 }
                 std::cout << std::endl;
             }
         }
-        #if ADD_DIMENSION_Z
+#if ADD_DIMENSION_Z
         std::cout << std::endl;
         }
-        #endif
+#endif
     }
 }

@@ -28,23 +28,15 @@
 
 /* Prefix for Radolan constants, data types and methods is 'RD' */
 
-#define RD_HEADER_LENGTH 138
-#define RD_DIM_LON 900
-#define RD_DIM_LAT	900
-
 #define RD_SECONDARY_VALUE_BIT	0x01	// 0b0000000000000001
 #define RD_ERROR_BIT			0x02	// 0b0000000000000010
 #define RD_NEGATIVE_SIGN_BIT	0x04	// 0b0000000000000100
 #define RD_CLUTTER_BIT			0x08	// 0b0000000000001000
 
-#define RD_CLUTTER_VALUE -2490.0f
-#define RD_ERROR_VALUE -2500.0f
-
-#define RX_CLUTTER_VALUE 0xF9
-#define RX_ERROR_VALUE 0xFA
-
-#define RD_DBZ_BASEVALUE -32.5
-#define RD_DBZ_OUTSIDEVALUE 92.5
+#define RD_CLUTTER_VALUE        -2490.0f
+#define RD_ERROR_VALUE          -2500.0f
+#define RX_ERROR_VALUE          0xFA
+#define RD_DBZ_OUTSIDEVALUE     92.5
 
 #ifdef __cplusplus
 extern "C"
@@ -91,13 +83,14 @@ extern "C"
         RD_EZ,
         RD_EH,
         RD_EB,
-        RD_EW
+        RD_EW,
+        RD_FZ
     } RDScanType;
 
     /** \var typedef RDRadarFormat
      * Radar format as denoted in Chapter 1.1 of the Radolan v2.1 spec. 
      */
-    typedef enum {R100km=1,R128km=2} RDRadarFormat;
+    typedef enum {R100km=1, R128km=2, R150km=3} RDRadarFormat;
 
     /** Quantification as denoted in Chapter 1.1 of the Radolan v2.1 spec. */
     typedef enum {RAVOQ_HV,RAVOQ_HV_ConfidenceEstimate,RAVOQ,Winterrath} RDQuantification;
