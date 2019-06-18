@@ -56,7 +56,7 @@ namespace Radolan {
         static void convertToPoints(RDScan *scan,
                                     const char *filename,
                                     bool geographic = false,
-                                    bool withValues = true)
+                                    bool withValues = true);
         /**
          * Writes out a shapefile with the individual radar pixels as polygons
          *

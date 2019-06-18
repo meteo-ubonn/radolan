@@ -81,12 +81,15 @@ ELSE ()
 ENDIF ()
 
 # netcdf
-FIND_PACKAGE(NETCDF)
+set (NETCDF_CXX "YES")
+set (NETCDF_F77 "NO")
+set (NETCDF_F90 "NO")
+FIND_PACKAGE(NetCDF)
 IF (NOT NETCDF_FOUND)
     MESSAGE(FATAL_ERROR "netcdf(cxx) not found (http://www.unidata.ucar.edu/software/netcdf/docs/netcdf-cxx/)")
 ELSE ()
     MESSAGE(STATUS "NETCDF found")
-    INCLUDE_DIRECTORIES(${NETCDF_INCLUDEDIR})
+    INCLUDE_DIRECTORIES(${NETCDF_INCLUDE_DIRS})
 ENDIF ()
 
 # Shapefile
