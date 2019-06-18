@@ -26,7 +26,7 @@ source activate radolan
 conda config --add channels conda-forge
 
 # Install radolan dependencies
-conda install --yes boost netcdf-cxx4 cmake shapefile
+conda install --yes boost hdf5 netcdf-cxx4 cmake shapelib
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]
 then
