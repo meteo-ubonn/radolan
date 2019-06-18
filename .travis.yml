@@ -19,5 +19,4 @@ script:
   - mkdir ../build
   - cd ../build
   - cmake --debug-output -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DWITH_TESTS=YES ../radolan
-../radolan
   - make VERBOSE=1
