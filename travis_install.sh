@@ -3,12 +3,12 @@
 # Distributed under the MIT License. See LICENSE.txt for more info.
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-    wget http://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh \
+    wget http://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh \
         -O miniconda.sh
 fi
 
 if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-    wget http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh \
+    wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
         -O miniconda.sh
 fi
 
@@ -19,14 +19,15 @@ conda update --yes conda
 conda update --yes conda
 
 # Create a testenv with the correct Python version
-conda create -n radolan --yes pip python=2.7
+conda create -n radolan --yes pip python=3.7
 source activate radolan
 
 # add conda-forge channel
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 
 # Install radolan dependencies
-conda install --yes boost netcdf-cxx4 cmake
+conda install --yes boost=1.69.0 hdf5 netcdf-cxx4 cmake shapelib
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]
 then

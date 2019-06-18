@@ -2,7 +2,7 @@ language: cpp
 
 sudo: required
 
-dist: trusty
+dist: xenial
 
 compiler:
   - gcc  # [not osx]
@@ -18,5 +18,5 @@ install:
 script:
   - mkdir ../build
   - cd ../build
-  - cmake --debug-output ../radolan
+  - cmake --debug-output -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DWITH_TESTS=YES ../radolan
   - make VERBOSE=1

@@ -60,7 +60,7 @@ namespace Radolan {
                                     bool write_one_bytes_as_byte = false,
                                     const RDDataType *threshold = NULL,
                                     netCDF::NcFile::FileMode mode = netCDF::NcFile::replace,
-                                    bool omitOutside = true) throw(RDConversionException);
+                                    bool omitOutside = true);
 
         /**
          * Converts a radolan scan.
@@ -81,7 +81,7 @@ namespace Radolan {
                                     const char *netcdfPath,
                                     bool write_one_bytes_as_byte,
                                     const RDDataType *threshold = NULL,
-                                    netCDF::NcFile::FileMode mode = netCDF::NcFile::write) throw(RDConversionException);
+                                    netCDF::NcFile::FileMode mode = netCDF::NcFile::write);
 
         /**
          * Simple function to get a visual rep of the file with ascii characters

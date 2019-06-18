@@ -34,7 +34,7 @@ namespace Radolan {
     void Radolan2Shapefile::convertToPoints(RDScan *scan,
                                             const char *filename,
                                             bool geographic,
-                                            bool withValues) throw(RDConversionException)
+                                            bool withValues)
     {
         SHPHandle shapefile = withValues ? SHPCreate(filename, SHPT_MULTIPOINTM) : SHPCreate(filename, SHPT_MULTIPOINT);
         if (shapefile) {
@@ -93,7 +93,7 @@ namespace Radolan {
     void Radolan2Shapefile::convertToPolygons(RDScan *scan,
                                               const char *filename,
                                               bool geographic,
-                                              bool withValues) throw(RDConversionException) {
+                                              bool withValues) {
         SHPHandle shapefile = withValues
           ? SHPCreate(filename, SHPT_POLYGONM)
           : SHPCreate(filename, SHPT_POLYGON);
@@ -205,7 +205,7 @@ namespace Radolan {
 
     void Radolan2Shapefile::writeBoundingBox(RDScan *scan,
                                              const char *filename,
-                                             bool geographic) throw(RDConversionException) {
+                                             bool geographic) {
         SHPHandle shapefile = SHPCreate(filename, SHPT_POLYGON);
         if (shapefile) {
             std::vector<double> vx, vy;

@@ -40,7 +40,7 @@ namespace Radolan
                                 bool write_one_bytes_as_byte,
                                 const RDDataType *threshold,
                                 netCDF::NcFile::FileMode mode,
-                                bool omitOutside) throw(RDConversionException) {
+                                bool omitOutside) {
         if (mode == netCDF::NcFile::read) {
             throw RDConversionException("Mode 'ReadOnly' does not make sense");
         }
@@ -69,7 +69,7 @@ namespace Radolan
                                 const char *netcdfPath,
                                 bool write_one_bytes_as_byte,
                                 const RDDataType *threshold,
-                                netCDF::NcFile::FileMode mode) throw(RDConversionException) {
+                                netCDF::NcFile::FileMode mode) {
         using namespace netCDF;
         using namespace std;
 
