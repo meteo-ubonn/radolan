@@ -56,8 +56,7 @@ namespace Radolan {
         static void convertToPoints(RDScan *scan,
                                     const char *filename,
                                     bool geographic = false,
-                                    bool withValues = true) throw(RDConversionException);
-
+                                    bool withValues = true)
         /**
          * Writes out a shapefile with the individual radar pixels as polygons
          *
@@ -72,7 +71,7 @@ namespace Radolan {
         static void convertToPolygons(RDScan *scan,
                                       const char *filename,
                                       bool geographic = false,
-                                      bool withValues = true) throw(RDConversionException);
+                                      bool withValues = true);
 
         /**
          * Obtains the bounding box of the radolan scan.
@@ -102,7 +101,7 @@ namespace Radolan {
          */
         static void writeBoundingBox(RDScan *scan,
                                      const char *filename,
-                                     bool geographic = false) throw(RDConversionException);
+                                     bool geographic = false);
 
         /**
          * Prints out the bounding box of the coordinate system to console
