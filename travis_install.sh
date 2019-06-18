@@ -27,7 +27,7 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 
 # Install radolan dependencies
-conda install --yes boost<1.70.0 hdf5 netcdf-cxx4 cmake shapelib
+conda install --yes boost=1.69.0 hdf5 netcdf-cxx4 cmake shapelib
 
 if [[ "$TRAVIS_OS_NAME" == "osx" ]]
 then
