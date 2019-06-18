@@ -30,7 +30,7 @@ extern "C"
 	namespace Radolan {
 #endif
 
-    static const std::string VERSION = "1.2.0";
+    static const std::string VERSION = "1.2.1";
 
     void print_version() {
         std::cout << VERSION << std::endl;
