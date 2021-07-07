@@ -52,10 +52,9 @@ namespace Radolan {
                 // HDCP^2 declared 250 (92.5) as
                 // the max value (Kai)
                 return 92.5;
-                break;
             default:
                 return 4095;
-        };
+        }
     }
 
     RDDataType RDMissingValue(RDScanType t) {
@@ -63,7 +62,6 @@ namespace Radolan {
             case RD_RX:
             case RD_EX:
                 return RD_DBZ_OUTSIDEVALUE;
-                break;
             default:
                 return RD_ERROR_VALUE;
         };
@@ -74,7 +72,9 @@ namespace Radolan {
             case RD_RX:
             case RD_EX:
                 return 92.0f;
-                break;
+            case RD_FZ:
+                // FZ does not really have clutter points
+                return RD_ERROR_VALUE;
             default:
                 return RD_CLUTTER_VALUE;
         };
@@ -162,6 +162,7 @@ namespace Radolan {
         switch (t) {
             case RD_RX:
             case RD_EX:
+            case RD_FZ:
                 result = "dBZ";
                 break;
             case RD_RZ:
@@ -246,109 +247,76 @@ namespace Radolan {
         switch (type) {
             case RD_RX:
                 return "RX";
-                break;
             case RD_RO:
                 return "RO";
-                break;
             case RD_RK:
                 return "RK";
-                break;
             case RD_RZ:
                 return "RZ";
-                break;
             case RD_RY:
                 return "RY";
-                break;
             case RD_RH:
                 return "RH";
-                break;
             case RD_RJ:
                 return "RJ";
-                break;
             case RD_RP:
                 return "RP";
-                break;
             case RD_RT:
                 return "RT";
-                break;
             case RD_RC:
                 return "RC";
-                break;
             case RD_RI:
                 return "RI";
-                break;
             case RD_RG:
                 return "RG";
-                break;
             case RD_RB:
                 return "RB";
-                break;
             case RD_RA:
                 return "RA";
-                break;
             case RD_RM:
                 return "RM";
-                break;
             case RD_RL:
                 return "RL";
-                break;
             case RD_RN:
                 return "RN";
-                break;
             case RD_RD:
                 return "RD";
-                break;
             case RD_RF:
                 return "RF";
-                break;
             case RD_RW:
                 return "RW";
-                break;
             case RD_RU:
                 return "RU";
-                break;
             case RD_RR:
                 return "RR";
-                break;
             case RD_SQ:
                 return "SQ";
-                break;
             case RD_SH:
                 return "SH";
-                break;
             case RD_SF:
                 return "SF";
-                break;
             case RD_RV:
                 return "RV";
-                break;
             case RD_RS:
                 return "RS";
-                break;
             case RD_RQ:
                 return "RQ";
-                break;
             case RD_TZ:
                 return "TZ";
-                break;
             case RD_TH:
                 return "TH";
-                break;
             case RD_EX:
                 return "EX";
-                break;
             case RD_EZ:
                 return "EZ";
-                break;
             case RD_EH:
                 return "EH";
-                break;
             case RD_EB:
                 return "EB";
-                break;
             case RD_EW:
                 return "EW";
-                break;
+            case RD_FZ:
+                return "FZ";
             default:
                 return "UNKNOWN";
         }
@@ -430,6 +398,8 @@ namespace Radolan {
             type = RD_EB;
         } else if (strcmp(str, "EW") == 0) {
             type = RD_EW;
+        } else if (strcmp(str, "FZ") == 0) {
+            type = RD_FZ;
         }
         return type;
     }
@@ -479,6 +449,10 @@ namespace Radolan {
                 *width = 1500;
                 *height = 1400;
                 break;
+
+            case RD_FZ:
+                *width = 450;
+                *height = 450;
 
             case RD_UNKNOWN:
                 *width = -1;

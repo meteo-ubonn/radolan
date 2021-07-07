@@ -44,8 +44,7 @@ namespace Radolan
     const double RDCoordinateSystem::MESH_WIDTH(1.0);
 
     RDCoordinateSystem::RDCoordinateSystem(RDScanType type) {
-        m_scanType = type;
-        updateGridInfo();
+        this->setScanType(type);
     }
 
     RDCoordinateSystem::~RDCoordinateSystem() {
@@ -57,7 +56,6 @@ namespace Radolan
         updateGridInfo();
     }
 
-
     void RDCoordinateSystem::updateGridInfo() {
         switch (this->m_scanType) {
 
@@ -68,13 +66,18 @@ namespace Radolan
                 m_radolanGridCountVertical = 1500;
                 m_originGeographical = rdGeographicalPoint(9.0f, 51.0f);
                 m_offset = rdCartesianPoint(600.0f, 800.0f);
-            }
-                break;
+            } break;
+
+            case RD_FZ:
+                m_radolanGridCountHorizontal = 450;
+                m_radolanGridCountVertical = 450;
+                m_originGeographical = rdGeographicalPoint(9.0f, 51.0f);
+                m_offset = rdCartesianPoint(450.0f, 450.0f);
 
             default: {
-                m_originGeographical = rdGeographicalPoint(9.0f, 51.0f);
                 m_radolanGridCountHorizontal = 900;
                 m_radolanGridCountVertical = 900;
+                m_originGeographical = rdGeographicalPoint(9.0f, 51.0f);
                 m_offset = rdCartesianPoint(450.0f, 450.0f);
             }
         }

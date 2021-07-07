@@ -42,7 +42,7 @@ $ source activate radolan
 ```
 Note, shapelib is not available at the moment within the conda environment.
 
-## Library and ececutables
+## Library and Executables
 
 The project produces a libradolan, which is installed to /usr/local/lib
 together with it's headers at /usr/local/include. In addition, the following

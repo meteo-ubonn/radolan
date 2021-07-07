@@ -26,6 +26,7 @@
 #include <radolan/read.h>
 #include <radolan/radolan_utils.h>
 #include <radolan/endianess.h>
+#include <radolan/types.h>
 
 #ifdef __cplusplus
 namespace Radolan
@@ -137,6 +138,8 @@ void RDReadRadolanHeader(gzFile *f, RDRadolanHeader *header) {
                     header->radarFormat = R100km;
                 } else if (val == 2) {
                     header->radarFormat = R128km;
+                } else if (val == 3) {
+                    header->radarFormat = R150km;
                 }
                 bytesRead += 4;
             }
@@ -215,9 +218,12 @@ void RDReadRadolanHeader(gzFile *f, RDRadolanHeader *header) {
         case RD_EW:
             realPayloadSize = 1500 * 1400 * RDBytesPerPixel(header->scanType);
             break;
+        case RD_FZ:
+            // For a change these match
+            realPayloadSize = header->payloadSize;
+            break;
         default:
             realPayloadSize = 900 * 900 * RDBytesPerPixel(header->scanType);
-            break;
     }
     header->headerSize = header->payloadSize - realPayloadSize;
     header->payloadSize = realPayloadSize;
@@ -253,6 +259,10 @@ int RDReadScan(const char *filename, RDScan *scan, bool ommitOutside) {
             case RD_EW:
                 scan->dimLat = 1500;
                 scan->dimLon = 1400;
+                break;
+            case RD_FZ:
+                scan->dimLat = 450;
+                scan->dimLon = 450;
                 break;
             default:
                 scan->dimLat = 900;
@@ -344,6 +354,7 @@ int RDReadScan(const char *filename, RDScan *scan, bool ommitOutside) {
             } break;
 
             default: {
+                // 16 bit encoding (little endian)
                 scan->min_value = RDMinValue(scan->header.scanType); //dbZ
                 scan->max_value = RDMaxValue(scan->header.scanType); //dbZ
 
@@ -355,20 +366,6 @@ int RDReadScan(const char *filename, RDScan *scan, bool ommitOutside) {
                     fprintf(stderr, "RDReadScan : ERROR : could not allocate data buffer : out of memory\n");
                     return 0;
                 }
-
-                // since August 11 2009 some problem with radolan header. It's missing 2 bytes!
-                // START WORKAROUND
-                //					size_t pos = gztell(f);
-                //					gzrewind(f);
-                //					size_t fileSize = gzread(f, buffer, -1);
-                //					size_t nominalSize = scan->header.payloadSize + scan->header.headerSize;
-                //					if (fileSize < nominalSize )
-                //					{
-                //						fprintf(stdout,"RDReadScan : ERROR : header payload size exceeds file size by %ld. Attempting to compensate\n", nominalSize-fileSize);
-                //						pos = pos - (nominalSize - fileSize);
-                //					}
-                //					gzseek(f, pos, 0);
-                // END WORKAROUND
 
                 // read data into buffer
                 int bytesRead = gzread(f, buffer, scan->header.payloadSize);
